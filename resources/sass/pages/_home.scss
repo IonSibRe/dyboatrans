@@ -1,8 +1,9 @@
 .home-header {
     background-color: #f2f2f2;
     padding: 20px;
+    position: relative;
 
-    // Slideshow
+    // ====================== Slideshow ======================
     .home-header-showcase {
         position: relative;
         height: 625px;
@@ -23,45 +24,77 @@
         opacity: 1;
     }
 
-    .home-header-showcase-slide .content {
-        position: absolute;
-        bottom: 70px;
-        left: -600px;
-        opacity: 0;
+    .home-header-showcase-slide-content {
         width: 600px;
-        background-color: rgba(255, 255, 255, 0.8);
-        color: #333;
-        padding: 35px;
+        margin: 80px;
+
+        .home-header-showcase-slide-title {
+            font-size: 70px;
+            font-weight: 300;
+            text-transform: uppercase;
+
+            & > span {
+                color: $secondary-color;
+                font-weight: 800;
+            }
+        }
+
+        .home-header-showcase-slide-btn {
+            position: relative;
+            top: 20px;
+            padding: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            background-color: $primary-color;
+            color: $text-light;
+            border-radius: 5px;
+
+            & > img {
+                position: relative;
+                top: 8px;
+                left: -4px;
+            }
+        }
+
+        .home-header-showcase-slide-btn-icon {
+            width: 30px;
+        }
     }
 
-    .buttons button#next {
+    .home-header-showcase-btns {
         position: absolute;
-        top: 40%;
-        right: 15px;
+        display: flex;
+        align-items: center;
+        top: 470px;
+        left: 100px;
+
+        & > button {
+            font-size: 25px;
+        }
+
+        #home-header-showcase-btns-prev {
+            margin-right: 5px;
+        }
+
+        #home-header-showcase-btns-next {
+            margin-left: 5px;
+        }
+
+        .home-header-showcase-dot {
+            margin: 0 5px;
+            height: 5px;
+            width: 5px;
+            background-color: $primary-color;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .home-header-showcase-dot-current {
+            width: 50px;
+            background-color: $secondary-color;
+        }
     }
 
-    .buttons button#prev {
-        position: absolute;
-        top: 40%;
-        left: 15px;
-    }
-
-    .buttons button {
-        border: 2px solid #fff;
-        background-color: transparent;
-        color: #fff;
-        cursor: pointer;
-        padding: 13px 15px;
-        border-radius: 50%;
-        outline: none;
-    }
-
-    .buttons button:hover {
-        background-color: #fff;
-        color: #333;
-    }
-
-    // Background Images
+    // ====================== Background Images ======================
     .home-header-showcase-slide:first-child {
         background: url("https://source.unsplash.com/RyRpq9SUwAU/1600x900")
             no-repeat center top/cover;
@@ -77,5 +110,81 @@
     .home-header-showcase-slide:nth-child(4) {
         background: url("https://source.unsplash.com/yXpA_eCbtzI/1600x900")
             no-repeat center top/cover;
+    }
+
+    // ====================== Info ======================
+    .home-header-info {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .home-header-info-main-wrap {
+        flex: 3.5;
+
+        .home-header-info-title-wrap {
+            width: fit-content;
+            padding: 20px;
+            background-color: $primary-color;
+
+            .home-header-info-title {
+                color: $text-light;
+                font-size: 42px;
+                font-weight: 300;
+
+                & > span {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .home-header-info-desc-wrap {
+            padding: 20px;
+            width: 930px;
+
+            .home-header-info-desc-title {
+                margin-bottom: 15px;
+                font-weight: 800;
+                font-size: 36px;
+            }
+
+            .home-header-info-desc-text {
+                margin-bottom: 15px;
+                font-size: 29px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .home-header-info-side-wrap {
+        flex: 1;
+        padding: 30px;
+        border: 4px solid $secondary-color;
+        border-radius: 5px;
+
+        .home-header-info-side-wrap-title {
+            margin-bottom: 50px;
+            font-size: 40px;
+            font-weight: 300;
+
+            & > span {
+                font-weight: 700;
+            }
+        }
+
+        .home-header-info-side-wrap-item {
+            display: flex;
+            margin-bottom: 40px;
+        }
+
+        .home-header-info-side-wrap-item-icon {
+            margin-right: 30px;
+            width: 70px;
+        }
+
+        .home-header-info-side-wrap-item-text {
+            font-size: 28px;
+            font-weight: 600;
+        }
     }
 }
