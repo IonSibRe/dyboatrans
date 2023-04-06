@@ -1,0 +1,62 @@
+// ==================== Imports ====================
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap");
+
+// ==================== Variables ====================
+// Layout
+$container-width: 90%;
+
+// Typography
+
+// Colors
+$primary-color: #000;
+$secondary-color: #bb8141;
+
+$text-light: #fff;
+
+// ==================== Custom Classes ====================
+.hide {
+    display: none !important;
+}
+
+// ==================== Mixins ====================
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin container-center {
+    width: $container-width;
+    margin: 0 auto;
+}
+
+// ====================== Default Resets ======================
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Sora", sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
