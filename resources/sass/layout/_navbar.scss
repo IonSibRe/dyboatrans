@@ -103,3 +103,123 @@
         }
     }
 }
+
+// Nav mobile
+.nav-mobile {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    z-index: 999;
+}
+
+.nav-mobile-inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+
+    .nav-mobile-logo-wrap {
+        margin: 0;
+    }
+
+    .nav-mobile-bars-wrap {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-mobile-bars-btn {
+        font-size: 50px;
+    }
+}
+
+.nav-mobile-info-wrap {
+    display: flex;
+    justify-content: space-between;
+
+    & > * {
+        padding: 15px 0;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    & > * > i {
+        margin-right: 5px;
+    }
+
+    .nav-mobile-info-order-btn {
+        flex: 1;
+        color: $text-light;
+        text-transform: uppercase;
+        background-color: $secondary-color;
+    }
+
+    .nav-mobile-info-phone-num {
+        flex: 1;
+        color: $text-light;
+        background-color: $primary-color;
+    }
+}
+
+.nav-mobile-item-wrap {
+    height: 0;
+    text-align: center;
+    transition: 0.25s all ease-in-out;
+    overflow: hidden;
+
+    .nav-mobile-item {
+        padding: 1rem 0;
+        border-bottom: 1px solid #ccc;
+        background-color: rgba($color: #000000, $alpha: 0.025);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .nav-mobile-link {
+        font-size: 25px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #000;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .nav-inner {
+        padding: 20px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-logo-wrap {
+        margin-bottom: 30px;
+    }
+
+    .nav-links-wrap {
+        margin-bottom: 40px;
+    }
+
+    .nav-links-wrap .nav-link-active::after {
+        bottom: -12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .nav-mobile-info-wrap > * {
+        font-size: 15px;
+    }
+
+    .nav-mobile-item-wrap .nav-mobile-link {
+        font-size: 20px;
+    }
+}

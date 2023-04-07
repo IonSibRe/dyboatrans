@@ -1,5 +1,24 @@
 import "./bootstrap";
 
+// ========================= Mobile Navbar =========================
+const barsBtn = document.querySelector(".nav-mobile-bars-btn");
+const navbarMobileItemWrap = document.querySelector(".nav-mobile-item-wrap");
+const navbarMobileItems = document.querySelectorAll(".nav-mobile-item");
+
+let navbarHeight = 0;
+navbarMobileItems.forEach((item) => {
+    navbarHeight += item.offsetHeight;
+});
+
+barsBtn.addEventListener("click", () => {
+    if (navbarMobileItemWrap.offsetHeight === 0) {
+        navbarMobileItemWrap.style.height = navbarHeight + "px";
+    } else {
+        navbarMobileItemWrap.style.height = 0;
+    }
+});
+
+// ========================= Slideshow =========================
 const slides = document.querySelectorAll(".home-header-showcase-slide");
 const dots = document.querySelectorAll(".home-header-showcase-dot");
 const next = document.querySelector("#home-header-showcase-btns-next");
