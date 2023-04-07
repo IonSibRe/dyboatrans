@@ -1,70 +1,73 @@
 <x-layout>
     <section class="home-header">
-        <div class="home-header-showcase">
-            <div class="home-header-showcase-slide current">
-                <div class="home-header-showcase-slide-content">
-                    <h1 class="home-header-showcase-slide-title">
-                        Je libo luxus
-                        <span> <br> za rozumné peníze?</span>
-                    </h1>
-                    <a href="" class="home-header-showcase-slide-btn">
-                        <img src="{{" imgs/home/info-circle-icon.svg"}}" alt="Showcase Info Icon"
-                            class="home-header-showcase-slide-btn-icon">
-                        chci zjistit více
-                    </a>
+        <div class="home-header-showcase-wrap">
+            <div class="home-header-showcase">
+                <div class="home-header-showcase-slide current">
+                    <div class="home-header-showcase-slide-content">
+                        <h1 class="home-header-showcase-slide-title">
+                            Je libo luxus
+                            <span> <br> za rozumné peníze?</span>
+                        </h1>
+                        <a href="" class="home-header-showcase-slide-btn">
+                            <img src="{{" imgs/home/info-circle-icon.svg"}}" alt="Showcase Info Icon"
+                                class="home-header-showcase-slide-btn-icon">
+                            chci zjistit více
+                        </a>
+                    </div>
+                </div>
+                <div class="home-header-showcase-slide">
+                    <div class="home-header-showcase-slide-content">
+                        <h1 class="home-header-showcase-slide-title">
+                            Sympatičtí a <span>ochotní řidiči</span> jsou samozřejmostí
+                        </h1>
+                        <a href="" class="home-header-showcase-slide-btn">
+                            <img src="{{" imgs/home/info-circle-icon.svg"}}" alt="Showcase Info Icon"
+                                class="home-header-showcase-slide-btn-icon">
+                            chci zjistit více
+                        </a>
+                    </div>
+                </div>
+                <div class="home-header-showcase-slide">
+                    <div class="home-header-showcase-slide-content">
+                        <h1 class="home-header-showcase-slide-title">
+                            <span>20 Let</span>
+                            zkušeností
+                            <span>v oboru</span>
+                        </h1>
+                        <a href="" class="home-header-showcase-slide-btn">
+                            <img src="{{" imgs/home/info-circle-icon.svg"}}" alt="Showcase Info Icon"
+                                class="home-header-showcase-slide-btn-icon">
+                            chci zjistit více
+                        </a>
+                    </div>
+                </div>
+                <div class="home-header-showcase-slide">
+                    <div class="home-header-showcase-slide-content">
+                        <h1 class="home-header-showcase-slide-title">
+                            Chcete si
+                            vychutnat třeba
+                            <span>rakouské vánoční trhy?</span>
+                        </h1>
+                        <a href="" class="home-header-showcase-slide-btn">
+                            <img src="{{" imgs/home/info-circle-icon.svg"}}" alt="Showcase Info Icon"
+                                class="home-header-showcase-slide-btn-icon">
+                            chci zjistit více
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="home-header-showcase-slide">
-                <div class="home-header-showcase-slide-content">
-                    <h1 class="home-header-showcase-slide-title">
-                        Je libo luxus
-                        <span>za rozumné peníze?</span>
-                    </h1>
-                    <a href="" class="home-header-showcase-slide-btn">
-                        <img src="{{" imgs/home/info-circle-icon.svg"}}" alt="Showcase Info Icon"
-                            class="home-header-showcase-slide-btn-icon">
-                        chci zjistit více
-                    </a>
-                </div>
+            <div class="home-header-showcase-btns">
+                <button id="home-header-showcase-btns-prev">
+                    <i class="fa-solid fa-caret-left"></i>
+                </button>
+                <div class="home-header-showcase-dot home-header-showcase-dot-current"></div>
+                <div class="home-header-showcase-dot"></div>
+                <div class="home-header-showcase-dot"></div>
+                <div class="home-header-showcase-dot"></div>
+                <button id="home-header-showcase-btns-next">
+                    <i class="fa-solid fa-caret-right"></i>
+                </button>
             </div>
-            <div class="home-header-showcase-slide">
-                <div class="home-header-showcase-slide-content">
-                    <h1 class="home-header-showcase-slide-title">
-                        Je libo luxus
-                        <span>za rozumné peníze?</span>
-                    </h1>
-                    <a href="" class="home-header-showcase-slide-btn">
-                        <img src="{{" imgs/home/info-circle-icon.svg"}}" alt="Showcase Info Icon"
-                            class="home-header-showcase-slide-btn-icon">
-                        chci zjistit více
-                    </a>
-                </div>
-            </div>
-            <div class="home-header-showcase-slide">
-                <div class="home-header-showcase-slide-content">
-                    <h1 class="home-header-showcase-slide-title">
-                        Je libo luxus
-                        <span>za rozumné peníze?</span>
-                    </h1>
-                    <a href="" class="home-header-showcase-slide-btn">
-                        <img src="{{" imgs/home/info-circle-icon.svg"}}" alt="Showcase Info Icon"
-                            class="home-header-showcase-slide-btn-icon">
-                        chci zjistit více
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="home-header-showcase-btns">
-            <button id="home-header-showcase-btns-prev">
-                <i class="fa-solid fa-caret-left"></i>
-            </button>
-            <div class="home-header-showcase-dot home-header-showcase-dot-current"></div>
-            <div class="home-header-showcase-dot"></div>
-            <div class="home-header-showcase-dot"></div>
-            <div class="home-header-showcase-dot"></div>
-            <button id="home-header-showcase-btns-next">
-                <i class="fa-solid fa-caret-right"></i>
-            </button>
         </div>
         <div class="home-header-info">
             <div class="home-header-info-main-wrap">

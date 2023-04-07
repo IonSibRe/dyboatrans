@@ -18,6 +18,20 @@ barsBtn.addEventListener("click", () => {
     }
 });
 
+// ========================= Navbar fixed on scroll =========================
+const nav = document.querySelector(".nav");
+const navMobile = document.querySelector(".nav-mobile");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > nav.offsetHeight) {
+        nav.classList.add("nav-fixed");
+        navMobile.classList.add("nav-fixed");
+    } else {
+        nav.classList.remove("nav-fixed");
+        navMobile.classList.remove("nav-fixed");
+    }
+});
+
 // ========================= Slideshow =========================
 const slides = document.querySelectorAll(".home-header-showcase-slide");
 const dots = document.querySelectorAll(".home-header-showcase-dot");

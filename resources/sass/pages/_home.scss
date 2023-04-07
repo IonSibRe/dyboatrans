@@ -1,10 +1,14 @@
+// ====================== Header ======================
 .home-header {
-    display: none;
     background-color: #f2f2f2;
     padding: 20px;
     position: relative;
 
     // ====================== Slideshow ======================
+    .home-header-showcase-wrap {
+        position: relative;
+    }
+
     .home-header-showcase {
         position: relative;
         height: 625px;
@@ -42,8 +46,9 @@
 
         .home-header-showcase-slide-btn {
             position: relative;
-            top: 20px;
+            top: 40px;
             padding: 20px;
+            font-size: 18px;
             font-weight: 600;
             text-transform: uppercase;
             background-color: $primary-color;
@@ -66,8 +71,9 @@
         position: absolute;
         display: flex;
         align-items: center;
-        top: 470px;
-        left: 100px;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
 
         & > button {
             font-size: 25px;
@@ -95,22 +101,22 @@
         }
     }
 
-    // ====================== Background Images ======================
+    // Background Images
     .home-header-showcase-slide:first-child {
-        background: url("https://source.unsplash.com/RyRpq9SUwAU/1600x900")
-            no-repeat center top/cover;
+        background: url("../../../public/imgs/home/slideshow-img-2.png")
+            no-repeat center center/cover;
     }
     .home-header-showcase-slide:nth-child(2) {
-        background: url("https://source.unsplash.com/BeOW_PJjA0w/1600x900")
-            no-repeat center top/cover;
+        background: url("../../../public/imgs/home/slideshow-img-4.png")
+            no-repeat center center/cover;
     }
     .home-header-showcase-slide:nth-child(3) {
-        background: url("https://source.unsplash.com/TMOeGZw9NY4/1600x900")
-            no-repeat center top/cover;
+        background: url("../../../public/imgs/home/slideshow-img-3.png")
+            no-repeat center center/cover;
     }
     .home-header-showcase-slide:nth-child(4) {
-        background: url("https://source.unsplash.com/yXpA_eCbtzI/1600x900")
-            no-repeat center top/cover;
+        background: url("../../../public/imgs/home/slideshow-img-1.png")
+            no-repeat center center/cover;
     }
 
     // ====================== Info ======================
@@ -118,6 +124,7 @@
         margin-top: 20px;
         display: flex;
         justify-content: space-between;
+        display: none;
     }
 
     .home-header-info-main-wrap {
@@ -187,5 +194,19 @@
             font-size: 28px;
             font-weight: 600;
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home-header .home-header-showcase-slide-content {
+        width: 100%;
+        margin: 20vh 0 0 0;
+        text-align: center;
+    }
+
+    .home-header
+        .home-header-showcase-slide-content
+        .home-header-showcase-slide-title {
+        font-size: 50px;
     }
 }

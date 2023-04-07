@@ -1,5 +1,11 @@
 .nav {
-    border-bottom: 1px solid #ccc;
+    width: 100vw;
+    background-color: $text-light;
+    z-index: 999;
+}
+
+.nav-fixed {
+    position: fixed;
 }
 
 .nav-inner {
@@ -45,7 +51,7 @@
         width: 100%;
         height: 5px;
         position: absolute;
-        bottom: -17px;
+        bottom: 0;
         left: 0;
         background-color: $secondary-color;
     }
@@ -107,8 +113,8 @@
 // Nav mobile
 .nav-mobile {
     display: none;
-    position: fixed;
     width: 100vw;
+    background-color: $text-light;
     z-index: 999;
 }
 
