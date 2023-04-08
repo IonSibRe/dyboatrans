@@ -1,5 +1,5 @@
 <x-layout>
-    <section class="home-header">
+    <header class="home-header">
         <div class="home-header-showcase-wrap">
             <div class="home-header-showcase">
                 <div class="home-header-showcase-slide current">
@@ -124,7 +124,82 @@
                     <p class="home-header-info-side-wrap-item-text">ANGLICKY MLUVÍCÍ ŘIDIČI</p>
                 </div>
             </div>
-
+        </div>
+    </header>
+    <section>
+        <div class="home-vehicle-showcase">
+            <h1 class="home-vehicle-showcase-title">Vozový park</h1>
+            <div class="home-vehicle-showcase-wrap">
+                <div class="home-vehicle-showcase-inner">
+                    <div class="home-vehicle-showcase-slide vehicle-current">
+                        <div class="home-vehicle-showcase-slide-content">
+                            <div class="home-vehicle-showcase-slide-content-img-wrap">
+                                <img src="{{" imgs/home/vehicle-slideshow-bus.png"}}" alt="Vehicle Showcase Img"
+                                    class="home-vehicle-showcase-slide-content-img">
+                            </div>
+                            <div class="home-vehicle-showcase-slide-content-text-wrap">
+                                <div class="home-vehicle-showcase-slide-content-inner-text-wrap">
+                                    <h2 class="home-vehicle-showcase-slide-content-title">Náhodný autobus 88</h2>
+                                    <div class="home-vehicle-showcase-slide-icons-wrap">
+                                        <div class="home-vehicle-showcase-slide-row"></div>
+                                        <img src="{{" imgs/home/tv-icon.png"}}" alt="Vehicle Slide Icon"
+                                            class="home-vehicle-showcase-slide-icon">
+                                        <img src="{{" imgs/home/wifi-icon.png"}}" alt="Vehicle Slide Icon"
+                                            class="home-vehicle-showcase-slide-icon">
+                                        <img src="{{" imgs/home/toilet-paper-icon.png"}}" alt="Vehicle Slide Icon"
+                                            class="home-vehicle-showcase-slide-icon">
+                                        <img src="{{" imgs/home/gps-icon.png"}}" alt="Vehicle Slide Icon"
+                                            class="home-vehicle-showcase-slide-icon">
+                                        <img src="{{" imgs/home/usb-icon.png"}}" alt="Vehicle Slide Icon"
+                                            class="home-vehicle-showcase-slide-icon">
+                                        <img src="{{" imgs/home/coffee-icon.png"}}" alt="Vehicle Slide Icon"
+                                            class="home-vehicle-showcase-slide-icon">
+                                        <img src="{{" imgs/home/seat-icon.png"}}" alt="Vehicle Slide Icon"
+                                            class="home-vehicle-showcase-slide-icon">
+                                    </div>
+                                    <p class="home-vehicle-showcase-slide-content-text">
+                                        INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ. INFORMACE O AUTOBUSU, SKVĚLÝ,
+                                        PROSTORNÝ,
+                                        VELKÝ. INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ. INFORMACE O AUTOBUSU,
+                                        SKVĚLÝ,
+                                        PROSTORNÝ, VELKÝ. INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ. INFORMACE O
+                                        AUTOBUSU,
+                                        SKVĚLÝ, PROSTORNÝ, VELKÝ. INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ.
+                                    </p>
+                                    <div class="home-vehicle-showcase-slide-content-sm-imgs-wrap">
+                                        <img src="{{" imgs/home/vehicle-slideshow-sm-bus.png"}}"
+                                            alt="Vehicle Slide SM Image"
+                                            class="home-vehicle-showcase-slide-content-sm-img">
+                                        <img src="{{" imgs/home/vehicle-slideshow-sm-bus.png"}}"
+                                            alt="Vehicle Slide SM Image"
+                                            class="home-vehicle-showcase-slide-content-sm-img">
+                                        <img src="{{" imgs/home/vehicle-slideshow-sm-bus.png"}}"
+                                            alt="Vehicle Slide SM Image"
+                                            class="home-vehicle-showcase-slide-content-sm-img">
+                                        <img src="{{" imgs/home/vehicle-slideshow-sm-bus.png"}}"
+                                            alt="Vehicle Slide SM Image"
+                                            class="home-vehicle-showcase-slide-content-sm-img">
+                                    </div>
+                                    <a href="" class="home-vehicle-showcase-slide-content-btn">
+                                        <i class="fa-solid fa-circle-info"></i>
+                                        více informací
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="home-vehicle-showcase-btns">
+                    <button id="home-vehicle-showcase-btns-prev">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button id="home-vehicle-showcase-btns-next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <img src="{{" imgs/home/vehicle-slideshow-wave.png"}}" alt="Vehicle Slideshow Wave"
+                class="home-vehicle-showcase-wave">
         </div>
     </section>
 </x-layout>
