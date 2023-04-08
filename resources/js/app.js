@@ -37,9 +37,6 @@ const slides = document.querySelectorAll(".home-header-showcase-slide");
 const dots = document.querySelectorAll(".home-header-showcase-dot");
 const next = document.querySelector("#home-header-showcase-btns-next");
 const prev = document.querySelector("#home-header-showcase-btns-prev");
-const auto = false; // Auto scroll
-const intervalTime = 5000;
-let slideInterval;
 
 const nextSlide = () => {
     // Get current class
@@ -98,26 +95,56 @@ const prevSlide = () => {
 };
 
 // Button events
-next.addEventListener("click", (e) => {
-    nextSlide();
-    if (auto) {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, intervalTime);
-    }
-});
-
-prev.addEventListener("click", (e) => {
-    prevSlide();
-    if (auto) {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, intervalTime);
-    }
-});
-
-// Auto slide
-if (auto) {
-    // Run next slide at interval time
-    slideInterval = setInterval(nextSlide, intervalTime);
-}
+next.addEventListener("click", nextSlide);
+prev.addEventListener("click", prevSlide);
 
 // ========================= Vehicle Slideshow =========================
+const vehicleSlides = document.querySelectorAll(".home-vehicle-showcase-slide");
+const vehiclePrev = document.querySelector("#home-vehicle-showcase-btns-prev");
+const vehicleNext = document.querySelector("#home-vehicle-showcase-btns-next");
+const vehicleMobilePrev = document.querySelector(
+    "#home-vehicle-showcase-mobile-btns-prev"
+);
+const vehicleMobileNext = document.querySelector(
+    "#home-vehicle-showcase-mobile-btns-next"
+);
+
+const vehicleNextSlide = () => {
+    const vehicleCurrent = document.querySelector(".vehicle-current");
+    vehicleCurrent.classList.remove("vehicle-current");
+
+    if (vehicleCurrent.nextElementSibling) {
+        vehicleCurrent.nextElementSibling.classList.add("vehicle-current");
+    } else {
+        vehicleSlides[0].classList.add("vehicle-current");
+    }
+
+    setTimeout(() => {
+        vehicleCurrent.classList.remove("vehicle-current");
+    });
+};
+
+const vehiclePrevSlide = () => {
+    const vehicleCurrent = document.querySelector(".vehicle-current");
+    vehicleCurrent.classList.remove("vehicle-current");
+
+    if (vehicleCurrent.previousElementSibling) {
+        vehicleCurrent.previousElementSibling.classList.add("vehicle-current");
+    } else {
+        vehicleSlides[vehicleSlides.length - 1].classList.add(
+            "vehicle-current"
+        );
+    }
+
+    setTimeout(() => {
+        vehicleCurrent.classList.remove("vehicle-current");
+    });
+};
+
+vehiclePrev.addEventListener("click", vehiclePrevSlide);
+vehicleNext.addEventListener("click", vehicleNextSlide);
+vehicleMobilePrev.addEventListener("click", () => {
+    console.log("click");
+    vehiclePrevSlide();
+});
+vehicleMobileNext.addEventListener("click", vehicleNextSlide);

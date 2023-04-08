@@ -199,12 +199,31 @@
 }
 
 // ====================== Vozovy park ======================
-.home-vehicle-showcase-wrap {
+.home-vehicle-showcase {
     position: relative;
 }
 
+.home-vehicle-showcase-wrap {
+    position: relative;
+    padding: 40px 0 80px 0;
+}
+
+.home-vehicle-showcase-inner {
+    position: relative;
+    height: 625px;
+}
+
+#home-vehicle-showcase-mobile-btns-prev,
+#home-vehicle-showcase-mobile-btns-next {
+    display: none;
+}
+
+.home-vehicle-showcase-mobile-btns-title {
+    display: none;
+}
+
 .home-vehicle-showcase-title {
-    margin: 40px 0 80px 0;
+    margin: 40px 0 0 0;
     display: inline-block;
     padding: 20px;
     position: relative;
@@ -218,17 +237,38 @@
     border-radius: 10px;
 }
 
+.home-vehicle-showcase-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity ease-in-out 0.4s;
+}
+
+.home-vehicle-showcase-slide.vehicle-current {
+    opacity: 1;
+}
+
 .home-vehicle-showcase-slide-content {
     display: flex;
 
     .home-vehicle-showcase-slide-content-img-wrap {
         flex: 1;
+
+        & > img {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
 
     .home-vehicle-showcase-slide-content-text-wrap {
         flex: 1;
         display: flex;
         align-items: center;
+        padding: 20px;
     }
 
     .home-vehicle-showcase-slide-content-title {
@@ -292,34 +332,54 @@
     }
 }
 
-.home-vehicle-showcase-btns {
+#home-vehicle-showcase-btns-prev {
+    font-size: 60px;
     position: absolute;
     top: 50%;
     left: 20px;
-    transform: translateX(-50%);
+    transform: translateY(-50%);
+}
 
-    #home-vehicle-showcase-btns-prev {
-        position: absolute;
-        left: 20px;
-    }
-
-    #home-vehicle-showcase-btns-next {
-        position: absolute;
-    }
+#home-vehicle-showcase-btns-next {
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
 }
 
 .home-vehicle-showcase-wave {
-    display: none;
+    position: absolute;
+    bottom: -35px;
+    left: -60px;
+    width: 500px;
 }
 
 @media screen and (max-width: 1400px) {
+    // Header Info
     .home-header .home-header-info-main-wrap .home-header-info-desc-wrap {
+        width: 100%;
+    }
+
+    // Vehicle Showcase
+    .home-vehicle-showcase-title {
+        font-size: 50px;
+    }
+
+    .home-vehicle-showcase-slide-content
+        .home-vehicle-showcase-slide-content-title {
+        font-size: 45px;
+    }
+
+    .home-vehicle-showcase-slide-content
+        .home-vehicle-showcase-slide-content-text {
+        font-size: 20px;
         width: 100%;
     }
 }
 
 @media screen and (max-width: 1100px) {
-    // Info
+    // Header Info
     .home-header .home-header-info-main-wrap {
         flex: 3;
     }
@@ -364,10 +424,38 @@
         .home-header-info-side-wrap-item-text {
         font-size: 22px;
     }
+
+    // Vehicle Slideshow
+    .home-vehicle-showcase-wrap {
+        padding: 0 0 80px 0;
+    }
+
+    .home-vehicle-showcase-inner {
+        height: 950px;
+    }
+
+    .home-vehicle-showcase-slide-content {
+        flex-direction: column;
+    }
+
+    .home-vehicle-showcase-slide-content
+        .home-vehicle-showcase-slide-content-img-wrap
+        > img {
+        width: 600px;
+        top: 0;
+        transform: translateY(0);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #home-vehicle-showcase-btns-prev,
+    #home-vehicle-showcase-btns-next {
+        top: 25%;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    // Slideshow
+    // Header Slideshow
     .home-header .home-header-showcase-slide:first-child {
         background: url("../../../public/imgs/home/slideshow-mobile-img-1.png")
             no-repeat center center/cover;
@@ -410,7 +498,7 @@
         font-size: 16px;
     }
 
-    // Info
+    // Header Info
     .home-header .home-header-info {
         flex-direction: column;
     }
@@ -418,10 +506,69 @@
     .home-header .home-header-info-main-wrap {
         margin-right: 0;
     }
+
+    // Vehicle Slideshow
+    .home-vehicle-showcase-inner {
+        height: 1100px;
+    }
+
+    .home-vehicle-showcase-title {
+        margin: 50px 0 0 0;
+        font-size: 50px;
+    }
+
+    .home-vehicle-showcase-slide-content
+        .home-vehicle-showcase-slide-content-img-wrap
+        > img {
+        width: 100%;
+    }
+
+    .home-vehicle-showcase-wave {
+        display: none;
+    }
+
+    .home-vehicle-showcase-slide-content .home-vehicle-showcase-slide-row {
+        display: none;
+    }
+
+    #home-vehicle-showcase-btns-prev,
+    #home-vehicle-showcase-btns-next {
+        display: none;
+    }
+
+    #home-vehicle-showcase-mobile-btns-prev,
+    #home-vehicle-showcase-mobile-btns-next {
+        display: block;
+        font-size: 50px;
+    }
+
+    .home-vehicle-showcase-mobile-btns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    #home-vehicle-showcase-mobile-btns-prev {
+        margin-left: 10px;
+    }
+
+    #home-vehicle-showcase-mobile-btns-next {
+        margin-right: 10px;
+    }
+
+    .home-vehicle-showcase-mobile-btns-title {
+        display: block;
+        position: relative;
+        top: -2px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 30px;
+    }
 }
 
 @media screen and (max-width: 425px) {
-    // Slideshow
+    // Header Slideshow
     .home-header
         .home-header-showcase-slide-content
         .home-header-showcase-slide-title {
@@ -436,7 +583,7 @@
         font-size: 14px;
     }
 
-    // Info
+    // Header Info
     .home-header .home-header-info-main-wrap .home-header-info-title-wrap {
         text-align: center;
     }
@@ -482,5 +629,42 @@
         .home-header-info-side-wrap-item-icon {
         margin-right: 20px;
         width: 55px;
+    }
+
+    // Vehicle Slideshow
+    .home-vehicle-showcase-wrap {
+        padding: 0;
+    }
+
+    .home-vehicle-showcase-title {
+        font-size: 40px;
+    }
+
+    .home-vehicle-showcase-slide-content
+        .home-vehicle-showcase-slide-content-title {
+        font-size: 35px;
+    }
+
+    .home-vehicle-showcase-slide-content
+        .home-vehicle-showcase-slide-content-text {
+        font-size: 18px;
+    }
+
+    .home-vehicle-showcase-slide-content
+        .home-vehicle-showcase-slide-content-sm-img {
+        width: 100px;
+    }
+
+    #home-vehicle-showcase-mobile-btns-prev,
+    #home-vehicle-showcase-mobile-btns-next {
+        display: block;
+        font-size: 40px;
+    }
+
+    .home-vehicle-showcase-mobile-btns-title {
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 22px;
     }
 }

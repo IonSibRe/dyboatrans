@@ -112,7 +112,7 @@
 
 // Nav mobile
 .nav-mobile {
-    display: none;
+    display: none !important;
     width: 100vw;
     background-color: $text-light;
     z-index: 999;
