@@ -1,4 +1,5 @@
 <x-layout>
+    {{-- ================== Header ================== --}}
     <header class="home-header">
         <div class="home-header-showcase-wrap">
             <div class="home-header-showcase">
@@ -126,6 +127,7 @@
             </div>
         </div>
     </header>
+    {{-- ================== Vehicle Showcase ================== --}}
     <section>
         <div class="home-vehicle-showcase">
             <h1 class="home-vehicle-showcase-title">Vozový park</h1>
@@ -326,6 +328,69 @@
             </div>
             <img src="{{" imgs/home/vehicle-slideshow-wave.png"}}" alt="Vehicle Slideshow Wave"
                 class="home-vehicle-showcase-wave">
+        </div>
+    </section>
+    {{-- ================== Trips ================== --}}
+    <section class="home-trips">
+        <div class="home-trips-inner">
+            <div class="home-trips-text-wrap">
+                <div class="home-trips-text-inner-wrap">
+                    <h1 class="home-trips-title">Nabídka zájezdů</h1>
+                    <p class="home-trips-text">Aktuální nabídku zájezdů najdete také na našich sociálních sítích.</p>
+                </div>
+                <div class="home-trips-text-inner-wrap">
+                    <a href="" class="home-trips-btn">
+                        <i class="fa-solid fa-city"></i>
+                        Všechny zájezdy
+                    </a>
+                </div>
+            </div>
+            <div class="home-trips-cards-wrap">
+                <div class="home-trips-card">
+                    <div class="home-trips-card-img-wrap">
+                        <img src="{{" imgs/home/trips-img.png"}}" alt="Trips Img" class="home-trips-card-img">
+                    </div>
+                    <div class="home-trips-card-text-wrap">
+                        <h3 class="home-trips-card-title">Adventní krakow</h3>
+                        <h4 class="home-trips-card-date">17.12.2022</h4>
+                        <div class="home-trips-card-row"></div>
+                        <p class="home-trips-card-text">Vychutnejte si advent v Krakově, polském královském městě!</p>
+                    </div>
+                </div>
+                <div class="home-trips-card">
+                    <div class="home-trips-card-img-wrap">
+                        <img src="{{" imgs/home/trips-img.png"}}" alt="Trips Img" class="home-trips-card-img">
+                    </div>
+                    <div class="home-trips-card-text-wrap">
+                        <h3 class="home-trips-card-title">Adventní krakow</h3>
+                        <h4 class="home-trips-card-date">17.12.2022</h4>
+                        <div class="home-trips-card-row"></div>
+                        <p class="home-trips-card-text">Vychutnejte si advent v Krakově, polském královském městě!</p>
+                    </div>
+                </div>
+                <div class="home-trips-card">
+                    <div class="home-trips-card-img-wrap">
+                        <img src="{{" imgs/home/trips-img.png"}}" alt="Trips Img" class="home-trips-card-img">
+                    </div>
+                    <div class="home-trips-card-text-wrap">
+                        <h3 class="home-trips-card-title">Adventní krakow</h3>
+                        <h4 class="home-trips-card-date">17.12.2022</h4>
+                        <div class="home-trips-card-row"></div>
+                        <p class="home-trips-card-text">Vychutnejte si advent v Krakově, polském královském městě!</p>
+                    </div>
+                </div>
+                <div class="home-trips-card">
+                    <div class="home-trips-card-img-wrap">
+                        <img src="{{" imgs/home/trips-img.png"}}" alt="Trips Img" class="home-trips-card-img">
+                    </div>
+                    <div class="home-trips-card-text-wrap">
+                        <h3 class="home-trips-card-title">Adventní krakow</h3>
+                        <h4 class="home-trips-card-date">17.12.2022</h4>
+                        <div class="home-trips-card-row"></div>
+                        <p class="home-trips-card-text">Vychutnejte si advent v Krakově, polském královském městě!</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </x-layout>

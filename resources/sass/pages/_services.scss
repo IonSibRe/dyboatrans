@@ -1,0 +1,218 @@
+// ====================== Header ======================
+.svc-header {
+    height: 70vh;
+    width: 100vw;
+    background: url("../../../public/imgs/services/services-header-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    position: relative;
+}
+
+.svc-header-content {
+    width: 600px;
+    margin: 0 80px;
+    position: absolute;
+    bottom: 60px;
+
+    .svc-header-title {
+        margin-bottom: 5px;
+        font-size: 80px;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: $text-light;
+    }
+
+    .svc-header-row {
+        height: 10px;
+        width: 250px;
+        margin-bottom: 10px;
+        background-color: $text-light;
+    }
+
+    .svc-header-text {
+        font-size: 24px;
+        font-weight: 500;
+        color: $text-light;
+    }
+}
+
+.svc-header-scrolldown {
+    display: none;
+    font-size: 60px;
+    color: $text-light;
+}
+
+// ====================== Cards ======================
+.svc-cards-wrap {
+    padding: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 70px;
+    background-color: #f2f2f2;
+}
+
+.svc-card {
+    background-color: $text-light;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+.svc-card-img-wrap {
+    padding: 25px 20px;
+}
+
+.svc-card-title {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: $primary-color;
+    color: $text-light;
+}
+
+.svc-card-text {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: $secondary-color;
+}
+
+// ====================== Info ======================
+.svc-info-inner-wrap {
+    padding: 60px 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.svc-info-vehicle-wrap {
+    margin-right: 50px;
+}
+
+.svc-info-title {
+    margin-bottom: 30px;
+    font-size: 48px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.svc-info-text {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.svc-info-lower-text {
+    padding: 0 80px 60px 80px;
+    font-size: 24px;
+    font-weight: 500;
+    color: $secondary-color;
+}
+
+@media screen and (max-width: 1100px) {
+    // Cards
+    .svc-cards-wrap {
+        grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+    }
+
+    .svc-card-title {
+        font-size: 22px;
+    }
+
+    // Info
+    .svc-info-inner-wrap {
+        flex-direction: column;
+    }
+
+    .svc-info-vehicle-wrap {
+        margin: 0 0 30px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    // Header
+    .svc-header-content {
+        width: 90%;
+        margin: 0;
+        bottom: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .svc-header-scrolldown {
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    // Cards
+    .svc-cards-wrap {
+        padding: 40px;
+    }
+
+    // Info
+    .svc-info-inner-wrap {
+        padding: 60px 40px;
+    }
+
+    .svc-info-lower-text {
+        padding: 0 40px 60px 40px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    // Header
+    .svc-header-content .svc-header-title {
+        font-size: 60px;
+    }
+
+    .svc-header-content .svc-header-row {
+        width: 220px;
+    }
+
+    .svc-header-content .svc-header-text {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    // Cards
+    .svc-cards-wrap {
+        gap: 40px;
+        padding: 20px;
+    }
+
+    .svc-card-title {
+        font-size: 20px;
+    }
+
+    .svc-card-text {
+        font-size: 18px;
+    }
+
+    // Info
+    .svc-info-inner-wrap {
+        padding: 60px 20px;
+    }
+
+    .svc-info-title {
+        font-size: 40px;
+    }
+
+    .svc-info-text {
+        font-size: 20px;
+    }
+
+    .svc-info-lower-text {
+        padding: 0 20px 60px 20px;
+        font-size: 20px;
+    }
+}

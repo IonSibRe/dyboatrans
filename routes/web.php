@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::view('/', "index");
+Route::view("/services", "services");
+Route::view("/vehicles", "vehicles");
+Route::view("/trips", "trips");
+Route::view("/contact", "contact");

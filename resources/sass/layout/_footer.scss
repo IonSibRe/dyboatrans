@@ -1,0 +1,205 @@
+.footer {
+    background: url("../../../public/imgs/footer/footer-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 80px;
+}
+
+.footer-item {
+    margin: 30px;
+}
+
+.footer-logo {
+    width: 480px;
+    margin-bottom: 30px;
+}
+
+.footer-info-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 700;
+    color: $text-light;
+
+    .footer-info-icon {
+        width: 45px;
+        margin-right: 30px;
+    }
+}
+
+.footer-links-title {
+    margin-bottom: 30px;
+    font-size: 38px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $text-light;
+}
+
+.footer-link {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $text-light;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+.footer-opening-title {
+    font-size: 31px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $text-light;
+}
+
+.footer-opening-subtitle {
+    font-size: 26px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $text-light;
+}
+
+.footer-opening-days {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 21px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $text-light;
+
+    .footer-opening-days-icon {
+        width: 35px;
+        margin-right: 20px;
+    }
+}
+
+.footer-opening-times-wrap {
+    margin-top: 20px;
+    display: flex;
+
+    .footer-opening-times-icon-wrap {
+        margin-right: 20px;
+    }
+
+    .footer-opening-times-text {
+        font-size: 21px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $text-light;
+    }
+
+    .footer-opening-times-icon {
+        width: 35px;
+    }
+}
+
+.footer-wave {
+    width: 850px;
+    position: absolute;
+    right: 100px;
+    bottom: -140px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-inner {
+        padding: 40px;
+    }
+
+    .footer-logo {
+        width: 300px;
+    }
+
+    .footer-info-text {
+        font-size: 22px;
+    }
+
+    .footer-info-text .footer-info-icon {
+        width: 30px;
+    }
+
+    .footer-links-title {
+        font-size: 32px;
+    }
+
+    .footer-link {
+        font-size: 22px;
+    }
+
+    .footer-wave {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .footer-inner {
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .footer-item {
+        width: 95%;
+    }
+
+    .footer-item:first-child {
+        text-align: center;
+    }
+
+    .footer-info-text {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-item:nth-child(2) {
+        text-align: center;
+    }
+
+    .footer-item:last-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-opening-title {
+        text-align: center;
+    }
+
+    .footer-opening-subtitle {
+        text-align: center;
+    }
+
+    .footer-opening-days {
+        position: relative;
+        left: 10px;
+    }
+
+    .footer-info-text .footer-info-icon {
+        margin-right: 15px;
+    }
+
+    .footer-logo {
+        width: 250px;
+    }
+
+    .footer-links-title {
+        font-size: 32px;
+    }
+
+    .footer-link {
+        font-size: 22px;
+    }
+}

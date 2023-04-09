@@ -1,7 +1,8 @@
 .nav {
     width: 100vw;
     background-color: $text-light;
-    z-index: 999;
+    z-index: 9999;
+    display: none;
 }
 
 .nav-fixed {
@@ -112,10 +113,10 @@
 
 // Nav mobile
 .nav-mobile {
-    display: none !important;
+    display: none;
     width: 100vw;
     background-color: $text-light;
-    z-index: 999;
+    z-index: 9999;
 }
 
 .nav-mobile-inner {

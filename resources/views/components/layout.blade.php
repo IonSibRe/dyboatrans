@@ -21,11 +21,11 @@
                 <img src="{{" imgs/nav/nav-logo.svg"}}" alt="Nav Logo" class="nav-logo">
             </div>
             <div class="nav-links-wrap">
-                <a href="" class="nav-link nav-link-active">úvod</a>
-                <a href="" class="nav-link">služby</a>
-                <a href="" class="nav-link">vozový park</a>
-                <a href="" class="nav-link">zájezdy</a>
-                <a href="" class="nav-link">kontakt</a>
+                <a href="/" class="nav-link nav-link-active">úvod</a>
+                <a href="/services" class="nav-link">služby</a>
+                <a href="/vehicles" class="nav-link">vozový park</a>
+                <a href="/trips" class="nav-link">zájezdy</a>
+                <a href="/contact" class="nav-link">kontakt</a>
             </div>
             <div class="nav-info-wrap">
                 <a href="" class="nav-info-order-btn">
@@ -89,6 +89,69 @@
     <main>
         {{$slot}}
     </main>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-item">
+                <img src="{{" imgs/footer/footer-logo-bus.png"}}" alt="Footer Logo" class="footer-logo">
+                <p class="footer-info-text">
+                    <img src="{{" imgs/footer/footer-phone.png"}}" alt="Footer Phone" class="footer-info-icon">
+                    +420 722 604 746
+                </p>
+                <p class="footer-info-text">
+                    <img src="{{" imgs/footer/footer-email.png"}}" alt="Footer Email" class="footer-info-icon">
+                    dyboatrans@email.cz
+                </p>
+            </div>
+            <div class="footer-item">
+                <h3 class="footer-links-title">Stránky</h3>
+                <a href="" class="footer-link">
+                    <i class="fa-solid fa-angle-right"></i>
+                    domů
+                </a>
+                <a href="" class="footer-link">
+                    <i class="fa-solid fa-angle-right"></i>
+                    služby
+                </a>
+                <a href="" class="footer-link">
+                    <i class="fa-solid fa-angle-right"></i>
+                    kontakt
+                </a>
+                <a href="" class="footer-link">
+                    <i class="fa-solid fa-angle-right"></i>
+                    vozový park
+                </a>
+                <a href="" class="footer-link">
+                    <i class="fa-solid fa-angle-right"></i>
+                    zájezdy
+                </a>
+            </div>
+            <div class="footer-item">
+                <h3 class="footer-opening-title">Otevírací doba</h3>
+                <h4 class="footer-opening-subtitle">Na objednání</h4>
+                <p class="footer-opening-days">
+                    <img src="{{" imgs/footer/footer-calendar.png"}}" alt="Footer Calendar"
+                        class="footer-opening-days-icon">
+                    Pondělí - Neděle
+                </p>
+                <div class="footer-opening-times-wrap">
+                    <div class="footer-opening-times-icon-wrap">
+                        <img src="{{" imgs/footer/footer-clock.png"}}" alt="Footer Clock"
+                            class="footer-opening-times-icon">
+                    </div>
+                    <div class="footer-opening-times-text-wrap">
+                        <p class="footer-opening-times-text">PO: 17:00 - 22:00</p>
+                        <p class="footer-opening-times-text">ÚT: 17:00 - 22:00</p>
+                        <p class="footer-opening-times-text">ST: 17:00 - 22:00</p>
+                        <p class="footer-opening-times-text">ČT: 17:00 - 22:00</p>
+                        <p class="footer-opening-times-text">PÁ: 17:00 - 22:00</p>
+                        <p class="footer-opening-times-text">SO: 9:00 - 22:00</p>
+                        <p class="footer-opening-times-text">NE: 9:00 - 22:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="{{" imgs/footer/footer-wave.png"}}" alt="Footer Wave" class="footer-wave">
+    </footer>
 </body>
 
 </html>
