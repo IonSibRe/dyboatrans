@@ -1,5 +1,43 @@
 import "./bootstrap";
 
+// ========================= Change Navbar Active Link =========================
+const navLinks = document.querySelectorAll(".nav-link");
+
+navLinks.forEach((link) => {
+    if (link.classList.contains("nav-link-active")) {
+        link.classList.remove("nav-link-active");
+    }
+
+    if (
+        "/" +
+            window.location.href.split("/")[
+                window.location.href.split("/").length - 1
+            ] ===
+        link.getAttribute("href")
+    ) {
+        link.classList.add("nav-link-active");
+    }
+});
+
+// ========================= Change Mobile Navbar Active Link =========================
+const navMobileLinks = document.querySelectorAll(".nav-mobile-link");
+
+navMobileLinks.forEach((link) => {
+    if (link.classList.contains("nav-mobile-link-active")) {
+        link.classList.remove("nav-mobile-link-active");
+    }
+
+    if (
+        "/" +
+            window.location.href.split("/")[
+                window.location.href.split("/").length - 1
+            ] ===
+        link.getAttribute("href")
+    ) {
+        link.classList.add("nav-mobile-link-active");
+    }
+});
+
 // ========================= Mobile Navbar =========================
 const barsBtn = document.querySelector(".nav-mobile-bars-btn");
 const navbarMobileItemWrap = document.querySelector(".nav-mobile-item-wrap");

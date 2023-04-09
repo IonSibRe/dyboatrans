@@ -2,7 +2,7 @@
 .svc-header {
     height: 70vh;
     width: 100vw;
-    background: url("../../../public/imgs/services/services-header-bg.jpg");
+    background: url("../../../public/imgs/services/services-header-bg.png");
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
@@ -92,10 +92,21 @@
 }
 
 .svc-info-title {
+    display: flex;
+    align-items: center;
     margin-bottom: 30px;
     font-size: 48px;
     font-weight: 800;
     text-transform: uppercase;
+
+    & > img {
+        margin-left: 20px;
+        width: 70px;
+    }
+
+    .svc-info-title-person-icon {
+        width: 50px;
+    }
 }
 
 .svc-info-text {

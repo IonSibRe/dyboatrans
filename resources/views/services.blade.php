@@ -53,7 +53,10 @@
     <section class="svc-info-wrap">
         <div class="svc-info-inner-wrap">
             <div class="svc-info-vehicle-wrap">
-                <h2 class="svc-info-title">Naše vozidla</h2>
+                <h2 class="svc-info-title">
+                    Naše vozidla
+                    <img src="{{" imgs/services/svc-car-icon.svg"}}" alt="Services Info Car">
+                </h2>
                 <p class="svc-info-text">- Plně vybavené zájezdové autobusy a minibusy s kapacitou 3 - 53 míst</p>
                 <p class="svc-info-text">- Povínná rehistrace plátce obratové daně v SRN, Rakousku, Polsku, Chorvatsku a
                     Slovinsku</p>
@@ -63,7 +66,11 @@
                 <p class="svc-info-text">- Pojištění přepravy, autobusů, sedaček co do rozsahu a výše plnění</p>
             </div>
             <div class="svc-info-employee-wrap">
-                <h2 class="svc-info-title">Naši zaměstnanci</h2>
+                <h2 class="svc-info-title">
+                    Naši zaměstnanci
+                    <img src="{{" imgs/services/svc-person-icon.svg"}}" alt="Services Info Person"
+                        class="svc-info-title-person-icon">
+                </h2>
                 <p class="svc-info-text">- Sympatický, milý a ochotný řidič je samozřejmostí</p>
                 <p class="svc-info-text">- Pomoc s uložením zavazadel</p>
                 <p class="svc-info-text">- Zkušenosti dopravce, resp. řidiče s konkrétními destinacemi, trasami přeprav,

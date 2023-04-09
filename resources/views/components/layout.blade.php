@@ -70,19 +70,19 @@
         </div>
         <ul class="nav-mobile-item-wrap">
             <li class="nav-mobile-item">
-                <a href="/" class="nav-mobile-link">Úvod</a>
+                <a href="/" class="nav-mobile-link nav-mobile-link-active">Úvod</a>
             </li>
             <li class="nav-mobile-item">
-                <a href="/games" class="nav-mobile-link">Služby</a>
+                <a href="/services" class="nav-mobile-link">Služby</a>
             </li>
             <li class="nav-mobile-item">
-                <a href="/services" class="nav-mobile-link">Vozový park</a>
+                <a href="/vehicles" class="nav-mobile-link">Vozový park</a>
             </li>
             <li class="nav-mobile-item">
-                <a href="/news" class="nav-mobile-link">Zájezdy</a>
+                <a href="/trips" class="nav-mobile-link">Zájezdy</a>
             </li>
             <li class="nav-mobile-item">
-                <a href="/info" class="nav-mobile-link">Kontakt</a>
+                <a href="/contact" class="nav-mobile-link">Kontakt</a>
             </li>
         </ul>
     </nav>
