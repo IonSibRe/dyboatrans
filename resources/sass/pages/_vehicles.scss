@@ -1,0 +1,132 @@
+// ==================== Header ====================
+.veh-header {
+    height: 90vh;
+    width: 100vw;
+    position: relative;
+    padding: 80px;
+    display: none;
+}
+
+.veh-header-inner {
+    height: 100%;
+    width: 100%;
+    background: url("../../../public/imgs/vehicles/veh-header-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.veh-content {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+
+    .veh-content-title {
+        font-size: 80px;
+        font-weight: 800;
+        text-transform: uppercase;
+
+        & > span {
+            color: $secondary-color;
+        }
+    }
+
+    .veh-content-row {
+        width: 150px;
+        height: 10px;
+        margin: 20px 0;
+        background-color: #000;
+    }
+
+    .veh-content-text {
+        font-size: 24px;
+        font-weight: 500;
+    }
+}
+
+.veh-header-wave {
+    width: 900px;
+    position: absolute;
+    top: 10px;
+    right: -250px;
+}
+
+// ==================== Cards ====================
+.veh-cards-container {
+    padding: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+}
+
+.veh-card {
+    box-shadow: 0px 3px 6px #00000029;
+
+    .veh-card-text-wrap {
+        padding: 20px;
+    }
+
+    .veh-card-title {
+        margin-bottom: 10px;
+        font-size: 31px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .veh-card-text {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .veh-card-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 10px 15px 10px;
+        font-size: 15px;
+        font-weight: 500;
+        text-transform: uppercase;
+        background-color: $primary-color;
+        color: $text-light;
+        border-radius: 5px;
+    }
+
+    .veh-card-btn-icon {
+        width: 20px;
+        margin-right: 5px;
+        position: relative;
+        top: 4px;
+    }
+}
+
+// ==================== Buses ====================
+
+@media screen and (max-width: 1100px) {
+    .veh-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .veh-cards-container {
+        grid-template-columns: 1fr;
+        padding: 40px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .veh-cards-container {
+        padding: 20px;
+    }
+
+    .veh-card .veh-card-title {
+        font-size: 25px;
+    }
+
+    .veh-card .veh-card-text {
+        font-size: 18px;
+    }
+}
