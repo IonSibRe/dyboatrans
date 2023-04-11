@@ -1,14 +1,18 @@
 <x-layout>
     <header class="veh-header">
-        <div class="veh-header-content">
-            <h1 class="veh-header-title">VOZOVÝ <br> <span>PARK</span></h1>
-            <div class="veh-header-row"></div>
-            <p class="veh-header-text">
-                Naše autobusy splňují emisní limity EURO 6, čímž umožňujeme klientům levněji
-                cestovat do zemí, kde jsou tyto normy nutnou podmínkou pro vjezd do některých měst bez dodatkových
-                poplatků jako například Německo nebo Anglie.
-            </p>
-
+        <div class="veh-header-inner-wrap">
+            <div class="veh-header-content">
+                <h1 class="veh-header-title">VOZOVÝ <br> <span>PARK</span></h1>
+                <div class="veh-header-row"></div>
+                <p class="veh-header-text">
+                    Naše autobusy splňují emisní limity EURO 6, čímž umožňujeme klientům levněji
+                    cestovat do zemí, kde jsou tyto normy nutnou podmínkou pro vjezd do některých měst bez dodatkových
+                    poplatků jako například Německo nebo Anglie.
+                </p>
+            </div>
+            <div class="veh-header-img-wrap">
+                <img src="{{" imgs/vehicles/veh-header-img.png"}}" alt="Vehicle Header Image" class="veh-header-img">
+            </div>
         </div>
         {{-- <img src="{{" imgs/vehicles/veh-header-wave.svg"}}" alt="Vehicles Header Wave" class="veh-header-wave">
         --}}

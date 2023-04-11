@@ -1,24 +1,23 @@
 // ==================== Header ====================
 .veh-header {
-    position: relative;
-    top: -50px;
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
-    background: url("../../../public/imgs/vehicles/veh-header-bg-no-text.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    padding: 40px 80px 0 80px;
+}
+
+.veh-header-inner-wrap {
+    display: flex;
 }
 
 .veh-header-content {
+    flex: 2;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    position: relative;
-    width: 600px;
-    top: 150px;
-    left: 7%;
     text-align: right;
+    position: relative;
+    margin-top: 50px;
+    margin-right: 50px;
 }
 
 .veh-header-title {
@@ -41,6 +40,10 @@
 .veh-header-text {
     font-size: 24px;
     font-weight: 500;
+}
+
+.veh-header-img-wrap {
+    flex: 3;
 }
 
 // .veh-header-wave {
@@ -217,6 +220,28 @@
 }
 
 @media screen and (max-width: 1400px) {
+    // Header
+    .veh-header {
+        height: 100%;
+    }
+
+    .veh-header-inner-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .veh-header-content {
+        width: 600px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 0 50px 0;
+    }
+
+    .veh-header-img {
+        width: 600px;
+    }
+
     // Buses
     .veh-buses-upper-wrap {
         flex-direction: column;
@@ -255,6 +280,20 @@
 }
 
 @media screen and (max-width: 768px) {
+    // Header
+    .veh-header {
+        margin-bottom: 80px;
+        padding: 40px 40px 0 40px;
+    }
+
+    .veh-header-content {
+        width: 100%;
+    }
+
+    .veh-header-img {
+        width: 100%;
+    }
+
     // Cards
     .veh-cards-container {
         grid-template-columns: 1fr;
@@ -296,6 +335,19 @@
 }
 
 @media screen and (max-width: 425px) {
+    // Header
+    .veh-header {
+        padding: 40px 20px 0 20px;
+    }
+
+    .veh-header-title {
+        font-size: 60px;
+    }
+
+    .veh-header-text {
+        font-size: 20px;
+    }
+
     // Cards
     .veh-cards-container {
         padding: 20px;
