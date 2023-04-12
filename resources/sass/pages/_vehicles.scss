@@ -3,6 +3,7 @@
     height: 90vh;
     width: 100vw;
     padding: 40px 80px 0 80px;
+    position: relative;
 }
 
 .veh-header-inner-wrap {
@@ -46,12 +47,12 @@
     flex: 3;
 }
 
-// .veh-header-wave {
-//     width: 900px;
-//     position: absolute;
-//     top: 10px;
-//     right: -250px;
-// }
+.veh-header-wave {
+    width: 900px;
+    position: absolute;
+    top: 20px;
+    right: -300px;
+}
 
 // ==================== Cards ====================
 .veh-cards-container {
@@ -240,6 +241,10 @@
 
     .veh-header-img {
         width: 600px;
+    }
+
+    .veh-header-wave {
+        display: none;
     }
 
     // Buses

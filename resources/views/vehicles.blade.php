@@ -14,8 +14,8 @@
                 <img src="{{" imgs/vehicles/veh-header-img.png"}}" alt="Vehicle Header Image" class="veh-header-img">
             </div>
         </div>
-        {{-- <img src="{{" imgs/vehicles/veh-header-wave.svg"}}" alt="Vehicles Header Wave" class="veh-header-wave">
-        --}}
+        <img src="{{" imgs/vehicles/veh-header-wave.svg"}}" alt="Vehicles Header Wave" class="veh-header-wave">
+
     </header>
     <section class="veh-cards-wrap">
         <div class="veh-cards-container">
