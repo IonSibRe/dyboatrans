@@ -1,3 +1,4 @@
+// ==================== Header ====================
 .trips-header {
     background-color: #f2f2f2;
     position: relative;
@@ -64,6 +65,11 @@
             margin-top: 20px;
         }
     }
+
+    .trips-header-img {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
 }
 
 .trips-header-wave {
@@ -73,9 +79,45 @@
     right: -200px;
 }
 
-.trips-header-img {
-    display: inline-block;
-    margin-bottom: 20px;
+// ==================== Cards ====================
+.trips-cards-inner-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 350px);
+    gap: 100px;
+    justify-content: center;
+    padding: 80px;
+
+    .trips-card {
+        width: 350px;
+        box-shadow: 0px 3px 6px #00000029;
+    }
+
+    .trips-card-text-wrap {
+        padding: 20px;
+    }
+
+    .trips-card-title {
+        font-size: 32px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .trips-card-date {
+        font-size: 27px;
+        font-weight: 600;
+    }
+
+    .trips-card-row {
+        height: 6px;
+        width: 200px;
+        margin: 10px 0;
+        background-color: $secondary-color;
+    }
+
+    .trips-card-text {
+        font-size: 18px;
+        font-weight: 500;
+    }
 }
 
 @media screen and (max-width: 1400px) {
@@ -96,6 +138,11 @@
 
     .trips-header-inner .trips-header-img-wrap {
         justify-content: center;
+    }
+
+    // Cards
+    .trips-cards-inner-wrap {
+        gap: 60px;
     }
 }
 
@@ -130,6 +177,12 @@
 
     .trips-header-wave {
         display: none;
+    }
+
+    // Cards
+    .trips-cards-inner-wrap {
+        gap: 50px;
+        padding: 80px 40px;
     }
 }
 
@@ -175,5 +228,27 @@
 
     .trips-header-inner .trips-header-desc {
         font-size: 18px;
+    }
+
+    // Cards
+    .trips-cards-inner-wrap {
+        padding: 80px 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .trips-cards-inner-wrap .trips-card {
+        width: 100%;
+    }
+
+    .trips-cards-inner-wrap .trips-card-title {
+        font-size: 27px;
+    }
+
+    .trips-cards-inner-wrap .trips-card-date {
+        font-size: 23px;
+    }
+
+    .trips-cards-inner-wrap .trips-card-text {
+        font-size: 15px;
     }
 }
