@@ -28,6 +28,22 @@ $text-light: #fff;
     margin: 0 auto;
 }
 
+@mixin con-title {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 10px 15px;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $text-light;
+    background-color: $primary-color;
+
+    & > i {
+        margin-right: 10px;
+        color: $text-light;
+    }
+}
+
 // ====================== Default Resets ======================
 * {
     box-sizing: border-box;

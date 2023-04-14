@@ -1,0 +1,441 @@
+// ==================== Header ====================
+.con-header {
+    height: 90vh;
+    display: flex;
+    position: relative;
+}
+
+.con-header-img-wrap {
+    flex: 1;
+
+    .con-header-img {
+        height: 100%;
+    }
+}
+
+.con-header-text-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    .con-header-text-inner-wrap {
+        padding: 0 80px;
+    }
+
+    .con-header-title {
+        font-size: 80px;
+        font-weight: 800px;
+        text-transform: uppercase;
+    }
+
+    .con-header-row {
+        margin: 20px 0;
+        height: 10px;
+        width: 250px;
+        background-color: $secondary-color;
+    }
+
+    .con-header-text {
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    .con-header-sm-row {
+        height: 3px;
+        width: 100%;
+        margin-top: 30px;
+        background-color: #f0f0f0;
+    }
+}
+
+// ==================== Info ====================
+.con-info-wrap {
+    padding: 80px;
+}
+
+.con-info-text-mb {
+    margin-bottom: 30px;
+}
+
+// Address
+.con-info-address-wrap {
+    display: flex;
+}
+
+.con-info-address-text-wrap {
+    flex: 1.5;
+    margin-right: 50px;
+
+    .con-info-address-title {
+        @include con-title;
+    }
+
+    .con-info-address-text {
+        font-size: 32px;
+        font-weight: 300;
+    }
+
+    .con-info-address-text-bold {
+        font-weight: 700;
+    }
+}
+
+.con-info-address-map-wrap {
+    flex: 2;
+
+    & > iframe {
+        height: 100%;
+        width: 100%;
+        border: none;
+    }
+}
+
+// Order
+.con-info-order-wrap {
+    margin: 80px 0;
+
+    .con-info-order-title {
+        @include con-title;
+    }
+
+    .con-info-order-text {
+        font-size: 32px;
+        font-weight: 400;
+
+        &:first-child {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// Transport
+.con-info-transport-container {
+    display: flex;
+}
+
+.con-info-transport-title-wrap {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 10px 15px;
+    background-color: $primary-color;
+
+    .con-info-transport-title-inner-wrap {
+        display: flex;
+        align-items: center;
+
+        & > i {
+            margin-right: 10px;
+            font-size: 32px;
+            color: $text-light;
+        }
+    }
+}
+
+.con-info-transport-title {
+    @include con-title;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.con-info-transport-text-wrap {
+    flex: 1;
+    margin-right: 50px;
+    position: relative;
+
+    .con-info-transport-text {
+        font-size: 32px;
+        font-weight: 300;
+    }
+
+    .con-info-transport-text-bold {
+        font-weight: 600;
+    }
+
+    .con-info-transport-text-social-icons-wrap {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .con-info-transport-text-social-icon {
+        margin-right: 10px;
+        font-size: 60px;
+        color: $secondary-color;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.con-info-transport-form-wrap {
+    flex: 1;
+
+    // Inputs
+    .con-info-transport-form-inputs-wrap {
+        display: flex;
+    }
+
+    .con-info-transport-form-inputs-inner-wrap {
+        flex: 1;
+        margin-right: 30px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .con-info-transport-form-input-item {
+        margin-bottom: 30px;
+    }
+
+    .con-info-transport-form-label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .con-info-transport-form-input {
+        padding: 10px;
+        font-size: 24px;
+        background-color: #f2f2f2;
+        border: none;
+        outline: none;
+    }
+
+    // Textarea
+    .con-info-transport-form-textarea-wrap {
+        margin-top: 20px;
+    }
+
+    .con-info-transport-form-textarea {
+        height: 150px;
+        width: 100%;
+        padding: 10px;
+        font-size: 24px;
+        background-color: #f2f2f2;
+        resize: none;
+        border: none;
+        outline: none;
+    }
+
+    // Button
+    .con-info-transport-form-btn {
+        margin-top: 60px;
+        padding: 20px 30px;
+        font-size: 26px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $text-light;
+        background-color: $secondary-color;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    // ==================== Info ====================
+    // Transport
+    .con-info-transport-container {
+        flex-direction: column;
+    }
+
+    .con-info-transport-text-wrap {
+        margin-right: 0;
+        width: 900px;
+    }
+
+    .con-info-transport-form-wrap {
+        width: 900px;
+    }
+
+    .con-info-transport-text-wrap .con-info-transport-text-social-icons-wrap {
+        position: relative;
+        margin: 30px 0;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    // ==================== Header ====================
+    .con-header-text-wrap {
+        position: absolute;
+        top: 25vh;
+    }
+
+    .con-header-text-inner-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .con-header-title {
+        color: $text-light;
+    }
+
+    .con-header-text {
+        color: $text-light;
+    }
+
+    .con-header-sm-row {
+        display: none;
+    }
+
+    // ==================== Info ====================
+    .con-info-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // Address
+    .con-info-address-wrap {
+        width: 700px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .con-info-address-text-wrap {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .con-info-address-map-wrap {
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .con-info-address-map-wrap > iframe {
+        height: 300px;
+    }
+
+    // Order
+    .con-info-order-wrap {
+        text-align: center;
+    }
+
+    // Transport
+    .con-info-transport-title-wrap {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .con-info-transport-text-wrap {
+        text-align: center;
+    }
+
+    .con-info-transport-text-wrap {
+        width: 700px;
+    }
+
+    .con-info-transport-form-wrap {
+        width: 700px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    // ==================== Header ====================
+    .con-header-text-wrap .con-header-text-inner-wrap {
+        padding: 0 40px;
+    }
+
+    .con-header-text-wrap .con-header-title {
+        font-size: 63px;
+    }
+
+    .con-header-text-wrap .con-header-row {
+        width: 180px;
+    }
+
+    .con-header-text-wrap .con-header-text {
+        font-size: 20px;
+    }
+
+    // ==================== Info ====================
+    .con-info-wrap {
+        padding: 40px;
+    }
+
+    // Address
+    .con-info-address-wrap {
+        width: 100%;
+    }
+
+    // Transport
+    .con-info-transport-form-wrap .con-info-transport-form-inputs-wrap {
+        flex-direction: column;
+    }
+
+    .con-info-transport-form-wrap .con-info-transport-form-inputs-inner-wrap {
+        margin-right: 0;
+    }
+
+    .con-info-transport-text-wrap {
+        width: 100%;
+    }
+
+    .con-info-transport-form-wrap {
+        width: 100%;
+    }
+
+    .con-info-transport-form-wrap .con-info-transport-form-input {
+        width: 100%;
+    }
+
+    .con-info-transport-title-wrap .con-info-transport-title-inner-wrap > i {
+        margin-right: 20px;
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    // ==================== Header ====================
+    .con-header-text-wrap .con-header-text-inner-wrap {
+        padding: 0 20px;
+    }
+
+    .con-header-text-wrap .con-header-title {
+        font-size: 55px;
+    }
+
+    // ==================== Info ====================
+    // Address
+    .con-info-address-text-wrap .con-info-address-title {
+        font-size: 32px;
+    }
+
+    .con-info-address-text-wrap .con-info-address-text {
+        font-size: 24px;
+    }
+
+    // Order
+    .con-info-order-wrap .con-info-order-title {
+        font-size: 32px;
+    }
+
+    .con-info-order-wrap .con-info-order-text {
+        font-size: 24px;
+    }
+
+    // Transport
+    .con-info-transport-title {
+        font-size: 36px;
+    }
+
+    .con-info-transport-text-wrap .con-info-transport-text {
+        font-size: 24px;
+    }
+
+    .con-info-transport-form-wrap .con-info-transport-form-label {
+        font-size: 24px;
+    }
+
+    .con-info-transport-form-wrap .con-info-transport-form-btn {
+        padding: 15px 20px;
+        font-size: 24px;
+    }
+}
