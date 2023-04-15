@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Trip;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class TripController extends Controller
 {
@@ -42,6 +43,42 @@ class TripController extends Controller
         }
         
         Trip::create($formFields);
+
+        return redirect("/admin/trips");
+    }
+
+    // Update Trip
+    public function update(Request $request, Trip $trip) {
+        $formFields = $request->validate([
+            "name" => "required",
+            "descShort" => "required",
+            "price" => "required",
+            "descLong" => "required",
+            "date" => "required",
+            "departure" => "required",
+            "priceIncludes" => "required",
+            "priceNotIncludes" => "required",
+        ]);
+
+        // Delete dir with imgs
+        Storage::deleteDirectory("public/trips/" . explode("/", $trip->images)[1]);
+
+        $formFields["images"] = "";
+
+        if ($request->hasFile("images")) {
+            $folderName = "";
+
+            foreach ($request->file("images") as $key => $image) {
+                if ($key === array_key_first($request->file("images"))) {
+                    $folderName = uniqid();
+                    $formFields["images"] .= $image->storeAs("trips/" . $folderName, $image->getClientOriginalName(), "public") . ",";
+                } else {
+                    $formFields["images"] .= $image->storeAs("trips/" . $folderName, $image->getClientOriginalName(), "public") . ",";
+                }
+            }
+        }
+
+        $trip->update($formFields);
 
         return redirect("/admin/trips");
     }

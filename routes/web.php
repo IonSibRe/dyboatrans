@@ -44,6 +44,8 @@ Route::get("/admin/trips", [TripController::class, "index"])->middleware("auth")
 // Create a Trip
 Route::post("/trips/store", [TripController::class, "store"])->middleware("auth");
 
+Route::put("/trips/edit/{trip}", [TripController::class, "update"])->middleware("auth");
+
 Route::delete("/trips/{trip}", [TripController::class, "destroy"])->middleware("auth");
 
 // Login 

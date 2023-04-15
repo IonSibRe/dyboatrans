@@ -11,9 +11,18 @@
         background-color: $secondary-color;
     }
 
+    &:nth-child(2) {
+        background-color: $primary-color;
+    }
+
     &:last-child {
         background-color: $primary-color;
     }
+}
+
+// Enable and Disable Forms
+.admin-trips-disable-item {
+    display: none;
 }
 
 // Cards
@@ -33,6 +42,7 @@
 }
 
 .admin-trips-add-card {
+    min-height: 320px;
     background-color: $text-light;
 }
 
@@ -179,6 +189,10 @@
         width: 100%;
         height: 100%;
     }
+}
+
+.admin-trips-form-edit-item-img {
+    display: block !important;
 }
 
 // Image Upload
