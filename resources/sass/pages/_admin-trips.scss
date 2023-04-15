@@ -1,0 +1,244 @@
+.admin-trips-wrap {
+    display: flex;
+    overflow: hidden;
+}
+
+.admin-trips-item {
+    flex: 1;
+    padding: 80px;
+
+    &:first-child {
+        background-color: $secondary-color;
+    }
+
+    &:last-child {
+        background-color: $primary-color;
+    }
+}
+
+// Cards
+.admin-trips-title {
+    margin: 60px 0 30px 0;
+    font-size: 56px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $text-light;
+}
+
+.admin-trips-cards-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 70px;
+    row-gap: 40px;
+}
+
+.admin-trips-add-card {
+    background-color: $text-light;
+}
+
+.admin-trips-card {
+    min-height: 320px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: $text-light;
+    border-radius: 5px;
+
+    .admin-trips-card-img-wrap {
+        flex: 3;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+
+        & > img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .admin-trips-card-text-wrap {
+        flex: 1;
+        padding: 10px 15px;
+    }
+
+    .admin-trips-card-title {
+        font-size: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .admin-trips-card-date {
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .admin-trips-card-row {
+        margin: 10px 0;
+        height: 5px;
+        width: 130px;
+        background-color: $secondary-color;
+    }
+
+    .admin-trips-card-text {
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    .admin-trips-card-btn {
+        position: absolute;
+        top: -18px;
+        font-size: 18px;
+        padding: 8px;
+        border-radius: 50px;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    .admin-trips-card-delete-btn {
+        left: -18px;
+        padding: 8px 10px;
+        color: $text-light;
+        background-color: red;
+    }
+
+    .admin-trips-card-edit-btn {
+        right: -18px;
+        background-color: $text-light;
+    }
+}
+
+// Form
+.admin-trips-form {
+    margin-top: 100px;
+}
+
+.admin-trips-form-container {
+    display: flex;
+}
+
+.admin-trips-form-inner-wrap {
+    flex: 2;
+    margin-right: 30px;
+
+    &:last-child {
+        flex: 1.5;
+        margin-right: 0;
+    }
+}
+
+.admin-trips-form-item {
+    margin-bottom: 20px;
+}
+
+.admin-trips-form-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 700;
+    color: $text-light;
+}
+
+.admin-trips-form-input {
+    width: 100%;
+    padding: 5px;
+    font-size: 22px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.admin-trips-form-textarea {
+    height: 150px;
+    width: 100%;
+    padding: 5px;
+    font-size: 22px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.admin-trips-form-item-img-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.admin-trips-form-item-img-wrap {
+    height: 100px;
+    width: 100px;
+    background-color: $text-light;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+
+    & > img {
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// Image Upload
+.admin-trips-form-img-upload-item {
+    position: relative;
+
+    & > i {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 100px;
+        color: $primary-color;
+    }
+
+    .admin-trips-form-img-input-text {
+        position: absolute;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 22px;
+        font-weight: 700;
+    }
+}
+
+.admin-trips-form-img-input {
+    height: 250px;
+    background-color: $text-light;
+    color: transparent;
+    cursor: pointer;
+
+    &::-webkit-file-upload-button {
+        visibility: hidden;
+    }
+
+    &::before {
+        content: "";
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.admin-trips-form-btn-wrap {
+    text-align: right;
+
+    .admin-trips-form-btn {
+        padding: 10px 20px;
+        font-size: 26px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $text-light;
+        background-color: $secondary-color;
+        border-radius: 5px;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+}

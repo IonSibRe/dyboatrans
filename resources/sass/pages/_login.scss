@@ -1,0 +1,114 @@
+.login-wrap {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary-color;
+}
+
+.admin-trips-add-card {
+    & > i {
+        font-size: 100px;
+        margin-bottom: 10px;
+    }
+
+    .admin-trips-add-card-text {
+        font-size: 18px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.login-card {
+    width: 600px;
+
+    .login-card-title {
+        margin-bottom: 50px;
+        padding: 10px 0;
+        font-size: 42px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        background-color: $text-light;
+        border-radius: 10px;
+    }
+
+    .login-card-form-item {
+        margin-bottom: 30px;
+    }
+
+    .login-card-form-label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 26px;
+        font-weight: 700;
+    }
+
+    .login-card-form-input {
+        width: 100%;
+        font-size: 24px;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+    }
+
+    .login-card-form-btn-wrap {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .login-card-form-btn {
+        padding: 15px 20px;
+        font-size: 28px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $text-light;
+        background-color: $primary-color;
+        border-radius: 10px;
+    }
+
+    .login-card-error-text {
+        margin-top: 10px;
+        font-size: 22px;
+        color: red;
+    }
+}
+
+.login-wave-img {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .login-card {
+        margin: 0 40px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .login-card {
+        margin: 0 20px;
+    }
+
+    .login-card .login-card-title {
+        font-size: 32px;
+    }
+
+    .login-card .login-card-form-label {
+        font-size: 22px;
+    }
+
+    .login-card .login-card-form-input {
+        font-size: 20px;
+    }
+
+    .login-card .login-card-form-btn {
+        font-size: 22px;
+    }
+}

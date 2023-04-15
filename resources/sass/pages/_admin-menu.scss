@@ -1,0 +1,51 @@
+.admin-menu-wrap {
+    display: flex;
+    height: 100vh;
+}
+
+.admin-menu-item {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &:first-child {
+        background-color: $secondary-color;
+    }
+
+    &:last-child {
+        background-color: $primary-color;
+    }
+
+    .admin-menu-text {
+        margin: 0 30px;
+        font-size: 102px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $text-light;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .admin-menu-item .admin-menu-text {
+        font-size: 72px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .admin-menu-wrap {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .admin-menu-item .admin-menu-text {
+        font-size: 56px;
+    }
+}

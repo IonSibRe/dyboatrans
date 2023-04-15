@@ -1,0 +1,23 @@
+.admin-nav {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: $text-light;
+    z-index: 999;
+
+    .admin-nav-logo {
+        width: 250px;
+    }
+
+    .admin-nav-logout-btn {
+        font-size: 30px;
+        color: red;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+}
