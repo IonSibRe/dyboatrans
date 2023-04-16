@@ -1,0 +1,308 @@
+.admin-buses-wrap {
+    display: flex;
+}
+
+.admin-buses-item {
+    flex: 1;
+    padding: 80px 80px 140px 80px;
+    background-color: $primary-color;
+
+    &:first-child {
+        background-color: $secondary-color;
+    }
+}
+
+.admin-buses-title {
+    margin: 80px 0 30px 0;
+    font-size: 72px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $text-light;
+}
+
+.admin-buses-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 70px;
+    row-gap: 40px;
+}
+
+// ========================= Cards =========================
+.admin-buses-add-card {
+    min-height: 200px;
+    background-color: $text-light;
+
+    & > i {
+        font-size: 80px;
+    }
+
+    .admin-buses-add-card-text {
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+}
+
+.admin-buses-card {
+    background-color: $text-light;
+    position: relative;
+    border-radius: 5px;
+}
+
+.admin-buses-card-text-wrap {
+    padding: 30px 10px;
+}
+
+.admin-buses-card-title {
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.admin-buses-card-text {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.admin-buses-card-btn {
+    position: absolute;
+    top: -18px;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 50px;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.admin-buses-card-delete-btn {
+    left: -18px;
+    padding: 8px 10px;
+    color: $text-light;
+    background-color: red;
+}
+
+.admin-buses-card-edit-btn {
+    right: -18px;
+    background-color: $text-light;
+}
+
+// Enable and Disable Forms
+.admin-buses-disable-item {
+    display: none;
+}
+
+// ========================= Form =========================
+.admin-buses-item-form-container {
+    display: flex;
+    margin-top: 110px;
+}
+
+.admin-buses-item-form-inner-wrap {
+    flex: 1;
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.admin-buses-item-form-item {
+    margin-bottom: 20px;
+}
+
+.admin-buses-item-form-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 700;
+    color: $text-light;
+}
+
+.admin-buses-item-form-input {
+    width: 100%;
+    padding: 5px;
+    font-size: 22px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.admin-buses-item-form-textarea {
+    height: 150px;
+    width: 100%;
+    padding: 5px;
+    font-size: 22px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.admin-buses-item-form-preview-imgs-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.admin-buses-item-form-preview-img-item {
+    height: 100px;
+    width: 100px;
+    background-color: $text-light;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+
+    & > img {
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// Icons Select
+.admin-buses-item-form-icon-select-wrap {
+    flex: 2;
+    margin-bottom: 30px;
+}
+
+.admin-buses-item-form-icon-select-card {
+    height: 320px;
+    background-color: $text-light;
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+
+.admin-buses-item-form-icon-select-header {
+    background-color: $secondary-color;
+    display: flex;
+}
+
+.admin-buses-item-form-icon-select-header-text {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 10px 20px;
+
+    &:first-child {
+        flex: 1;
+    }
+
+    &:last-child {
+        flex: 3;
+    }
+}
+
+.admin-buses-item-form-icon-select-item {
+    height: 70px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    transition: 0.1s all ease-in-out;
+    cursor: pointer;
+
+    & > * {
+        padding: 5px 20px;
+    }
+
+    &:hover {
+        background-color: #f2f2f2;
+    }
+}
+
+.admin-icon-item-active {
+    background-color: #f2f2f2;
+}
+
+.admin-buses-item-form-icon-select-item-icon-wrap {
+    flex: 1;
+}
+
+.admin-buses-item-form-icon-select-item-icon {
+    height: 40px;
+    width: 40px;
+}
+
+.admin-buses-item-form-icon-select-item-text-wrap {
+    flex: 3;
+}
+
+.admin-buses-item-form-icon-select-item-text {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.admin-buses-item-form-img-upload-wrap {
+    flex: 1.5;
+}
+
+// Image Upload
+.admin-buses-item-form-img-upload-wrap {
+    position: relative;
+
+    & > i {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 100px;
+        color: $primary-color;
+    }
+
+    .admin-buses-item-form-img-upload-text {
+        position: absolute;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 22px;
+        font-weight: 700;
+    }
+}
+
+.admin-buses-item-form-img-input {
+    height: 250px;
+    background-color: $text-light;
+    color: transparent;
+    cursor: pointer;
+
+    &::-webkit-file-upload-button {
+        visibility: hidden;
+    }
+
+    &::before {
+        content: "";
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.admin-buses-form-btn-wrap {
+    margin-top: 30px;
+    text-align: right;
+
+    .admin-buses-form-btn {
+        padding: 10px 20px;
+        font-size: 26px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $text-light;
+        background-color: $secondary-color;
+        border-radius: 5px;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+}
+
+.admin-buses-icons-input {
+    display: none;
+}

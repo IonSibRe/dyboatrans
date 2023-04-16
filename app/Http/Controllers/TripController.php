@@ -61,8 +61,11 @@ class TripController extends Controller
         ]);
 
         // Delete dir with imgs
-        Storage::deleteDirectory("public/trips/" . explode("/", $trip->images)[1]);
+        if ($request->hasFile("images")) {
+            Storage::deleteDirectory("public/trips/" . explode("/", $trip->images)[1]);
+        }
 
+        // Create new dir and store imgs there
         $formFields["images"] = "";
 
         if ($request->hasFile("images")) {
@@ -86,6 +89,8 @@ class TripController extends Controller
     // Delete Trip
     public function destroy(Trip $trip) {
         $trip->delete();
+
+        Storage::deleteDirectory("public/trips/" . explode("/", $trip->images)[1]);
 
         return redirect("/admin/trips");
     }

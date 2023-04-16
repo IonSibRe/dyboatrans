@@ -190,7 +190,7 @@
 
                         <div class="admin-trips-form-item admin-trips-form-img-upload-item">
                             <input type="file" name="images[]" multiple
-                                class="admin-trips-form-input admin-trips-form-img-input">
+                                class="admin-trips-form-input admin-trips-form-img-input admin-trips-form-edit-img-input">
                             <i class="fa-solid fa-cloud-arrow-up"></i>
                             <p class="admin-trips-form-img-input-text">Nahrát fotky</p>
                         </div>
@@ -203,42 +203,19 @@
         </div>
     </section>
     <script>
-        // ========================= Admin Img Preview =========================
-        const imgUploadInput = document.querySelector(".admin-trips-form-img-input");
-        const formImgs = document.querySelectorAll(".admin-trips-form-item-img");
-
-        const setPreviewImgs = () => {
-            console.log("change");
-
-            if (imgUploadInput.files) {
-                const filesAmount = imgUploadInput.files.length;
-
-                for (let i = 0; i < imgUploadInput.files.length; i++) {
-                    const reader = new FileReader();
-
-                    reader.onload = function(e) {
-                        formImgs[i].src = e.target.result;
-                        formImgs[i].style.display = "block";
-                    }
-
-                    reader.readAsDataURL(imgUploadInput.files[i]);
-                }
-            }
-        }
-
-        imgUploadInput.addEventListener("change", setPreviewImgs);
-
         // ========================= Enable and Disable Forms =========================
         const addTripBtn = document.querySelector(".admin-trips-add-card");
         const cardEditBtns = document.querySelectorAll(".admin-trips-card-edit-btn");
         const createForm = document.querySelector(".admin-trips-item-create-form-wrap");
         const editForm = document.querySelector(".admin-trips-item-edit-form-wrap");
 
+        // Display create form
         addTripBtn.addEventListener("click", () => {
             createForm.classList.remove("admin-trips-disable-item");
             editForm.classList.add("admin-trips-disable-item");
         });
 
+        // Display edit form & Insert card data into form
         cardEditBtns.forEach(btn => {
             btn.addEventListener("click", () => {
                 createForm.classList.add("admin-trips-disable-item");
@@ -273,8 +250,31 @@
 
                 previewImages.forEach((img, i) => {
                     img.src = "/storage/" + imgPathArray[i];
-                })  
+                })
             })
         })
+
+        // ========================= Admin Img Preview =========================
+        let imgUploadInput = document.querySelector(".admin-trips-form-img-input");;
+        let formImgs = document.querySelectorAll(".admin-trips-form-item-img");
+
+        const setPreviewImgs = () => {
+            if (imgUploadInput.files) {
+                const filesAmount = imgUploadInput.files.length;
+
+                for (let i = 0; i < imgUploadInput.files.length; i++) {
+                    const reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        formImgs[i].src = e.target.result;
+                        formImgs[i].style.display = "block";
+                    }
+
+                    reader.readAsDataURL(imgUploadInput.files[i]);
+                }
+            }
+        }
+
+        imgUploadInput.addEventListener("change", setPreviewImgs);
     </script>
 </x-admin-layout>

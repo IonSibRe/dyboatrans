@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\TripController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TripController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BusesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +39,7 @@ Route::get("/admin/login", [AdminController::class, "login"])->name("login")->mi
 // Show Admin Menu
 Route::view("/admin/menu", "admin-menu")->middleware("auth");
 
+// ----------- Trips -----------
 // Show Trips Administration
 Route::get("/admin/trips", [TripController::class, "index"])->middleware("auth");
 
@@ -48,6 +50,17 @@ Route::put("/trips/edit/{trip}", [TripController::class, "update"])->middleware(
 
 Route::delete("/trips/{trip}", [TripController::class, "destroy"])->middleware("auth");
 
+// ----------- Buses -----------
+// Show Buses Administration
+Route::get("/admin/buses", [BusesController::class, "index"])->middleware("auth");
+
+Route::post("/buses/store", [BusesController::class, "store"])->middleware("auth");
+
+Route::put("/buses/edit/{bus}", [BusesController::class, "update"])->middleware("auth");
+
+Route::delete("/buses/{bus}", [BusesController::class, "destroy"])->middleware("auth");
+
+// ----------- Auth -----------
 // Login 
 Route::post("/admin/signin", [AdminController::class, "signin"])->middleware("guest");
 
