@@ -1,4 +1,6 @@
 <x-layout>
+    @php
+    @endphp
     {{-- ================== Header ================== --}}
     <header class="home-header">
         <div class="home-header-showcase-wrap">
@@ -142,111 +144,36 @@
                     </button>
                 </div>
                 <div class="home-vehicle-showcase-inner">
-                    {{-- Slide 1 --}}
-                    <div class="home-vehicle-showcase-slide vehicle-current">
-                        <div class="home-vehicle-showcase-slide-content">
-                            <div class="home-vehicle-showcase-slide-content-img-wrap">
-                                <img src="{{" imgs/home/vehicle-slideshow-bus.png"}}" alt="Vehicle Showcase Img"
-                                    class="home-vehicle-showcase-slide-content-img">
-                            </div>
-                            <div class="home-vehicle-showcase-slide-content-text-wrap">
-                                <div class="home-vehicle-showcase-slide-content-inner-text-wrap">
-                                    <h2 class="home-vehicle-showcase-slide-content-title">Náhodný autobus 88</h2>
-                                    <div class="home-vehicle-showcase-slide-icons-wrap">
-                                        <div class="home-vehicle-showcase-slide-row"></div>
-                                        <img src="{{" imgs/home/tv-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                        <img src="{{" imgs/home/wifi-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                        <img src="{{" imgs/home/toilet-paper-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                        <img src="{{" imgs/home/gps-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                        <img src="{{" imgs/home/usb-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                        <img src="{{" imgs/home/coffee-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                        <img src="{{" imgs/home/seat-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                    </div>
-                                    <p class="home-vehicle-showcase-slide-content-text">
-                                        INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ. INFORMACE O AUTOBUSU, SKVĚLÝ,
-                                        PROSTORNÝ,
-                                        VELKÝ. INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ. INFORMACE O AUTOBUSU,
-                                        SKVĚLÝ,
-                                        PROSTORNÝ, VELKÝ. INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ. INFORMACE O
-                                        AUTOBUSU,
-                                        SKVĚLÝ, PROSTORNÝ, VELKÝ. INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ.
-                                    </p>
-                                    <div class="home-vehicle-showcase-slide-content-sm-imgs-wrap">
-                                        <img src="{{" imgs/home/vehicle-slideshow-sm-bus.png"}}"
-                                            alt="Vehicle Slide SM Image"
-                                            class="home-vehicle-showcase-slide-content-sm-img">
-                                        <img src="{{" imgs/home/vehicle-slideshow-sm-bus.png"}}"
-                                            alt="Vehicle Slide SM Image"
-                                            class="home-vehicle-showcase-slide-content-sm-img">
-                                        <img src="{{" imgs/home/vehicle-slideshow-sm-bus.png"}}"
-                                            alt="Vehicle Slide SM Image"
-                                            class="home-vehicle-showcase-slide-content-sm-img">
-                                        <img src="{{" imgs/home/vehicle-slideshow-sm-bus.png"}}"
-                                            alt="Vehicle Slide SM Image"
-                                            class="home-vehicle-showcase-slide-content-sm-img">
-                                    </div>
-                                    <a href="" class="home-vehicle-showcase-slide-content-btn">
-                                        <i class="fa-solid fa-circle-info"></i>
-                                        více informací
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- Slide 2 --}}
+                    @foreach ($buses as $bus)
+
+                    @php
+                        $imgPaths = explode(",", $bus->images);
+                    @endphp
+                    
                     <div class="home-vehicle-showcase-slide">
                         <div class="home-vehicle-showcase-slide-content">
                             <div class="home-vehicle-showcase-slide-content-img-wrap">
-                                <img src="{{" imgs/home/vehicle-slideshow-bus.png"}}" alt="Vehicle Showcase Img"
+                                <img src="{{asset('storage/') . "/" . $imgPaths[0]}}" alt="Vehicle Showcase Img"
                                     class="home-vehicle-showcase-slide-content-img">
                             </div>
                             <div class="home-vehicle-showcase-slide-content-text-wrap">
                                 <div class="home-vehicle-showcase-slide-content-inner-text-wrap">
-                                    <h2 class="home-vehicle-showcase-slide-content-title">Náhodný autobus 99</h2>
+                                    <h2 class="home-vehicle-showcase-slide-content-title">{{$bus->name}}</h2>
                                     <div class="home-vehicle-showcase-slide-icons-wrap">
                                         <div class="home-vehicle-showcase-slide-row"></div>
-                                        <img src="{{" imgs/home/tv-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                        <img src="{{" imgs/home/wifi-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                        <img src="{{" imgs/home/toilet-paper-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                        <img src="{{" imgs/home/gps-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                        <img src="{{" imgs/home/usb-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                        <img src="{{" imgs/home/coffee-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                        <img src="{{" imgs/home/seat-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
+                                        @foreach (explode("=", $bus->icons) as $icon)
+                                            <img src="{{explode(",", $icon)[0]}}" alt="Vehicle Slide Icon"
+                                                class="home-vehicle-showcase-slide-icon">
+                                        @endforeach
                                     </div>
                                     <p class="home-vehicle-showcase-slide-content-text">
-                                        INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ. INFORMACE O AUTOBUSU, SKVĚLÝ,
-                                        PROSTORNÝ,
-                                        VELKÝ. INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ. INFORMACE O AUTOBUSU,
-                                        SKVĚLÝ,
-                                        PROSTORNÝ, VELKÝ. INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ. INFORMACE O
-                                        AUTOBUSU,
-                                        SKVĚLÝ, PROSTORNÝ, VELKÝ. INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ.
+                                        {{$bus->descLong}}
                                     </p>
                                     <div class="home-vehicle-showcase-slide-content-sm-imgs-wrap">
-                                        <img src="{{" imgs/home/vehicle-slideshow-sm-bus.png"}}"
+                                        <img src="{{asset('storage/') . "/" . $imgPaths[1]}}"
                                             alt="Vehicle Slide SM Image"
                                             class="home-vehicle-showcase-slide-content-sm-img">
-                                        <img src="{{" imgs/home/vehicle-slideshow-sm-bus.png"}}"
-                                            alt="Vehicle Slide SM Image"
-                                            class="home-vehicle-showcase-slide-content-sm-img">
-                                        <img src="{{" imgs/home/vehicle-slideshow-sm-bus.png"}}"
-                                            alt="Vehicle Slide SM Image"
-                                            class="home-vehicle-showcase-slide-content-sm-img">
-                                        <img src="{{" imgs/home/vehicle-slideshow-sm-bus.png"}}"
+                                        <img src="{{asset('storage/') . "/" . $imgPaths[2]}}"
                                             alt="Vehicle Slide SM Image"
                                             class="home-vehicle-showcase-slide-content-sm-img">
                                     </div>
@@ -258,64 +185,7 @@
                             </div>
                         </div>
                     </div>
-                    {{-- Slide 3 --}}
-                    <div class="home-vehicle-showcase-slide">
-                        <div class="home-vehicle-showcase-slide-content">
-                            <div class="home-vehicle-showcase-slide-content-img-wrap">
-                                <img src="{{" imgs/home/vehicle-slideshow-bus.png"}}" alt="Vehicle Showcase Img"
-                                    class="home-vehicle-showcase-slide-content-img">
-                            </div>
-                            <div class="home-vehicle-showcase-slide-content-text-wrap">
-                                <div class="home-vehicle-showcase-slide-content-inner-text-wrap">
-                                    <h2 class="home-vehicle-showcase-slide-content-title">Náhodný autobus 104</h2>
-                                    <div class="home-vehicle-showcase-slide-icons-wrap">
-                                        <div class="home-vehicle-showcase-slide-row"></div>
-                                        <img src="{{" imgs/home/tv-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                        <img src="{{" imgs/home/wifi-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                        <img src="{{" imgs/home/toilet-paper-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                        <img src="{{" imgs/home/gps-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                        <img src="{{" imgs/home/usb-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                        <img src="{{" imgs/home/coffee-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                        <img src="{{" imgs/home/seat-icon.png"}}" alt="Vehicle Slide Icon"
-                                            class="home-vehicle-showcase-slide-icon">
-                                    </div>
-                                    <p class="home-vehicle-showcase-slide-content-text">
-                                        INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ. INFORMACE O AUTOBUSU, SKVĚLÝ,
-                                        PROSTORNÝ,
-                                        VELKÝ. INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ. INFORMACE O AUTOBUSU,
-                                        SKVĚLÝ,
-                                        PROSTORNÝ, VELKÝ. INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ. INFORMACE O
-                                        AUTOBUSU,
-                                        SKVĚLÝ, PROSTORNÝ, VELKÝ. INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ.
-                                    </p>
-                                    <div class="home-vehicle-showcase-slide-content-sm-imgs-wrap">
-                                        <img src="{{" imgs/home/vehicle-slideshow-sm-bus.png"}}"
-                                            alt="Vehicle Slide SM Image"
-                                            class="home-vehicle-showcase-slide-content-sm-img">
-                                        <img src="{{" imgs/home/vehicle-slideshow-sm-bus.png"}}"
-                                            alt="Vehicle Slide SM Image"
-                                            class="home-vehicle-showcase-slide-content-sm-img">
-                                        <img src="{{" imgs/home/vehicle-slideshow-sm-bus.png"}}"
-                                            alt="Vehicle Slide SM Image"
-                                            class="home-vehicle-showcase-slide-content-sm-img">
-                                        <img src="{{" imgs/home/vehicle-slideshow-sm-bus.png"}}"
-                                            alt="Vehicle Slide SM Image"
-                                            class="home-vehicle-showcase-slide-content-sm-img">
-                                    </div>
-                                    <a href="" class="home-vehicle-showcase-slide-content-btn">
-                                        <i class="fa-solid fa-circle-info"></i>
-                                        více informací
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 <div class="home-vehicle-showcase-btns">
                     <button id="home-vehicle-showcase-btns-prev">
@@ -346,50 +216,24 @@
                 </div>
             </div>
             <div class="home-trips-cards-wrap">
-                <div class="home-trips-card">
-                    <div class="home-trips-card-img-wrap">
-                        <img src="{{" imgs/home/trips-img.png"}}" alt="Trips Img" class="home-trips-card-img">
+                @foreach ($trips as $trip)
+
+                    @php
+                        $tripCardImgPaths = explode(",", $trip->images);
+                    @endphp
+
+                    <div class="home-trips-card">
+                        <div class="home-trips-card-img-wrap">
+                            <img src="{{asset('storage/') . "/" . $tripCardImgPaths[1]}}" alt="Trips Img" class="home-trips-card-img">
+                        </div>
+                        <div class="home-trips-card-text-wrap">
+                            <h3 class="home-trips-card-title">{{$trip->name}}</h3>
+                            <h4 class="home-trips-card-date">{{$trip->date}}</h4>
+                            <div class="home-trips-card-row"></div>
+                            <p class="home-trips-card-text">{{substr($trip->descShort, 0, 20)}}</p>
+                        </div>
                     </div>
-                    <div class="home-trips-card-text-wrap">
-                        <h3 class="home-trips-card-title">Adventní krakow</h3>
-                        <h4 class="home-trips-card-date">17.12.2022</h4>
-                        <div class="home-trips-card-row"></div>
-                        <p class="home-trips-card-text">Vychutnejte si advent v Krakově, polském královském městě!</p>
-                    </div>
-                </div>
-                <div class="home-trips-card">
-                    <div class="home-trips-card-img-wrap">
-                        <img src="{{" imgs/home/trips-img.png"}}" alt="Trips Img" class="home-trips-card-img">
-                    </div>
-                    <div class="home-trips-card-text-wrap">
-                        <h3 class="home-trips-card-title">Adventní krakow</h3>
-                        <h4 class="home-trips-card-date">17.12.2022</h4>
-                        <div class="home-trips-card-row"></div>
-                        <p class="home-trips-card-text">Vychutnejte si advent v Krakově, polském královském městě!</p>
-                    </div>
-                </div>
-                <div class="home-trips-card">
-                    <div class="home-trips-card-img-wrap">
-                        <img src="{{" imgs/home/trips-img.png"}}" alt="Trips Img" class="home-trips-card-img">
-                    </div>
-                    <div class="home-trips-card-text-wrap">
-                        <h3 class="home-trips-card-title">Adventní krakow</h3>
-                        <h4 class="home-trips-card-date">17.12.2022</h4>
-                        <div class="home-trips-card-row"></div>
-                        <p class="home-trips-card-text">Vychutnejte si advent v Krakově, polském královském městě!</p>
-                    </div>
-                </div>
-                <div class="home-trips-card">
-                    <div class="home-trips-card-img-wrap">
-                        <img src="{{" imgs/home/trips-img.png"}}" alt="Trips Img" class="home-trips-card-img">
-                    </div>
-                    <div class="home-trips-card-text-wrap">
-                        <h3 class="home-trips-card-title">Adventní krakow</h3>
-                        <h4 class="home-trips-card-date">17.12.2022</h4>
-                        <div class="home-trips-card-row"></div>
-                        <p class="home-trips-card-text">Vychutnejte si advent v Krakově, polském královském městě!</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

@@ -19,175 +19,85 @@
     </header>
     <section class="veh-cards-wrap">
         <div class="veh-cards-container">
-            <div class="veh-card">
-                <div class="veh-card-img-wrap">
-                    <img src="{{" imgs/vehicles/veh-cards-img.png"}}" alt="" class="veh-card-img">
+            @foreach ($buses as $bus)
+
+                @php
+                    $imgPaths = explode(",", $bus->images);
+                @endphp
+
+                <div class="veh-card">
+                    <div class="veh-card-img-wrap">
+                        <img src="{{asset('storage/') . "/" . $imgPaths[1]}}" alt="" class="veh-card-img">
+                    </div>
+                    <div class="veh-card-text-wrap">
+                        <h2 class="veh-card-title">{{$bus->name}}</h2>
+                        <p class="veh-card-text">({{$bus->seatCount}})</p>
+                        <a href="" class="veh-card-btn">
+                            <img src="{{" imgs/vehicles/info-circle-icon.svg"}}" alt="Vehicles Card Btn Icon"
+                                class="veh-card-btn-icon">
+                            Chci zjistit více
+                        </a>
+                    </div>
                 </div>
-                <div class="veh-card-text-wrap">
-                    <h2 class="veh-card-title">Náhodný autobus 89</h2>
-                    <p class="veh-card-text">(49 + 1 + 1)</p>
-                    <a href="" class="veh-card-btn">
-                        <img src="{{" imgs/vehicles/info-circle-icon.svg"}}" alt="Vehicles Card Btn Icon"
-                            class="veh-card-btn-icon">
-                        Chci zjistit více
-                    </a>
-                </div>
-            </div>
-            <div class="veh-card">
-                <div class="veh-card-img-wrap">
-                    <img src="{{" imgs/vehicles/veh-cards-img.png"}}" alt="" class="veh-card-img">
-                </div>
-                <div class="veh-card-text-wrap">
-                    <h2 class="veh-card-title">Náhodný autobus 89</h2>
-                    <p class="veh-card-text">(49 + 1 + 1)</p>
-                    <a href="" class="veh-card-btn">
-                        <img src="{{" imgs/vehicles/info-circle-icon.svg"}}" alt="Vehicles Card Btn Icon"
-                            class="veh-card-btn-icon">
-                        Chci zjistit více
-                    </a>
-                </div>
-            </div>
-            <div class="veh-card">
-                <div class="veh-card-img-wrap">
-                    <img src="{{" imgs/vehicles/veh-cards-img.png"}}" alt="" class="veh-card-img">
-                </div>
-                <div class="veh-card-text-wrap">
-                    <h2 class="veh-card-title">Náhodný autobus 89</h2>
-                    <p class="veh-card-text">(49 + 1 + 1)</p>
-                    <a href="" class="veh-card-btn">
-                        <img src="{{" imgs/vehicles/info-circle-icon.svg"}}" alt="Vehicles Card Btn Icon"
-                            class="veh-card-btn-icon">
-                        Chci zjistit více
-                    </a>
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
     <section class="veh-buses-wrap">
         <div class="veh-buses-inner-wrap">
-            <div class="veh-buses-row"></div>
-            <div class="veh-buses-upper-wrap">
-                <div class="veh-buses-upper-text-wrap">
-                    <div class="veh-buses-upper-text-inner-wrap">
-                        <h2 class="veh-buses-upper-title">Náhodný autobus 88</h2>
-                        <div class="veh-buses-upper-row"></div>
-                        <p class="veh-buses-upper-text">
-                            INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ. INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ,
-                            VELKÝ.
-                            INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ. INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ,
-                            VELKÝ.
-                            INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ. INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ,
-                            VELKÝ.
-                            INFORMACE O AUTOBUSU, SKVĚLÝ, PROSTORNÝ, VELKÝ.
-                        </p>
-                    </div>
-                </div>
-                <div class="veh-buses-upper-img-wrap">
-                    <img src="{{" imgs/vehicles/veh-buses-img.jpg"}}" alt="Vehicles Bus Image"
-                        class="veh-buses-upper-img">
-                </div>
-            </div>
-            <div class="veh-buses-lower-wrap">
-                <div class="veh-buses-lower-text-wrap">
-                    <h3 class="veh-buses-lower-title">Vybavení</h3>
-                    <div class="veh-buses-lower-text-inner-wrap">
-                        <div class="veh-buses-lower-icons-wrap">
-                            <p class="veh-buses-lower-icon-text">
-                                <i class="fa-solid fa-bus"></i>
-                                luxusní dálkový autobus
-                            </p>
-                            <p class="veh-buses-lower-icon-text">
-                                <i class="fa-solid fa-user"></i>
-                                49 míst k sezení
-                            </p>
-                            <p class="veh-buses-lower-icon-text">
-                                <i class="fa-solid fa-leaf"></i>
-                                EURO 5
-                            </p>
-                            <p class="veh-buses-lower-icon-text">
-                                <i class="fa-solid fa-chair"></i>
-                                polohovatelné sedačky
-                            </p>
-                            <p class="veh-buses-lower-icon-text">
-                                <i class="fa-solid fa-tv"></i>
-                                2x TV
-                            </p>
-                            <p class="veh-buses-lower-icon-text">
-                                <i class="fa-solid fa-wifi"></i>
-                                WiFi
-                            </p>
-                            <p class="veh-buses-lower-icon-text">
-                                <i class="fa-solid fa-mug-saucer"></i>
-                                kávovar
-                            </p>
-                            <p class="veh-buses-lower-icon-text">
-                                <i class="fa-solid fa-font-awesome"></i>
-                                lednice
-                            </p>
+            @foreach ($buses as $bus)
+
+                @php
+                    $busesLgimgPaths = explode(",", $bus->images);
+                @endphp
+                
+                <div class="veh-buses-bus-item">
+                    <div class="veh-buses-row"></div>
+                    <div class="veh-buses-upper-wrap">
+                        <div class="veh-buses-upper-text-wrap">
+                            <div class="veh-buses-upper-text-inner-wrap">
+                                <h2 class="veh-buses-upper-title">{{$bus->name}}</h2>
+                                <div class="veh-buses-upper-row"></div>
+                                <p class="veh-buses-upper-text">
+                                    {{$bus->descLong}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sed voluptas fugit est. Officiis corporis quas nam maiores vitae ratione hic voluptates quisquam culpa, facere, exercitationem deleniti dolorum maxime rerum repellendus officia laudantium quasi deserunt expedita beatae aut ullam earum placeat. Corrupti aliquam ullam inventore officiis quasi reprehenderit voluptates blanditiis?
+                                </p>
+                            </div>
                         </div>
-                        <div class="veh-buses-lower-icons-wrap">
-                            <p class="veh-buses-lower-icon-text">
-                                <i class="fa-solid fa-shield-halved"></i>
-                                moderní bezpečnostní prvky
-                            </p>
-                            <p class="veh-buses-lower-icon-text">
-                                <i class="fa-solid fa-snowflake"></i>
-                                klimatizace
-                            </p>
-                            <p class="veh-buses-lower-icon-text">
-                                <i class="fa-solid fa-location-crosshairs"></i>
-                                GPS
-                            </p>
-                            <p class="veh-buses-lower-icon-text">
-                                <i class="fa-solid fa-compact-disc"></i>
-                                DVD
-                            </p>
-                            <p class="veh-buses-lower-icon-text">
-                                <i class="fa-solid fa-microphone"></i>
-                                mikrofon
-                            </p>
-                            <p class="veh-buses-lower-icon-text">
-                                <i class="fa-brands fa-usb"></i>
-                                USB na všech sedadlech
-                            </p>
-                            <p class="veh-buses-lower-icon-text">
-                                <i class="fa-solid fa-toilet-paper"></i>
-                                toaleta
-                            </p>
-                            <p class="veh-buses-lower-icon-text">
-                                <i class="fa-solid fa-caravan"></i>
-                                tažné zařízení
-                            </p>
+                        <div class="veh-buses-upper-img-wrap">
+                            <img src="{{asset('storage/') . "/" . $busesLgimgPaths[0]}}" alt="Vehicles Bus Image"
+                                class="veh-buses-upper-img">
                         </div>
                     </div>
-                </div>
-                <div class="veh-buses-lower-imgs-wrap">
-                    <div class="veh-buses-lower-imgs-inner-wrap">
-                        <div>
-                            <img src="{{" imgs/vehicles/veh-cards-img.png"}}" alt="Vehicle Bus Small Image"
-                                class="veh-buses-lower-img">
+                    <div class="veh-buses-lower-wrap">
+                        <div class="veh-buses-lower-text-wrap">
+                            <h3 class="veh-buses-lower-title">Vybavení</h3>
+                            <div class="veh-buses-lower-text-inner-wrap">
+                                @foreach (explode("=", $bus->icons) as $icon)
+                                    <div class="veh-buses-lower-icons-wrap">
+                                        <img src="{{explode(",", $icon)[0]}}" alt="Buses Icon Image">
+                                        <p class="veh-buses-lower-icon-text">{{explode(",", $icon)[1]}}</p>
+                                    </div>
+                                @endforeach
+                            </div>
                         </div>
-                        <div>
-                            <img src="{{" imgs/vehicles/veh-cards-img.png"}}" alt="Vehicle Bus Small Image"
-                                class="veh-buses-lower-img">
+                        <div class="veh-buses-lower-imgs-wrap">
+                            <div class="veh-buses-lower-imgs-inner-wrap">
+                                <div>
+                                    <img src="{{asset('storage/') . "/" . $busesLgimgPaths[1]}}" alt="Vehicle Bus Small Image"
+                                        class="veh-buses-lower-img">
+                                </div>
+                                <div>
+                                    <img src="{{asset('storage/') . "/" . $busesLgimgPaths[2]}}" alt="Vehicle Bus Small Image"
+                                        class="veh-buses-lower-img">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="veh-buses-lower-imgs-inner-wrap">
-                        <div>
-                            <img src="{{" imgs/vehicles/veh-cards-img.png"}}" alt="Vehicle Bus Small Image"
-                                class="veh-buses-lower-img">
-                        </div>
-                        <div>
-                            <img src="{{" imgs/vehicles/veh-cards-img.png"}}" alt="Vehicle Bus Small Image"
-                                class="veh-buses-lower-img">
-                        </div>
+                    <div class="veh-buses-layout-img-wrap">
+                        <img src="{{" imgs/vehicles/veh-buses-layout-img.png"}}" alt="Vehicle Bus Layout Image"
+                            class="veh-buses-layout-img">
                     </div>
                 </div>
-            </div>
-            <div class="veh-buses-layout-img-wrap">
-                <img src="{{" imgs/vehicles/veh-buses-layout-img.png"}}" alt="Vehicle Bus Layout Image"
-                    class="veh-buses-layout-img">
-            </div>
+            @endforeach
         </div>
     </section>
 </x-layout>

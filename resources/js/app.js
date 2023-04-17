@@ -1,5 +1,12 @@
 import "./bootstrap";
 
+// ========================= Assign classes on load =========================
+const homeVehicleSlides = document.querySelectorAll(
+    ".home-vehicle-showcase-slide"
+);
+
+homeVehicleSlides[0].classList.add("vehicle-current");
+
 // ========================= Change Navbar Active Link =========================
 const navLinks = document.querySelectorAll(".nav-link");
 

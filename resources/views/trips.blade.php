@@ -42,61 +42,24 @@
     </header>
     <section class="trips-cards-wrap">
         <div class="trips-cards-inner-wrap">
-            <div class="trips-card">
-                <div class="trips-card-img-wrap">
-                    <img src="{{" imgs/trips/krakow-card-img.png"}}" alt="Trips Card Image" class="trips-card-img">
+            @foreach ($trips as $trip)
+
+                @php
+                    $tripImgPath = explode(",", $trip->images);
+                @endphp
+
+                <div class="trips-card">
+                    <div class="trips-card-img-wrap">
+                        <img src="{{asset('storage/') . "/" . $tripImgPath[1]}}" alt="Trips Card Image" class="trips-card-img">
+                    </div>
+                    <div class="trips-card-text-wrap">
+                        <h3 class="trips-card-title">{{$trip->name}}</h3>
+                        <h4 class="trips-card-date">{{$trip->date}}</h4>
+                        <div class="trips-card-row"></div>
+                        <p class="trips-card-text">{{substr($trip->descShort, 0, 20)}}</p>
+                    </div>
                 </div>
-                <div class="trips-card-text-wrap">
-                    <h3 class="trips-card-title">Adventní krakow</h3>
-                    <h4 class="trips-card-date">17.12.2022</h4>
-                    <div class="trips-card-row"></div>
-                    <p class="trips-card-text">Vychutnejte si advent v Krakově, polském královském městě!</p>
-                </div>
-            </div>
-            <div class="trips-card">
-                <div class="trips-card-img-wrap">
-                    <img src="{{" imgs/trips/krakow-card-img.png"}}" alt="Trips Card Image" class="trips-card-img">
-                </div>
-                <div class="trips-card-text-wrap">
-                    <h3 class="trips-card-title">Adventní krakow</h3>
-                    <h4 class="trips-card-date">17.12.2022</h4>
-                    <div class="trips-card-row"></div>
-                    <p class="trips-card-text">Vychutnejte si advent v Krakově, polském královském městě!</p>
-                </div>
-            </div>
-            <div class="trips-card">
-                <div class="trips-card-img-wrap">
-                    <img src="{{" imgs/trips/krakow-card-img.png"}}" alt="Trips Card Image" class="trips-card-img">
-                </div>
-                <div class="trips-card-text-wrap">
-                    <h3 class="trips-card-title">Adventní krakow</h3>
-                    <h4 class="trips-card-date">17.12.2022</h4>
-                    <div class="trips-card-row"></div>
-                    <p class="trips-card-text">Vychutnejte si advent v Krakově, polském královském městě!</p>
-                </div>
-            </div>
-            <div class="trips-card">
-                <div class="trips-card-img-wrap">
-                    <img src="{{" imgs/trips/krakow-card-img.png"}}" alt="Trips Card Image" class="trips-card-img">
-                </div>
-                <div class="trips-card-text-wrap">
-                    <h3 class="trips-card-title">Adventní krakow</h3>
-                    <h4 class="trips-card-date">17.12.2022</h4>
-                    <div class="trips-card-row"></div>
-                    <p class="trips-card-text">Vychutnejte si advent v Krakově, polském královském městě!</p>
-                </div>
-            </div>
-            <div class="trips-card">
-                <div class="trips-card-img-wrap">
-                    <img src="{{" imgs/trips/krakow-card-img.png"}}" alt="Trips Card Image" class="trips-card-img">
-                </div>
-                <div class="trips-card-text-wrap">
-                    <h3 class="trips-card-title">Adventní krakow</h3>
-                    <h4 class="trips-card-date">17.12.2022</h4>
-                    <div class="trips-card-row"></div>
-                    <p class="trips-card-text">Vychutnejte si advent v Krakově, polském královském městě!</p>
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
 </x-layout>

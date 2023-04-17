@@ -84,16 +84,28 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, 350px);
     gap: 100px;
-    justify-content: center;
     padding: 80px;
 
     .trips-card {
+        height: 450px;
         width: 350px;
         box-shadow: 0px 3px 6px #00000029;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trips-card-img-wrap {
+        flex: 3;
+
+        & > img {
+            height: 100%;
+        }
+
     }
 
     .trips-card-text-wrap {
         padding: 20px;
+        flex: 1;
     }
 
     .trips-card-title {
@@ -150,6 +162,11 @@
     // Header
     .trips-header-content-inner-wrap {
         width: 100%;
+    }
+
+    // Cards
+    .trips-cards-inner-wrap {
+        justify-content: center;
     }
 }
 

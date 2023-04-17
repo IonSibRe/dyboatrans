@@ -245,6 +245,7 @@
 }
 
 .home-vehicle-showcase-slide {
+    padding: 0 80px;
     position: absolute;
     top: 0;
     left: 0;
@@ -266,6 +267,7 @@
         flex: 1;
 
         & > img {
+            display: inline-block;
             position: relative;
             top: 50%;
             transform: translateY(-50%);
@@ -426,9 +428,20 @@
 
     .home-trips-card {
         box-shadow: 0px 3px 6px #00000029;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-trips-card-img-wrap {
+        flex: 3;
+
+        & > img {
+            height: 100%;
+        }
     }
 
     .home-trips-card-text-wrap {
+        flex: 1;
         padding: 20px 30px;
     }
 

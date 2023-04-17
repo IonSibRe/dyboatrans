@@ -1,9 +1,12 @@
 <?php
 
+use App\Models\Bus;
+use App\Models\Trip;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TripController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BusesController;
+use App\Http\Controllers\FrontendDataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,10 +29,22 @@ use App\Http\Controllers\BusesController;
 // destroy - Delete task
 
 // ===================== Page Routing =====================
-Route::view('/', "index");
+Route::get('/', function () {
+    $trips = Trip::all();
+    $buses = Bus::all();
+
+    return view("index", compact("trips", "buses"));
+});
 Route::view("/services", "services");
-Route::view("/vehicles", "vehicles");
-Route::view("/trips", "trips");
+
+Route::get('/vehicles', function () {
+    return view("vehicles", ["buses" => Bus::all()]);
+});
+
+Route::get('/trips', function () {
+    return view("trips", ["trips" => Trip::all()]);
+});
+
 Route::view("/contact", "contact");
 
 // ===================== Admin =====================

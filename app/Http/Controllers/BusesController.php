@@ -51,8 +51,11 @@ class BusesController extends Controller
             "descShort" => "required",
             "seatCount" => "required",
             "descLong" => "required",
-            "icons" => "required",
         ]);
+
+        if(!is_null($request["icons"])) {
+            $formFields["icons"] = $request["icons"];
+        }
 
         // Delete dir with imgs
         if ($request->hasFile("images")) {
