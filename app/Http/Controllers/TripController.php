@@ -13,6 +13,10 @@ class TripController extends Controller
         return view("admin-trips", ["trips" => Trip::all()]);
     }
 
+    public function show(Trip $trip) {
+        return view("trip-single-show", ["trip" => $trip]);
+    }
+
     // Create New Trip
     public function store(Request $request) {
         $formFields = $request->validate([

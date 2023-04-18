@@ -65,6 +65,9 @@ Route::put("/trips/edit/{trip}", [TripController::class, "update"])->middleware(
 
 Route::delete("/trips/{trip}", [TripController::class, "destroy"])->middleware("auth");
 
+// Trips single page
+Route::get("/trips/{trip}", [TripController::class, "show"]);
+
 // ----------- Buses -----------
 // Show Buses Administration
 Route::get("/admin/buses", [BusesController::class, "index"])->middleware("auth");

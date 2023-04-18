@@ -50,7 +50,9 @@
 
                 <div class="trips-card">
                     <div class="trips-card-img-wrap">
-                        <img src="{{asset('storage/') . "/" . $tripImgPath[1]}}" alt="Trips Card Image" class="trips-card-img">
+                        <a href="/trips/{{$trip->id}}">
+                            <img src="{{asset('storage/') . "/" . $tripImgPath[1]}}" alt="Trips Card Image" class="trips-card-img">
+                        </a>
                     </div>
                     <div class="trips-card-text-wrap">
                         <h3 class="trips-card-title">{{$trip->name}}</h3>

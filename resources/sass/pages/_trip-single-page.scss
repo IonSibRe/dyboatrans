@@ -1,0 +1,194 @@
+// ============================== Header ==============================
+.trip-sp-header {
+    position: relative;
+    height: 70vh;
+    
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.25);
+    }
+}
+
+.trip-sp-header-img {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.trip-sp-header-content {
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 80px;
+    z-index: 99;
+}
+
+.trip-sp-header-subtitle {
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $text-light;
+}
+
+.trip-sp-header-row {
+    margin: 20px 0 10px 0;
+    height: 10px;
+    width: 250px;
+    background-color: $secondary-color;
+}
+
+.trip-sp-header-title, .trip-sp-header-date {
+    font-size: 65px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $text-light;
+}
+
+// ============================== Info ==============================
+.trip-sp-info-inner-wrap {
+    padding: 80px;
+    display: flex;
+}
+
+.trip-sp-info-text-wrap {
+    flex: 1;
+    margin-right: 50px;
+}
+
+.trip-sp-info-title {
+    margin-bottom: 50px;
+    font-size: 65px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.trip-sp-info-date, .trip-sp-info-price {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.trip-sp-info-text {
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.trip-sp-info-text-bold {
+    font-weight: 700;
+}
+
+.trip-sp-text-mb {
+    margin-bottom: 30px;
+}
+
+.trip-sp-info-img-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trip-sp-info-img {
+    width: 600px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// ============================== Media Queries ==============================
+@media screen and (max-width: 1400px) {
+    // Info
+    .trip-sp-info-inner-wrap {
+        flex-direction: column;
+    }
+
+    .trip-sp-info-text-wrap {
+        margin-right: 0;
+    }
+
+    .trip-sp-info-img-wrap {
+        margin-top: 50px;
+        align-items: flex-start;
+    }
+
+    .trip-sp-info-img:first-child {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    // Header
+    .trip-sp-header-content {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // Info
+    .trip-sp-info-inner-wrap {
+        padding: 0 40px;
+    }
+
+    .trip-sp-info-title {
+        margin: 50px 0;
+    }
+
+    .trip-sp-info-img-wrap {
+        margin-bottom: 50px;
+    }
+
+    .trip-sp-info-img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    // Header
+    .trip-sp-header-subtitle {
+        font-size: 36px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $text-light;
+    }
+
+    .trip-sp-header-title, .trip-sp-header-date {
+        font-size: 46px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $text-light;
+    }
+
+    // Info
+    .trip-sp-info-inner-wrap {
+        padding: 0 20px;
+    }
+
+    .trip-sp-info-text-wrap {
+        text-align: center;
+    }
+
+    .trip-sp-info-title {
+        margin-bottom: 30px;
+        font-size: 48px;
+    }
+    
+    .trip-sp-info-date, .trip-sp-info-price {
+        font-size: 26px;
+    }
+    
+    .trip-sp-info-text {
+        font-size: 22px;
+    }
+}
+

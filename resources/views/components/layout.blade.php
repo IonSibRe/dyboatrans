@@ -18,7 +18,7 @@
     <nav class="nav">
         <div class="nav-inner">
             <div class="nav-logo-wrap">
-                <img src="{{" imgs/nav/nav-logo.svg"}}" alt="Nav Logo" class="nav-logo">
+                <img src="{{ URL::to('/') }}/imgs/nav/nav-logo.svg" alt="Nav Logo" class="nav-logo">
             </div>
             <div class="nav-links-wrap">
                 <a href="/" class="nav-link nav-link-active">úvod</a>
@@ -34,7 +34,7 @@
                 </a>
                 <div class="nav-info-phone-num-wrap">
                     <div class="nav-info-phone-num-icon-wrap">
-                        <img src="{{" imgs/nav/phone-icon.svg"}}" alt="" class="nav-info-phone-num-icon">
+                        <img src="{{ URL::to('/') }}/imgs/nav/phone-icon.svg" alt="Nav Phone Icon" class="nav-info-phone-num-icon">
                     </div>
                     <div class="nav-info-phone-num-text-wrap">
                         <p class="nav-info-phone-num-text">objednávky</p>
@@ -92,13 +92,13 @@
     <footer class="footer">
         <div class="footer-inner">
             <div class="footer-item">
-                <img src="{{" imgs/footer/footer-logo-bus.png"}}" alt="Footer Logo" class="footer-logo">
+                <img src="{{ URL::to('/') }}/imgs/footer/footer-logo-bus.png" alt="Footer Logo" class="footer-logo">
                 <p class="footer-info-text">
-                    <img src="{{" imgs/footer/footer-phone.png"}}" alt="Footer Phone" class="footer-info-icon">
+                    <img src="{{ URL::to('/') }}/imgs/footer/footer-phone.png" alt="Footer Phone" class="footer-info-icon">
                     +420 722 604 746
                 </p>
                 <p class="footer-info-text">
-                    <img src="{{" imgs/footer/footer-email.png"}}" alt="Footer Email" class="footer-info-icon">
+                    <img src="{{ URL::to('/') }}/imgs/footer/footer-email.png" alt="Footer Email" class="footer-info-icon">
                     dyboatrans@email.cz
                 </p>
             </div>
@@ -129,13 +129,13 @@
                 <h3 class="footer-opening-title">Otevírací doba</h3>
                 <h4 class="footer-opening-subtitle">Na objednání</h4>
                 <p class="footer-opening-days">
-                    <img src="{{" imgs/footer/footer-calendar.png"}}" alt="Footer Calendar"
+                    <img src="{{ URL::to('/') }}/imgs/footer/footer-calendar.png" alt="Footer Calendar"
                         class="footer-opening-days-icon">
                     Pondělí - Neděle
                 </p>
                 <div class="footer-opening-times-wrap">
                     <div class="footer-opening-times-icon-wrap">
-                        <img src="{{" imgs/footer/footer-clock.png"}}" alt="Footer Clock"
+                        <img src="{{ URL::to('/') }}/imgs/footer/footer-clock.png" alt="Footer Clock"
                             class="footer-opening-times-icon">
                     </div>
                     <div class="footer-opening-times-text-wrap">
@@ -150,7 +150,7 @@
                 </div>
             </div>
         </div>
-        <img src="{{" imgs/footer/footer-wave.png"}}" alt="Footer Wave" class="footer-wave">
+        <img src="{{ URL::to('/') }}/imgs/footer/footer-wave.png" alt="Footer Wave" class="footer-wave">
     </footer>
 </body>
 
