@@ -468,28 +468,28 @@
 .home-trips-cards-wrap {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, 360px);
     gap: 60px;
 
     .home-trips-card {
-        box-shadow: 0px 3px 6px #00000029;
-        display: flex;
-        flex-direction: column;
         border-radius: 6px;
+        box-shadow: 0px 3px 6px #00000029;
     }
 
     .home-trips-card-img-wrap {
-        flex: 3;
-
+        height: 325px;
+        
         & > a > img {
             height: 100%;
-            border-radius: 6px;
+            border-top-right-radius: 6px;
+            border-top-left-radius: 6px;
+            object-fit: cover;
         }
     }
 
     .home-trips-card-text-wrap {
-        flex: 1;
-        padding: 20px 30px;
+        padding: 20px;
+        height: 40%;
     }
 
     .home-trips-card-title {
@@ -822,7 +822,8 @@
     }
 
     .home-trips-cards-wrap {
-        grid-template-columns: 1fr;
+        grid-template-columns: 360px;
+        justify-content: center;
     }
 }
 
@@ -950,7 +951,12 @@
 
     // Trips
     .home-trips-inner {
-        padding: 20px;
+        padding: 40px 20px;
+    }
+
+    .home-trips-cards-wrap {
+        grid-template-columns: 270px;
+        justify-content: center;
     }
 
     .home-trips-text-wrap .home-trips-title {
