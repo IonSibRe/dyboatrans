@@ -51,6 +51,10 @@ $text-light: #fff;
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow-x: hidden;
     font-family: "Barlow", sans-serif;

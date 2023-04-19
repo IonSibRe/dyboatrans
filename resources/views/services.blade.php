@@ -14,39 +14,87 @@
     </header>
     <section class="svc-cards-wrap">
         <div class="svc-card">
-            <div class="svc-card-img-wrap">
-                <img src="{{" imgs/services/svc-card-img-1.png"}}" alt="Services Card Image" class="svc-card-img">
-            </div>
-            <div class="svc-card-text-wrap">
-                <h2 class="svc-card-title">Společenské akce</h2>
-                <p class="svc-card-text">Více info pod kartou</p>
-            </div>
-        </div>
-        <div class="svc-card">
-            <div class="svc-card-img-wrap">
-                <img src="{{" imgs/services/svc-card-img-2.png"}}" alt="Services Card Image" class="svc-card-img">
-            </div>
-            <div class="svc-card-text-wrap">
-                <h2 class="svc-card-title">Školní zájezdy</h2>
-                <p class="svc-card-text">Více info pod kartou</p>
-            </div>
-        </div>
-        <div class="svc-card">
-            <div class="svc-card-img-wrap">
-                <img src="{{" imgs/services/svc-card-img-3.png"}}" alt="Services Card Image" class="svc-card-img">
-            </div>
-            <div class="svc-card-text-wrap">
-                <h2 class="svc-card-title">Mezinárodní přeprava</h2>
-                <p class="svc-card-text">Více info pod kartou</p>
+            <div class="svc-card-inner">
+                <div class="svc-card-front">
+                    <div class="svc-card-img-wrap">
+                        <img src="{{" imgs/services/svc-card-img-1.png"}}" alt="Services Card Image" class="svc-card-img">
+                    </div>
+                    <div class="svc-card-text-wrap">
+                        <h2 class="svc-card-title">Společenské akce</h2>
+                        <p class="svc-card-text">Více info pod kartou</p>
+                    </div>
+                </div>
+                <div class="svc-card-back">
+                    <div class="svc-card-back-inner">
+                        <i class="fa-solid fa-champagne-glasses"></i>
+                        <p class="svc-card-back-text">
+                            Zajišťujeme dopravu na kongresy, veletrhy, kulturní akce, sportovní akce, privátní akce menšího rozsahu.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="svc-card">
-            <div class="svc-card-img-wrap">
-                <img src="{{" imgs/services/svc-card-img-4.png"}}" alt="Services Card Image" class="svc-card-img">
+            <div class="svc-card-inner">
+                <div class="svc-card-front">
+                    <div class="svc-card-img-wrap">
+                        <img src="{{" imgs/services/svc-card-img-2.png"}}" alt="Services Card Image" class="svc-card-img">
+                    </div>
+                    <div class="svc-card-text-wrap">
+                        <h2 class="svc-card-title">Školní zájezdy</h2>
+                        <p class="svc-card-text">Více info pod kartou</p>
+                    </div>
+                </div>
+                <div class="svc-card-back">
+                    <div class="svc-card-back-inner">
+                        <i class="fa-solid fa-school"></i>
+                        <p class="svc-card-back-text">
+                            Profesionální smluvní přeprava pro školy, jedno i několikadenní zájezdy, lyžařské, cyklistické, vodácké akce.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="svc-card-text-wrap">
-                <h2 class="svc-card-title">Dovolená, rekreace</h2>
-                <p class="svc-card-text">Více info pod kartou</p>
+        </div>
+        <div class="svc-card">
+            <div class="svc-card-inner">
+                <div class="svc-card-front">
+                    <div class="svc-card-img-wrap">
+                        <img src="{{" imgs/services/svc-card-img-3.png"}}" alt="Services Card Image" class="svc-card-img">
+                    </div>
+                    <div class="svc-card-text-wrap">
+                        <h2 class="svc-card-title">Mezinárodní přeprava</h2>
+                        <p class="svc-card-text">Více info pod kartou</p>
+                    </div>
+                </div>
+                <div class="svc-card-back">
+                    <div class="svc-card-back-inner">
+                        <i class="fa-solid fa-road"></i>
+                        <p class="svc-card-back-text">
+                            Pořádáme poznávací zájezdy, sportovní akce, turistické a lyžařské zájezdy, lázeňské a wellness pobyty.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="svc-card">
+            <div class="svc-card-inner">
+                <div class="svc-card-front">
+                    <div class="svc-card-img-wrap">
+                        <img src="{{" imgs/services/svc-card-img-4.png"}}" alt="Services Card Image" class="svc-card-img">
+                    </div>
+                    <div class="svc-card-text-wrap">
+                        <h2 class="svc-card-title">Dovolená, rekreace</h2>
+                        <p class="svc-card-text">Více info pod kartou</p>
+                    </div>
+                </div>
+                <div class="svc-card-back">
+                    <div class="svc-card-back-inner">
+                        <i class="fa-solid fa-earth-europe"></i>
+                        <p class="svc-card-back-text">
+                            Zajištěna mezinárodní přeprava pro víkendové i několikadenní v přímořských destinacích po celé Evropě.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

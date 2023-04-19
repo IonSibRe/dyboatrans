@@ -14,6 +14,10 @@ class BusesController extends Controller
 
     // Create a Bus
     public function store(Request $request) {
+        if (is_null($request->icons)) {
+            return redirect("/admin/buses")->with("error", "Je nutné nahrát alespoň jednu ikonu.");
+        }
+
         $formFields = $request->validate([
             "name" => "required",
             "descShort" => "required",
@@ -22,6 +26,9 @@ class BusesController extends Controller
             "icons" => "required"
         ]);
 
+        if (!$request->hasFile("images") || count($request->images) != 3) {
+            return redirect("/admin/buses")->with("error", "Je nutné nahrát 3 obrázky.");
+        }
 
         $formFields["images"] = "";
 
@@ -41,7 +48,7 @@ class BusesController extends Controller
         
         Bus::create($formFields);
 
-        return redirect("/admin/buses");
+        return back();
     }
 
     // Update Bus

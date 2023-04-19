@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(["resources/sass/app.scss", "resources/js/app.js"])
+    <script src="//unpkg.com/alpinejs" defer></script>
     {{-- Font Awesome --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -28,7 +29,7 @@
                 <a href="/contact" class="nav-link">kontakt</a>
             </div>
             <div class="nav-info-wrap">
-                <a href="" class="nav-info-order-btn">
+                <a href="/contact" class="nav-info-order-btn">
                     <i class="fa-solid fa-bus"></i>
                     objednávka
                 </a>

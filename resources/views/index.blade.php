@@ -11,7 +11,7 @@
                             Je libo luxus
                             <span> <br> za rozumné peníze?</span>
                         </h1>
-                        <a href="" class="home-header-showcase-slide-btn">
+                        <a href="/services" class="home-header-showcase-slide-btn">
                             <img src="{{" imgs/home/info-circle-icon.svg"}}" alt="Showcase Info Icon"
                                 class="home-header-showcase-slide-btn-icon">
                             chci zjistit více
@@ -23,7 +23,7 @@
                         <h1 class="home-header-showcase-slide-title">
                             Sympatičtí a <span>ochotní řidiči</span> jsou samozřejmostí
                         </h1>
-                        <a href="" class="home-header-showcase-slide-btn">
+                        <a href="/vehicles" class="home-header-showcase-slide-btn">
                             <img src="{{" imgs/home/info-circle-icon.svg"}}" alt="Showcase Info Icon"
                                 class="home-header-showcase-slide-btn-icon">
                             chci zjistit více
@@ -37,7 +37,7 @@
                             zkušeností
                             <span>v oboru</span>
                         </h1>
-                        <a href="" class="home-header-showcase-slide-btn">
+                        <a href="/services" class="home-header-showcase-slide-btn">
                             <img src="{{" imgs/home/info-circle-icon.svg"}}" alt="Showcase Info Icon"
                                 class="home-header-showcase-slide-btn-icon">
                             chci zjistit více
@@ -51,7 +51,7 @@
                             vychutnat třeba
                             <span>rakouské vánoční trhy?</span>
                         </h1>
-                        <a href="" class="home-header-showcase-slide-btn">
+                        <a href="/trips" class="home-header-showcase-slide-btn">
                             <img src="{{" imgs/home/info-circle-icon.svg"}}" alt="Showcase Info Icon"
                                 class="home-header-showcase-slide-btn-icon">
                             chci zjistit více
@@ -138,7 +138,7 @@
                     <button id="home-vehicle-showcase-mobile-btns-prev">
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
-                    <h2 class="home-vehicle-showcase-mobile-btns-title">Náhodný autobus 88</h2>
+                    <i class="fa-solid fa-bus fa-5x home-vehicle-showcase-mobile-btns-icon"></i>
                     <button id="home-vehicle-showcase-mobile-btns-next" type="button">
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
@@ -148,6 +148,7 @@
 
                     @php
                         $imgPaths = explode(",", $bus->images);
+                        $iconsCount = 0;
                     @endphp
                     
                     <div class="home-vehicle-showcase-slide">
@@ -161,13 +162,17 @@
                                     <h2 class="home-vehicle-showcase-slide-content-title">{{$bus->name}}</h2>
                                     <div class="home-vehicle-showcase-slide-icons-wrap">
                                         <div class="home-vehicle-showcase-slide-row"></div>
-                                        @foreach (explode("=", $bus->icons) as $icon)
-                                            <img src="{{explode(",", $icon)[0]}}" alt="Vehicle Slide Icon"
-                                                class="home-vehicle-showcase-slide-icon">
-                                        @endforeach
+                                        <div class="home-vehicle-showcase-slide-icons-inner-wrap">
+                                            @foreach (explode("=", $bus->icons) as $icon)
+                                                @if (++$iconsCount < 6)
+                                                    <img src="{{explode(",", $icon)[0]}}" alt="Vehicle Slide Icon"
+                                                        class="home-vehicle-showcase-slide-icon">
+                                                @endif
+                                            @endforeach
+                                        </div>
                                     </div>
                                     <p class="home-vehicle-showcase-slide-content-text">
-                                        {{$bus->descLong}}
+                                        {{substr($bus->descLong, 0, 220)}}
                                     </p>
                                     <div class="home-vehicle-showcase-slide-content-sm-imgs-wrap">
                                         <img src="{{asset('storage/') . "/" . $imgPaths[1]}}"
@@ -177,7 +182,7 @@
                                             alt="Vehicle Slide SM Image"
                                             class="home-vehicle-showcase-slide-content-sm-img">
                                     </div>
-                                    <a href="" class="home-vehicle-showcase-slide-content-btn">
+                                    <a href="/vehicles" class="home-vehicle-showcase-slide-content-btn">
                                         <i class="fa-solid fa-circle-info"></i>
                                         více informací
                                     </a>
@@ -209,7 +214,7 @@
                     <p class="home-trips-text">Aktuální nabídku zájezdů najdete také na našich sociálních sítích.</p>
                 </div>
                 <div class="home-trips-text-inner-wrap">
-                    <a href="" class="home-trips-btn">
+                    <a href="/trips" class="home-trips-btn">
                         <i class="fa-solid fa-city"></i>
                         Všechny zájezdy
                     </a>
@@ -224,7 +229,9 @@
 
                     <div class="home-trips-card">
                         <div class="home-trips-card-img-wrap">
-                            <img src="{{asset('storage/') . "/" . $tripCardImgPaths[1]}}" alt="Trips Img" class="home-trips-card-img">
+                            <a href="/trips/{{$trip->id}}">
+                                <img src="{{asset('storage/') . "/" . $tripCardImgPaths[1]}}" alt="Trips Img" class="home-trips-card-img">
+                            </a>
                         </div>
                         <div class="home-trips-card-text-wrap">
                             <h3 class="home-trips-card-title">{{$trip->name}}</h3>

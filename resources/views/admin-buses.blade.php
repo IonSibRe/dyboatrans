@@ -51,19 +51,19 @@
                     <div class="admin-buses-item-form-inner-wrap">
                         <div class="admin-buses-item-form-item">
                             <label for="name" class="admin-buses-item-form-label">Název</label>
-                            <input type="text" name="name" class="admin-buses-item-form-input">
+                            <input type="text" name="name" required class="admin-buses-item-form-input">
                         </div>
                         <div class="admin-buses-item-form-item">
                             <label for="descShort" class="admin-buses-item-form-label">Krátký popisek</label>
-                            <input type="text" name="descShort" class="admin-buses-item-form-input">
+                            <input type="text" name="descShort" required class="admin-buses-item-form-input">
                         </div>
                         <div class="admin-buses-item-form-item">
                             <label for="seatCount" class="admin-buses-item-form-label">Počet sedadel</label>
-                            <input type="text" name="seatCount" class="admin-buses-item-form-input">
+                            <input type="text" name="seatCount" required class="admin-buses-item-form-input">
                         </div>
                         <div class="admin-buses-item-form-item">
                             <label for="descLong" class="admin-buses-item-form-label">Popis</label>
-                            <textarea name="descLong" class="admin-buses-item-form-textarea"></textarea>
+                            <textarea name="descLong" required class="admin-buses-item-form-textarea"></textarea>
                         </div>
 
                         <label class="admin-buses-item-form-label">Nahrané fotky</label>
@@ -623,6 +623,8 @@
         addBusBtn.addEventListener("click", () => {
             createForm.classList.remove("admin-buses-disable-item");
             editForm.classList.add("admin-buses-disable-item");
+
+            window.location.reload();
         });
 
         // Display edit form & Insert card data into form

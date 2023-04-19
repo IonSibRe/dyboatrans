@@ -1,11 +1,13 @@
 import "./bootstrap";
 
 // ========================= Assign classes on load =========================
-const homeVehicleSlides = document.querySelectorAll(
-    ".home-vehicle-showcase-slide"
-);
+if (window.location.pathname === "/") {
+    const homeVehicleSlides = document.querySelectorAll(
+        ".home-vehicle-showcase-slide"
+    );
+    homeVehicleSlides[0].classList.add("vehicle-current");
+}
 
-homeVehicleSlides[0].classList.add("vehicle-current");
 
 // ========================= Change Navbar Active Link =========================
 const navLinks = document.querySelectorAll(".nav-link");
@@ -140,8 +142,10 @@ const prevSlide = () => {
 };
 
 // Button events
-next.addEventListener("click", nextSlide);
-prev.addEventListener("click", prevSlide);
+if (window.location.pathname === "/") {
+    next.addEventListener("click", nextSlide);
+    prev.addEventListener("click", prevSlide);
+}
 
 // ========================= Vehicle Slideshow =========================
 const vehicleSlides = document.querySelectorAll(".home-vehicle-showcase-slide");
@@ -186,10 +190,11 @@ const vehiclePrevSlide = () => {
     });
 };
 
-vehiclePrev.addEventListener("click", vehiclePrevSlide);
-vehicleNext.addEventListener("click", vehicleNextSlide);
-vehicleMobilePrev.addEventListener("click", () => {
-    console.log("click");
-    vehiclePrevSlide();
-});
-vehicleMobileNext.addEventListener("click", vehicleNextSlide);
+if (window.location.pathname === "/") {
+    vehiclePrev.addEventListener("click", vehiclePrevSlide);
+    vehicleNext.addEventListener("click", vehicleNextSlide);
+
+    vehicleMobilePrev.addEventListener("click", vehiclePrevSlide);
+    vehicleMobileNext.addEventListener("click", vehicleNextSlide);
+}
+

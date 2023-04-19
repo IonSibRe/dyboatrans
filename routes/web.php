@@ -7,6 +7,7 @@ use App\Http\Controllers\TripController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BusesController;
 use App\Http\Controllers\FrontendDataController;
+use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,8 @@ use App\Http\Controllers\FrontendDataController;
 // update - Update task
 // destroy - Delete task
 
+// ===================== E-mail =====================
+
 // ===================== Page Routing =====================
 Route::get('/', function () {
     $trips = Trip::all();
@@ -46,6 +49,7 @@ Route::get('/trips', function () {
 });
 
 Route::view("/contact", "contact");
+Route::post("/mail", [MailController::class, "send"]);
 
 // ===================== Admin =====================
 // Show Login Page

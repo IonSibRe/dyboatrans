@@ -1,7 +1,6 @@
 // ====================== Header ======================
 .svc-header {
     height: 70vh;
-    width: 100vw;
     background: url("../../../public/imgs/services/services-header-bg.png");
     background-repeat: no-repeat;
     background-position: bottom;
@@ -45,17 +44,77 @@
 
 // ====================== Cards ======================
 .svc-cards-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 80px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 70px;
     background-color: #f2f2f2;
 }
 
 .svc-card {
-    background-color: $text-light;
+    height: 500px;
+    width: 350px;
+    margin: 25px;
     border-radius: 10px;
-    box-shadow: 0px 3px 6px #00000029;
+    perspective: 1000px;
+}
+
+.svc-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.svc-card:hover .svc-card-inner {
+    transform: rotateY(180deg);
+}
+
+.svc-card-front, .svc-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.svc-card-front {
+    color: black;
+    background-color: $text-light;
+}
+  
+.svc-card-back {
+    position: relative;
+    background-color: $text-light;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.svc-card-back-inner {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    & > * {
+        color: $primary-color;
+    }
+
+    & > i {
+        margin-bottom: 20px;
+        font-size: 100px;
+        color: $secondary-color;
+    }
+
+    .svc-card-back-text {
+        font-size: 20px;
+    }
 }
 
 .svc-card-img-wrap {
@@ -120,6 +179,12 @@
     font-size: 24px;
     font-weight: 500;
     color: $secondary-color;
+}
+
+@media screen and (max-width: 1400px) {
+    .svc-cards-wrap {
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 1100px) {
@@ -197,8 +262,11 @@
 
     // Cards
     .svc-cards-wrap {
-        gap: 40px;
-        padding: 20px;
+        padding: 40px 5px;
+    }
+
+    .svc-card {
+        margin: 10px;
     }
 
     .svc-card-title {
@@ -225,5 +293,11 @@
     .svc-info-lower-text {
         padding: 0 20px 60px 20px;
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .svc-card {
+        height: 460px;
     }
 }

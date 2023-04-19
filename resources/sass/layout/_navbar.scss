@@ -114,7 +114,7 @@
 // ==================== Navbar Mobile ====================
 .nav-mobile {
     display: none;
-    width: 100vw;
+    width: 100%;
     background-color: $text-light;
     z-index: 9999;
 }
@@ -227,7 +227,7 @@
 
 @media screen and (max-width: 425px) {
     .nav-mobile-info-wrap > * {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .nav-mobile-item-wrap .nav-mobile-link {

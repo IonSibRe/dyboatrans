@@ -1,0 +1,13 @@
+.flash-msg-wrap {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    padding: 20px 40px;
+    transform: translateX(-50%);
+    background-color: #f00;
+    z-index: 99999;
+}
+
+.flash-msg-text {
+    color: $text-light;
+}

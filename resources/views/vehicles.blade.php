@@ -50,7 +50,7 @@
                     $busesLgimgPaths = explode(",", $bus->images);
                 @endphp
                 
-                <div class="veh-buses-bus-item">
+                <div class="veh-buses-bus-item" id="bus{{$bus->id}}">
                     <div class="veh-buses-row"></div>
                     <div class="veh-buses-upper-wrap">
                         <div class="veh-buses-upper-text-wrap">

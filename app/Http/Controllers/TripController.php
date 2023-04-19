@@ -30,6 +30,10 @@ class TripController extends Controller
             "priceNotIncludes" => "required",
         ]);
 
+        if (!$request->hasFile("images") || count($request->images) != 3) {
+            return redirect("/admin/trips")->with("error", "Je nutné nahrát 3 obrázky.");
+        }
+
         $formFields["images"] = "";
 
         if ($request->hasFile("images")) {
@@ -48,7 +52,7 @@ class TripController extends Controller
         
         Trip::create($formFields);
 
-        return redirect("/admin/trips");
+        return back();
     }
 
     // Update Trip

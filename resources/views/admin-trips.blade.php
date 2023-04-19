@@ -14,6 +14,7 @@
 
                 @php
                 $cardImgPath = explode(",", $trip->images)[1];
+
                 @endphp
 
                 <div class="admin-trips-card">
@@ -36,8 +37,8 @@
                             <i class="fa-solid fa-trash-can"></i>
                         </button>
                     </form>
-                    <button class="admin-trips-card-btn admin-trips-card-edit-btn" data-trip={{implode("|",
-                        $trip->toArray())}}>
+                    <button class="admin-trips-card-btn admin-trips-card-edit-btn" data-trip="{{implode("|",
+                        $trip->toArray())}}">
                         <i class="fa-solid fa-paintbrush"></i>
                     </button>
                 </div>
@@ -53,22 +54,22 @@
                     <div class="admin-trips-form-inner-wrap">
                         <div class="admin-trips-form-item">
                             <label for="name" class="admin-trips-form-label">Název</label>
-                            <input type="text" name="name" class="admin-trips-form-input">
+                            <input type="text" name="name" value="{{old("name")}}" required class="admin-trips-form-input">
                         </div>
 
                         <div class="admin-trips-form-item">
                             <label for="descShort" class="admin-trips-form-label">Krátký popisek</label>
-                            <input type="text" name="descShort" class="admin-trips-form-input">
+                            <input type="text" name="descShort" value="{{old("descShort")}}" required class="admin-trips-form-input">
                         </div>
 
                         <div class="admin-trips-form-item">
                             <label for="price" class="admin-trips-form-label">Cena</label>
-                            <input type="text" name="price" class="admin-trips-form-input">
+                            <input type="text" name="price" value="{{old("price")}}" required class="admin-trips-form-input">
                         </div>
 
                         <div class="admin-trips-form-item">
                             <label for="descLong" class="admin-trips-form-label">Popis</label>
-                            <textarea name="descLong" class="admin-trips-form-textarea"></textarea>
+                            <textarea name="descLong" value="{{old("descLong")}}" required class="admin-trips-form-textarea"></textarea>
                         </div>
 
                         <div class="admin-trips-form-item">
@@ -89,22 +90,22 @@
                     <div class="admin-trips-form-inner-wrap">
                         <div class="admin-trips-form-item">
                             <label for="date" class="admin-trips-form-label">Termín</label>
-                            <input type="text" name="date" class="admin-trips-form-input">
+                            <input type="text" name="date" value="{{old("date")}}" required class="admin-trips-form-input">
                         </div>
 
                         <div class="admin-trips-form-item">
                             <label for="departure" class="admin-trips-form-label">Odjezd</label>
-                            <input type="text" name="departure" class="admin-trips-form-input">
+                            <input type="text" name="departure" value="{{old("departure")}}" required class="admin-trips-form-input">
                         </div>
 
                         <div class="admin-trips-form-item">
                             <label for="priceIncludes" class="admin-trips-form-label">Cena zahrnuje</label>
-                            <input type="text" name="priceIncludes" class="admin-trips-form-input">
+                            <input type="text" name="priceIncludes" value="{{old("priceIncludes")}}" required class="admin-trips-form-input">
                         </div>
 
                         <div class="admin-trips-form-item">
                             <label for="priceNotIncludes" class="admin-trips-form-label">Cena nezahrnuje</label>
-                            <input type="text" name="priceNotIncludes" class="admin-trips-form-input">
+                            <input type="text" name="priceNotIncludes" value="{{old("priceNotIncludes")}}" required class="admin-trips-form-input">
                         </div>
 
                         <div class="admin-trips-form-item admin-trips-form-img-upload-item">
@@ -213,6 +214,8 @@
         addTripBtn.addEventListener("click", () => {
             createForm.classList.remove("admin-trips-disable-item");
             editForm.classList.add("admin-trips-disable-item");
+
+            window.location.reload();
         });
 
         // Display edit form & Insert card data into form
@@ -222,6 +225,8 @@
                 editForm.classList.remove("admin-trips-disable-item");
 
                 const tripArrayData = btn.dataset.trip.split("|");
+
+                console.log(btn.dataset.trip);
 
                 const nameInput = document.getElementById("admin-trips-name-input");
                 const descShortInput = document.getElementById("admin-trips-descShort-input");

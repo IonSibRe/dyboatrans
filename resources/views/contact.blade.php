@@ -109,7 +109,7 @@
                 </div>
                 {{-- Form Wrap --}}
                 <div class="con-info-transport-form-wrap">
-                    <form action="/" method="POST" class="con-info-transport-form">
+                    <form action="/mail" method="POST" class="con-info-transport-form">
                         @csrf
                         <div class="con-info-transport-form-inputs-wrap">
                             <div class="con-info-transport-form-inputs-inner-wrap">
@@ -155,7 +155,7 @@
                                     <label for="email" class="con-info-transport-form-label">
                                         Email *
                                     </label>
-                                    <input type="email" name="phone" class="con-info-transport-form-input">
+                                    <input type="email" name="email" class="con-info-transport-form-input">
                                 </div>
                                 <div class="con-info-transport-form-input-item">
                                     <label for="arrival" class="con-info-transport-form-label">
