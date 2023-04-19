@@ -39,7 +39,7 @@
                     </div>
                     <div class="nav-info-phone-num-text-wrap">
                         <p class="nav-info-phone-num-text">objednávky</p>
-                        <p class="nav-info-phone-num-text">+420 725 675 021</p>
+                        <a href="tel:+420725675021" class="nav-info-phone-num-text">+420 725 675 021</a>
                     </div>
                 </div>
             </div>
@@ -94,34 +94,34 @@
         <div class="footer-inner">
             <div class="footer-item">
                 <img src="{{ URL::to('/') }}/imgs/footer/footer-logo-bus.png" alt="Footer Logo" class="footer-logo">
-                <p class="footer-info-text">
+                <a href="tel:420722604746" class="footer-info-text">
                     <img src="{{ URL::to('/') }}/imgs/footer/footer-phone.png" alt="Footer Phone" class="footer-info-icon">
                     +420 722 604 746
-                </p>
-                <p class="footer-info-text">
+                </a>
+                <a href="mailto:dyboatrans@email.cz" class="footer-info-text">
                     <img src="{{ URL::to('/') }}/imgs/footer/footer-email.png" alt="Footer Email" class="footer-info-icon">
                     dyboatrans@email.cz
-                </p>
+                </a>
             </div>
             <div class="footer-item">
                 <h3 class="footer-links-title">Stránky</h3>
-                <a href="" class="footer-link">
+                <a href="/" class="footer-link">
                     <i class="fa-solid fa-angle-right"></i>
                     domů
                 </a>
-                <a href="" class="footer-link">
+                <a href="/services" class="footer-link">
                     <i class="fa-solid fa-angle-right"></i>
                     služby
                 </a>
-                <a href="" class="footer-link">
+                <a href="/contact" class="footer-link">
                     <i class="fa-solid fa-angle-right"></i>
                     kontakt
                 </a>
-                <a href="" class="footer-link">
+                <a href="/vehicles" class="footer-link">
                     <i class="fa-solid fa-angle-right"></i>
                     vozový park
                 </a>
-                <a href="" class="footer-link">
+                <a href="/trips" class="footer-link">
                     <i class="fa-solid fa-angle-right"></i>
                     zájezdy
                 </a>

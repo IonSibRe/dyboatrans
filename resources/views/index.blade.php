@@ -9,11 +9,10 @@
                     <div class="home-header-showcase-slide-content">
                         <h1 class="home-header-showcase-slide-title">
                             Je libo luxus
-                            <span> <br> za rozumné peníze?</span>
+                            <span> <br> za rozumné <br> peníze?</span>
                         </h1>
                         <a href="/services" class="home-header-showcase-slide-btn">
-                            <img src="{{" imgs/home/info-circle-icon.svg"}}" alt="Showcase Info Icon"
-                                class="home-header-showcase-slide-btn-icon">
+                            <i class="fa-sharp fa-solid fa-circle-info"></i>
                             chci zjistit více
                         </a>
                     </div>
@@ -24,8 +23,7 @@
                             Sympatičtí a <span>ochotní řidiči</span> jsou samozřejmostí
                         </h1>
                         <a href="/vehicles" class="home-header-showcase-slide-btn">
-                            <img src="{{" imgs/home/info-circle-icon.svg"}}" alt="Showcase Info Icon"
-                                class="home-header-showcase-slide-btn-icon">
+                            <i class="fa-sharp fa-solid fa-circle-info"></i>
                             chci zjistit více
                         </a>
                     </div>
@@ -38,8 +36,7 @@
                             <span>v oboru</span>
                         </h1>
                         <a href="/services" class="home-header-showcase-slide-btn">
-                            <img src="{{" imgs/home/info-circle-icon.svg"}}" alt="Showcase Info Icon"
-                                class="home-header-showcase-slide-btn-icon">
+                            <i class="fa-sharp fa-solid fa-circle-info"></i>
                             chci zjistit více
                         </a>
                     </div>
@@ -52,8 +49,7 @@
                             <span>rakouské vánoční trhy?</span>
                         </h1>
                         <a href="/trips" class="home-header-showcase-slide-btn">
-                            <img src="{{" imgs/home/info-circle-icon.svg"}}" alt="Showcase Info Icon"
-                                class="home-header-showcase-slide-btn-icon">
+                            <i class="fa-sharp fa-solid fa-circle-info"></i>
                             chci zjistit více
                         </a>
                     </div>
@@ -107,23 +103,19 @@
                     PROČ BYSTE SI MĚLI <span>ZVOLIT ZROVNA NÁS?</span>
                 </h2>
                 <div class="home-header-info-side-wrap-item">
-                    <img src="{{" imgs/home/handshake-icon.svg"}}" alt="Info Handshake Icon"
-                        class="home-header-info-side-wrap-item-icon">
+                    <i class="fa-solid fa-handshake home-header-info-side-wrap-item-icon"></i>
                     <p class="home-header-info-side-wrap-item-text">PROFESIONÁLNÍ PŘÍSTUP</p>
                 </div>
                 <div class="home-header-info-side-wrap-item">
-                    <img src="{{" imgs/home/city-icon.svg"}}" alt="Info City Icon"
-                        class="home-header-info-side-wrap-item-icon">
+                    <i class="fa-solid fa-city home-header-info-side-wrap-item-icon"></i>
                     <p class="home-header-info-side-wrap-item-text">ZNALOST VŠECH EVROPSKÝCH MĚST</p>
                 </div>
                 <div class="home-header-info-side-wrap-item">
-                    <img src="{{" imgs/home/bag-icon.svg"}}" alt="Info Bag Icon"
-                        class="home-header-info-side-wrap-item-icon">
+                    <i class="fa-solid fa-briefcase home-header-info-side-wrap-item-icon"></i>
                     <p class="home-header-info-side-wrap-item-text">20 LET ZKUŠENOSTÍ V OBORU</p>
                 </div>
                 <div class="home-header-info-side-wrap-item">
-                    <img src="{{" imgs/home/en-flag-icon.svg"}}" alt="Info English Flag Icon"
-                        class="home-header-info-side-wrap-item-icon">
+                    <i class="fa-solid fa-globe home-header-info-side-wrap-item-icon"></i>
                     <p class="home-header-info-side-wrap-item-text">ANGLICKY MLUVÍCÍ ŘIDIČI</p>
                 </div>
             </div>

@@ -19,7 +19,7 @@
 }
 
 .footer-logo {
-    width: 480px;
+    width: 430px;
     margin-bottom: 30px;
 }
 
@@ -27,19 +27,24 @@
     display: flex;
     align-items: center;
     margin-bottom: 30px;
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 700;
     color: $text-light;
+    transition: 0.2s all ease-in-out;
 
     .footer-info-icon {
         width: 45px;
         margin-right: 30px;
     }
+
+    &:hover {
+        color: $secondary-color;
+    }
 }
 
 .footer-links-title {
     margin-bottom: 30px;
-    font-size: 38px;
+    font-size: 30px;
     font-weight: 800;
     text-transform: uppercase;
     color: $text-light;
@@ -48,7 +53,7 @@
 .footer-link {
     display: block;
     margin-bottom: 10px;
-    font-size: 26px;
+    font-size: 21px;
     font-weight: 300;
     text-transform: uppercase;
     color: $text-light;
@@ -60,8 +65,8 @@
 }
 
 .footer-opening-title {
-    font-size: 31px;
-    font-weight: 700;
+    font-size: 30px;
+    font-weight: 800;
     text-transform: uppercase;
     color: $text-light;
 }
@@ -77,7 +82,7 @@
     display: flex;
     align-items: center;
     margin-top: 20px;
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
     color: $text-light;
@@ -97,7 +102,7 @@
     }
 
     .footer-opening-times-text {
-        font-size: 21px;
+        font-size: 20px;
         font-weight: 300;
         text-transform: uppercase;
         color: $text-light;

@@ -32,12 +32,17 @@
 
     .home-header-showcase-slide-content {
         width: 600px;
-        margin: 80px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 20px 0;
+        margin: 0 80px;
 
         .home-header-showcase-slide-title {
             font-size: 70px;
             font-weight: 300;
             text-transform: uppercase;
+            margin-bottom: 30px;
 
             & > span {
                 color: $secondary-color;
@@ -46,24 +51,26 @@
         }
 
         .home-header-showcase-slide-btn {
-            position: relative;
-            top: 40px;
-            padding: 20px;
-            font-size: 18px;
-            font-weight: 600;
+            display: inline-block;
+            padding: 15px 20px;
+            font-size: 20px;
+            font-weight: 700;
             text-transform: uppercase;
-            background-color: $primary-color;
-            color: $text-light;
+            color: $primary-color;
+            border: 2px solid $primary-color;
             border-radius: 5px;
-
+            transition: all 0.2s ease-in-out;
+    
             &:hover {
-                opacity: 0.9;
+                background-color: $primary-color;
+                color: $text-light;
             }
-
-            & > img {
+    
+            & > i {
+                margin-right: 5px;
                 position: relative;
-                top: 8px;
-                left: -4px;
+                top: 2px;
+                font-size: 25px;
             }
         }
 
@@ -193,11 +200,19 @@
         }
 
         .home-header-info-side-wrap-item-icon {
+            flex: 1;
             margin-right: 30px;
-            width: 70px;
+            text-align: center;
+            font-size: 60px;
+            transition: 0.2s all ease-in-out;
+
+            &:hover {
+                color: $secondary-color;
+            }
         }
 
         .home-header-info-side-wrap-item-text {
+            flex: 4;
             font-size: 28px;
             font-weight: 600;
         }
@@ -460,6 +475,7 @@
         box-shadow: 0px 3px 6px #00000029;
         display: flex;
         flex-direction: column;
+        border-radius: 6px;
     }
 
     .home-trips-card-img-wrap {
@@ -467,6 +483,7 @@
 
         & > a > img {
             height: 100%;
+            border-radius: 6px;
         }
     }
 
@@ -679,12 +696,16 @@
             no-repeat center center/cover;
     }
 
+    .home-header .home-header-showcase-slide {
+        border: 2px solid blue;
+    }
+
     .home-header .home-header-showcase-slide-content {
         width: 100%;
         margin: 0;
         padding: 0 20px;
-        position: absolute;
-        top: 57.5%;
+        top: 82.5%;
+        transform: translateY(-82.5%);
     }
 
     .home-header
@@ -696,7 +717,6 @@
     .home-header
         .home-header-showcase-slide-content
         .home-header-showcase-slide-btn {
-        top: 20px;
         padding: 15px;
         font-size: 16px;
     }
@@ -811,13 +831,12 @@
     .home-header
         .home-header-showcase-slide-content
         .home-header-showcase-slide-title {
-        font-size: 34px;
+        font-size: 32px;
     }
 
     .home-header
         .home-header-showcase-slide-content
         .home-header-showcase-slide-btn {
-        top: 20px;
         padding: 12px;
         font-size: 14px;
     }
@@ -873,9 +892,6 @@
     // ====================== Vehicle Slideshow ======================
     .home-vehicle-showcase-wrap {
         padding: 0;
-    }
-
-    .home-vehicle-showcase-inner {
     }
 
     .home-vehicle-showcase-slide {

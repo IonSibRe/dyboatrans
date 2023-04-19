@@ -92,10 +92,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="veh-buses-layout-img-wrap">
-                        <img src="{{" imgs/vehicles/veh-buses-layout-img.png"}}" alt="Vehicle Bus Layout Image"
-                            class="veh-buses-layout-img">
-                    </div>
                 </div>
             @endforeach
         </div>

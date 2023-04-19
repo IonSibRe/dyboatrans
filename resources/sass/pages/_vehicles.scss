@@ -232,11 +232,6 @@
     }
 }
 
-.veh-buses-layout-img {
-    margin: 60px 0;
-    width: 600px;
-}
-
 @media screen and (max-width: 1400px) {
     // Header
     .veh-header {
@@ -296,11 +291,6 @@
 
     .veh-buses-lower-icons-wrap {
         margin-bottom: 40px;
-    }
-
-    .veh-buses-layout-img-wrap {
-        display: flex;
-        justify-content: center;
     }
 }
 
@@ -375,10 +365,6 @@
         text-align: center;
         align-items: center;
     }
-    
-    .veh-buses-layout-img {
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 425px) {
@@ -434,9 +420,5 @@
 
     .veh-buses-lower-wrap .veh-buses-lower-title {
         margin-bottom: 20px;
-    }
-
-    .veh-buses-layout-img {
-        margin: 30px 0 60px 0;
     }
 }
