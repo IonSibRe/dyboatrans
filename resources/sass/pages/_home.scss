@@ -220,10 +220,6 @@
 }
 
 // ====================== Vozovy park ======================
-.home-vehicle-showcase {
-    position: relative;
-}
-
 .home-vehicle-showcase-wrap {
     position: relative;
 }
@@ -233,18 +229,75 @@
     height: 700px;
 }
 
-#home-vehicle-showcase-mobile-btns-prev,
-#home-vehicle-showcase-mobile-btns-next {
-    display: none;
+// Desktop btns
+.home-vehicle-showcase-btns > button {
+    cursor: pointer;
     z-index: 999;
+}
+
+.home-vehicle-showcase-btns > button > i {
+    font-size: 60px;
+    transition: 0.2s all ease-in-out;
 
     &:hover {
         color: $secondary-color;
     }
 }
 
-.home-vehicle-showcase-mobile-btns-icon {
+#home-vehicle-showcase-btns-prev {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+#home-vehicle-showcase-btns-next {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+// Mobile btns
+.home-vehicle-showcase-mobile-btns {
     display: none !important;
+    margin: 40px 0;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-vehicle-showcase-mobile-btns > button {
+    cursor: pointer;
+    z-index: 999;
+}
+
+.home-vehicle-showcase-mobile-btns > button > i {
+    font-size: 60px;
+    transition: 0.2s all ease-in-out;
+
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+.home-vehicle-showcase-mobile-btns-middle-icon {
+    font-size: 45px;
+}
+
+#home-vehicle-showcase-btns-prev {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+#home-vehicle-showcase-btns-next {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
 }
 
 
@@ -280,31 +333,33 @@
 }
 
 .home-vehicle-showcase-slide-content {
-    display: flex;
     height: 100%;
+    display: flex;
+}
 
-    .home-vehicle-showcase-slide-content-img-wrap {
-        flex: 1;
-        margin-right: 50px;
+.home-vehicle-showcase-slide-content-img-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
 
-        & > img {
-            display: inline-block;
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-            border-radius: 10px;
-        }
+    & > img {
+        object-fit: cover;
     }
+}
 
-    .home-vehicle-showcase-slide-content-text-wrap {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        padding: 20px;
+.home-vehicle-showcase-slide-content-text-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    
+    .home-vehicle-showcase-slide-content-inner-text-wrap {
+        width: 100%;
+        padding: 0 80px;
     }
 
     .home-vehicle-showcase-slide-content-title {
-        font-size: 59px;
+        margin-bottom: 10px;
+        font-size: 52px;
         font-weight: 700;
         text-transform: uppercase;
     }
@@ -312,111 +367,70 @@
     .home-vehicle-showcase-slide-icons-wrap {
         display: flex;
         align-items: center;
-        margin: 10px 0;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
     }
 
     .home-vehicle-showcase-slide-row {
-        height: 8px;
-        width: 150px;
-        margin-right: 20px;
+        margin-right: 15px;
+        width: 250px;
+        height: 10px;
         background-color: $secondary-color;
     }
 
     .home-vehicle-showcase-slide-icon {
         width: 30px;
-        margin-right: 10px;
+        margin-right: 15px;
 
-        &:nth-child(6) {
-            width: 25px;
+        &:last-child {
+            margin-right: 0;
         }
     }
 
     .home-vehicle-showcase-slide-content-text {
-        width: 600px;
         margin-bottom: 20px;
         font-size: 25px;
         font-weight: 700;
         text-transform: uppercase;
     }
 
-    .home-vehicle-showcase-slide-content-sm-imgs-wrap {
-        margin-bottom: 20px;
-    }
-
+    // Small Imgs
     .home-vehicle-showcase-slide-content-sm-img {
-        height: 100px;
-        width: 150px;
+        display: inline-block;
         margin-right: 20px;
+        height: 140px;   
+        width: 140px;
+        object-fit: cover;
         border-radius: 10px;
 
         &:last-child {
-            margin-bottom: 0;
+            margin-right: 0;
         }
     }
 
     .home-vehicle-showcase-slide-content-btn {
         display: inline-block;
-        padding: 15px 20px;
+        margin: 20px 0;
+        padding: 10px 15px;
         font-size: 20px;
-        font-weight: 700;
+        font-weight: 800;
         text-transform: uppercase;
-        color: $primary-color;
         border: 2px solid $primary-color;
-        border-radius: 5px;
-        transition: all 0.2s ease-in-out;
-
-        &:hover {
-            background-color: $primary-color;
-            color: $text-light;
-        }
+        color: $primary-color;
+        transition: 0.2s all ease-in-out;
 
         & > i {
-            margin-right: 5px;
-            position: relative;
-            top: 2px;
-            font-size: 25px;
+            margin-right: 10px;
+        }
+
+        &:hover {
+            color: $text-light;
+            background-color: $primary-color;
         }
     }
 }
 
-#home-vehicle-showcase-btns-prev {
-    font-size: 60px;
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    z-index: 999;
-    transition: 0.2s all ease-in-out;
 
-    &:hover {
-        color: $secondary-color;
-    }
-}
-
-#home-vehicle-showcase-btns-next {
-    font-size: 60px;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    z-index: 999;
-    transition: 0.2s all ease-in-out;
-
-    &:hover {
-        color: $secondary-color;
-    }
-}
-
-.home-vehicle-showcase-wave {
-    position: absolute;
-    bottom: -35px;
-    left: -60px;
-    width: 500px;
-}
-
-.home-vehicle-showcase-btns-img {
-    width: 40px;
-}
 
 // ====================== Trips ======================
 .home-trips {
@@ -523,20 +537,25 @@
         width: 100%;
     }
 
-    // ====================== Vehicle Showcase ======================
-    .home-vehicle-showcase-title {
-        font-size: 50px;
+    // ====================== Vehicle Slideshow ======================
+    .home-vehicle-showcase-inner {
+        height: 1200px;
     }
 
-    .home-vehicle-showcase-slide-content
-        .home-vehicle-showcase-slide-content-title {
-        font-size: 45px;
+    .home-vehicle-showcase-slide-content {
+        flex-direction: column;
     }
 
-    .home-vehicle-showcase-slide-content
-        .home-vehicle-showcase-slide-content-text {
-        font-size: 20px;
-        width: 100%;
+    .home-vehicle-showcase-slide-content-img-wrap {
+        justify-content: center;
+    }
+
+    .home-vehicle-showcase-slide-content-img-wrap > img {
+        width: 750px;
+    }
+
+    .home-vehicle-showcase-slide-content-text-wrap .home-vehicle-showcase-slide-content-inner-text-wrap {
+        padding: 0 40px;
     }
 
     // Trips
@@ -605,48 +624,8 @@
         height: 1000px;
     }
 
-    .home-vehicle-showcase-title {
-        margin-bottom: 40px;
-    }
-
-    .home-vehicle-showcase-slide-content {
-        flex-direction: column;
-    }
-
-    .home-vehicle-showcase-slide-content .home-vehicle-showcase-slide-content-img-wrap {
-        margin-right: 0;
-        position: relative;
-    }
-
-    .home-vehicle-showcase-slide-content
-        .home-vehicle-showcase-slide-content-img-wrap
-        > img {
-        width: 600px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .home-vehicle-showcase-slide-content-inner-text-wrap {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .home-vehicle-showcase-slide-icons-wrap {
-        flex-direction: column;
-    }
-
-    .home-vehicle-showcase-slide-row {
-        margin: 10px 0 20px 0;
-    }
-
-    #home-vehicle-showcase-btns-prev,
-    #home-vehicle-showcase-btns-next {
-        top: 25%;
+    .home-vehicle-showcase-slide-content-img-wrap > img {
+        width: 550px;
     }
 
     // Trips
@@ -731,89 +710,33 @@
     }
 
     // ====================== Vehicle Slideshow ======================
+    .home-vehicle-showcase-title {
+        font-size: 52px;
+    }
+
+    .home-vehicle-showcase-btns {
+        display: none;
+    }
+
+    .home-vehicle-showcase-mobile-btns {
+        display: flex !important;
+    }
+
     .home-vehicle-showcase-slide {
         padding: 0 40px;
     }
 
-    .home-vehicle-showcase-title {
-        margin: 50px 0 0 0;
-        font-size: 50px;
+    .home-vehicle-showcase-slide-content-img-wrap > img {
+        width: 100%;
     }
 
-    .home-vehicle-showcase-slide-content
-        .home-vehicle-showcase-slide-content-img-wrap
-         {
-            flex: 1;
+    .home-vehicle-showcase-slide-content-text-wrap .home-vehicle-showcase-slide-content-text {
+        font-size: 22px;
     }
 
-    .home-vehicle-showcase-slide-content
-        .home-vehicle-showcase-slide-content-img-wrap
-        > img {
-            width: 100%;
-    }
-
-    .home-vehicle-showcase-slide-content .home-vehicle-showcase-slide-content-text-wrap {
-        padding: 20px 0;
-        flex: 1;
-    }
-
-    .home-vehicle-showcase-wave {
-        display: none;
-    }
-
-    .home-vehicle-showcase-slide-content .home-vehicle-showcase-slide-row {
-        display: none;
-    }
-
-    #home-vehicle-showcase-btns-prev,
-    #home-vehicle-showcase-btns-next {
-        display: none;
-    }
-
-    #home-vehicle-showcase-mobile-btns-prev,
-    #home-vehicle-showcase-mobile-btns-next {
-        display: block;
-        font-size: 50px;
-    }
-
-    #home-vehicle-showcase-mobile-btns-prev {
-        position: relative;
-        left: 30px;
-    }
-
-    #home-vehicle-showcase-mobile-btns-next {
-        position: relative;
-        right: 30px;
-    }
-
-    .home-vehicle-showcase-mobile-btns {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 50px 0 0 0;
-    }
-    
-    .home-vehicle-showcase-mobile-btns-icon {
-        display: block !important;
-        color: $secondary-color;
-        margin-bottom: 20px;
-    }
-
-    #home-vehicle-showcase-mobile-btns-prev {
-        margin-left: 10px;
-    }
-
-    #home-vehicle-showcase-mobile-btns-next {
-        margin-right: 10px;
-    }
-
-    .home-vehicle-showcase-mobile-btns-title {
-        display: block;
-        position: relative;
-        top: -2px;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 30px;
+    .home-vehicle-showcase-slide-content-text-wrap .home-vehicle-showcase-slide-content-sm-img {
+        height: 100px;
+        width: 100px;
     }
 
     // Trips
@@ -891,62 +814,42 @@
     }
 
     // ====================== Vehicle Slideshow ======================
-    .home-vehicle-showcase-wrap {
-        padding: 0;
+    .home-vehicle-showcase-inner {
+        height: 800px;
+    }
+
+    .home-vehicle-showcase-title {
+        margin: 40px 0 0 0;
+        font-size: 36px;
     }
 
     .home-vehicle-showcase-slide {
         padding: 0 20px;
     }
 
-    .home-vehicle-showcase-title {
-        font-size: 40px;
+    .home-vehicle-showcase-slide-content-text-wrap .home-vehicle-showcase-slide-content-inner-text-wrap {
+        padding: 0 20px;
     }
 
-    .home-vehicle-showcase-slide-content
-        .home-vehicle-showcase-slide-content-title {
-        font-size: 35px;
-        margin-bottom: 5px;
+    .home-vehicle-showcase-slide-content-text-wrap .home-vehicle-showcase-slide-content-title {
+        font-size: 36px;
     }
 
-    .home-vehicle-showcase-slide-content
-        .home-vehicle-showcase-slide-content-text {
-        margin-top: 10px;
+    .home-vehicle-showcase-slide-content-text-wrap .home-vehicle-showcase-slide-content-text {
         font-size: 18px;
     }
 
-    .home-vehicle-showcase-slide-content
-        .home-vehicle-showcase-slide-content-sm-imgs-wrap {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+    .home-vehicle-showcase-slide-content-text-wrap .home-vehicle-showcase-slide-icon {
+        width: 25px;
     }
 
-    .home-vehicle-showcase-slide-content
-        .home-vehicle-showcase-slide-content-sm-img {
-            margin-right: 0;
+    .home-vehicle-showcase-slide-content-text-wrap .home-vehicle-showcase-slide-content-sm-img {
+        height: 70px;
+        width: 70px;
     }
 
-    .home-vehicle-showcase-slide-content
-        .home-vehicle-showcase-slide-content-sm-img:first-child {
-            margin-bottom: 20px;
-    }
-
-    #home-vehicle-showcase-mobile-btns-prev,
-    #home-vehicle-showcase-mobile-btns-next {
-        display: block;
-        font-size: 40px;
-    }
-
-    .home-vehicle-showcase-mobile-btns-icon {
-        margin-bottom: 0;
-    }
-
-    .home-vehicle-showcase-mobile-btns-title {
-        display: block;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 22px;
+    .home-vehicle-showcase-slide-content-text-wrap .home-vehicle-showcase-slide-content-btn {
+        font-size: 18px;
     }
 
     // Trips

@@ -127,10 +127,10 @@
             <h1 class="home-vehicle-showcase-title">Vozový park</h1>
             <div class="home-vehicle-showcase-wrap">
                 <div class="home-vehicle-showcase-mobile-btns">
-                    <button id="home-vehicle-showcase-mobile-btns-prev">
+                    <button id="home-vehicle-showcase-mobile-btns-prev" type="button">
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
-                    <i class="fa-solid fa-bus fa-5x home-vehicle-showcase-mobile-btns-icon"></i>
+                    <i class="fa-solid fa-bus home-vehicle-showcase-mobile-btns-middle-icon"></i>
                     <button id="home-vehicle-showcase-mobile-btns-next" type="button">
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
@@ -153,7 +153,6 @@
                                 <div class="home-vehicle-showcase-slide-content-inner-text-wrap">
                                     <h2 class="home-vehicle-showcase-slide-content-title">{{$bus->name}}</h2>
                                     <div class="home-vehicle-showcase-slide-icons-wrap">
-                                        <div class="home-vehicle-showcase-slide-row"></div>
                                         <div class="home-vehicle-showcase-slide-icons-inner-wrap">
                                             @foreach (explode("=", $bus->icons) as $icon)
                                                 @if (++$iconsCount < 6)
@@ -164,7 +163,7 @@
                                         </div>
                                     </div>
                                     <p class="home-vehicle-showcase-slide-content-text">
-                                        {{substr($bus->descLong, 0, 220)}}
+                                        {{substr($bus->descLong, 0, 220)}}...
                                     </p>
                                     <div class="home-vehicle-showcase-slide-content-sm-imgs-wrap">
                                         <img src="{{asset('storage/') . "/" . $imgPaths[1]}}"
@@ -185,16 +184,16 @@
                     @endforeach
                 </div>
                 <div class="home-vehicle-showcase-btns">
-                    <button id="home-vehicle-showcase-btns-prev">
+                    <button id="home-vehicle-showcase-btns-prev" type="button">
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
-                    <button id="home-vehicle-showcase-btns-next">
+                    <button id="home-vehicle-showcase-btns-next" type="button">
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
                 </div>
             </div>
-            <img src="{{" imgs/home/vehicle-slideshow-wave.png"}}" alt="Vehicle Slideshow Wave"
-                class="home-vehicle-showcase-wave">
+            {{-- <img src="{{" imgs/home/vehicle-slideshow-wave.png"}}" alt="Vehicle Slideshow Wave"
+                class="home-vehicle-showcase-wave"> --}}
         </div>
     </section>
     {{-- ================== Trips ================== --}}
