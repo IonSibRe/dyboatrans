@@ -21,6 +21,11 @@
 // Logo
 .nav-logo {
     width: 270px;
+    transition: 0.1s transform ease-in-out;
+
+    &:hover {
+        transform: scale(1.01);
+    }
 }
 
 // Links
@@ -178,6 +183,11 @@
         flex: 1;
         color: $text-light;
         background-color: $primary-color;
+        transition: 0.2s color ease-in-out;
+
+        &:hover {
+            color: $secondary-color;
+        }
     }
 }
 

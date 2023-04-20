@@ -19,7 +19,9 @@
     <nav class="nav">
         <div class="nav-inner">
             <div class="nav-logo-wrap">
-                <img src="{{ URL::to('/') }}/imgs/nav/nav-logo.svg" alt="Nav Logo" class="nav-logo">
+                <a href="/">
+                    <img src="{{ URL::to('/') }}/imgs/nav/nav-logo.svg" alt="Nav Logo" class="nav-logo">
+                </a>
             </div>
             <div class="nav-links-wrap">
                 <a href="/" class="nav-link nav-link-active">úvod</a>
@@ -64,10 +66,10 @@
                 <i class="fa-solid fa-bus"></i>
                 objednávka
             </a>
-            <p class="nav-mobile-info-phone-num">
+            <a href="tel:+420725675021" class="nav-mobile-info-phone-num">
                 <i class="fa-solid fa-phone"></i>
                 +420 725 675 021
-            </p>
+            </a>
         </div>
         <ul class="nav-mobile-item-wrap">
             <li class="nav-mobile-item">
@@ -128,7 +130,6 @@
             </div>
             <div class="footer-item">
                 <h3 class="footer-opening-title">Otevírací doba</h3>
-                <h4 class="footer-opening-subtitle">Na objednání</h4>
                 <p class="footer-opening-days">
                     <img src="{{ URL::to('/') }}/imgs/footer/footer-calendar.png" alt="Footer Calendar"
                         class="footer-opening-days-icon">

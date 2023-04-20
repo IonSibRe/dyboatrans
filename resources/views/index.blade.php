@@ -3,13 +3,14 @@
     @endphp
     {{-- ================== Header ================== --}}
     <header class="home-header">
+        {{-- Header Showcase --}}
         <div class="home-header-showcase-wrap">
             <div class="home-header-showcase">
                 <div class="home-header-showcase-slide current">
                     <div class="home-header-showcase-slide-content">
                         <h1 class="home-header-showcase-slide-title">
                             Je libo luxus
-                            <span> <br> za rozumné <br> peníze?</span>
+                            <span> za rozumné peníze?</span>
                         </h1>
                         <a href="/services" class="home-header-showcase-slide-btn">
                             <i class="fa-sharp fa-solid fa-circle-info"></i>
@@ -192,8 +193,6 @@
                     </button>
                 </div>
             </div>
-            {{-- <img src="{{" imgs/home/vehicle-slideshow-wave.png"}}" alt="Vehicle Slideshow Wave"
-                class="home-vehicle-showcase-wave"> --}}
         </div>
     </section>
     {{-- ================== Trips ================== --}}
@@ -228,7 +227,7 @@
                             <h3 class="home-trips-card-title">{{$trip->name}}</h3>
                             <h4 class="home-trips-card-date">{{$trip->date}}</h4>
                             <div class="home-trips-card-row"></div>
-                            <p class="home-trips-card-text">{{substr($trip->descShort, 0, 20)}}</p>
+                            <p class="home-trips-card-text">{{$trip->descShort}}</p>
                         </div>
                     </div>
                 @endforeach

@@ -58,7 +58,7 @@
                         <h3 class="trips-card-title">{{$trip->name}}</h3>
                         <h4 class="trips-card-date">{{$trip->date}}</h4>
                         <div class="trips-card-row"></div>
-                        <p class="trips-card-text">{{substr($trip->descShort, 0, 20)}}</p>
+                        <p class="trips-card-text">{{$trip->descShort}}</p>
                     </div>
                 </div>
             @endforeach

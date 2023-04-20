@@ -158,9 +158,26 @@ const vehicleMobileNext = document.querySelector(
     "#home-vehicle-showcase-mobile-btns-next"
 );
 
+const currentMainImg = document.querySelector(".vehicle-current").children[0].children[0].children[0];
+const vehiclesSmImgs = document.querySelectorAll(".home-vehicle-showcase-slide-content-sm-img");
+const currentMainImgSrc = currentMainImg.src;
+
+[...vehiclesSmImgs].forEach((img) => {
+    img.addEventListener("mouseenter", () => {
+        currentMainImg.src = img.src;
+    })
+
+    img.addEventListener("mouseleave", () => {
+        currentMainImg.src = currentMainImgSrc;
+    })
+})
+
 const vehicleNextSlide = () => {
     const vehicleCurrent = document.querySelector(".vehicle-current");
     vehicleCurrent.classList.remove("vehicle-current");
+
+    const vehiclesSmImgs = vehicleCurrent.children[0].children[0].children;
+    console.log(vehiclesSmImgs);
 
     if (vehicleCurrent.nextElementSibling) {
         vehicleCurrent.nextElementSibling.classList.add("vehicle-current");

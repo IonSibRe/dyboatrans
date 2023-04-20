@@ -71,7 +71,7 @@
     }
 
     .con-info-address-text {
-        font-size: 32px;
+        font-size: 25px;
         font-weight: 300;
     }
 
@@ -99,7 +99,7 @@
     }
 
     .con-info-order-text {
-        font-size: 32px;
+        font-size: 25px;
         font-weight: 400;
 
         &:first-child {
@@ -143,7 +143,7 @@
     position: relative;
 
     .con-info-transport-text {
-        font-size: 32px;
+        font-size: 25px;
         font-weight: 300;
     }
 
@@ -161,6 +161,11 @@
         margin-right: 10px;
         font-size: 60px;
         color: $secondary-color;
+        transition: 0.2s color ease-in-out;
+
+        &:hover {
+            color: $primary-color;
+        }
 
         &:last-child {
             margin-right: 0;

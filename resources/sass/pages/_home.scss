@@ -39,7 +39,7 @@
         margin: 0 80px;
 
         .home-header-showcase-slide-title {
-            font-size: 70px;
+            font-size: 66px;
             font-weight: 300;
             text-transform: uppercase;
             margin-bottom: 30px;
@@ -236,7 +236,10 @@
 }
 
 .home-vehicle-showcase-btns > button > i {
-    font-size: 60px;
+    font-size: 70px;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: $secondary-color;
     transition: 0.2s all ease-in-out;
 
     &:hover {
@@ -247,14 +250,14 @@
 #home-vehicle-showcase-btns-prev {
     position: absolute;
     top: 50%;
-    left: 20px;
+    left: 30px;
     transform: translateY(-50%);
 }
 
 #home-vehicle-showcase-btns-next {
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 30px;
     transform: translateY(-50%);
 }
 
@@ -275,7 +278,10 @@
 
 .home-vehicle-showcase-mobile-btns > button > i {
     font-size: 60px;
+    color: transparent;
     transition: 0.2s all ease-in-out;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: $secondary-color;
 
     &:hover {
         color: $secondary-color;
@@ -283,21 +289,8 @@
 }
 
 .home-vehicle-showcase-mobile-btns-middle-icon {
-    font-size: 45px;
-}
-
-#home-vehicle-showcase-btns-prev {
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-}
-
-#home-vehicle-showcase-btns-next {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+    font-size: 66px;
+    color: $secondary-color;
 }
 
 
@@ -317,7 +310,7 @@
 }
 
 .home-vehicle-showcase-slide {
-    padding: 0 80px;
+    padding: 0 100px;
     position: absolute;
     top: 0;
     left: 0;
@@ -449,7 +442,7 @@
     .home-trips-title {
         width: fit-content;
         padding: 20px;
-        font-size: 70px;
+        font-size: 56px;
         font-weight: 800;
         text-transform: uppercase;
         color: $text-light;
@@ -458,7 +451,7 @@
 
     .home-trips-text {
         margin-top: 30px;
-        font-size: 32px;
+        font-size: 25px;
         font-weight: 600;
     }
 
@@ -675,28 +668,24 @@
             no-repeat center center/cover;
     }
 
-    .home-header .home-header-showcase-slide {
-        border: 2px solid blue;
-    }
-
     .home-header .home-header-showcase-slide-content {
         width: 100%;
         margin: 0;
         padding: 0 20px;
-        top: 82.5%;
-        transform: translateY(-82.5%);
+        top: 82%;
+        transform: translateY(-82%);
     }
 
     .home-header
         .home-header-showcase-slide-content
         .home-header-showcase-slide-title {
-        font-size: 36px;
+        font-size: 31px;
     }
 
     .home-header
         .home-header-showcase-slide-content
         .home-header-showcase-slide-btn {
-        padding: 15px;
+        padding: 10px 15px 15px 15px;
         font-size: 16px;
     }
 
@@ -712,6 +701,7 @@
     // ====================== Vehicle Slideshow ======================
     .home-vehicle-showcase-title {
         font-size: 52px;
+        margin: 40px 0 0 0;
     }
 
     .home-vehicle-showcase-btns {
@@ -724,6 +714,10 @@
 
     .home-vehicle-showcase-slide {
         padding: 0 40px;
+    }
+
+    .home-vehicle-showcase-slide-content-text-wrap .home-vehicle-showcase-slide-content-inner-text-wrap {
+        padding: 0;
     }
 
     .home-vehicle-showcase-slide-content-img-wrap > img {
@@ -755,13 +749,13 @@
     .home-header
         .home-header-showcase-slide-content
         .home-header-showcase-slide-title {
-        font-size: 32px;
+        font-size: 26px;
     }
 
     .home-header
         .home-header-showcase-slide-content
         .home-header-showcase-slide-btn {
-        padding: 12px;
+        padding: 5px 15px 10px 15px;
         font-size: 14px;
     }
 
