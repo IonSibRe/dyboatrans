@@ -61,31 +61,56 @@
                                     {{$bus->descLong}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sed voluptas fugit est. Officiis corporis quas nam maiores vitae ratione hic voluptates quisquam culpa, facere, exercitationem deleniti dolorum maxime rerum repellendus officia laudantium quasi deserunt expedita beatae aut ullam earum placeat. Corrupti aliquam ullam inventore officiis quasi reprehenderit voluptates blanditiis?
                                 </p>
                             </div>
-                        </div>
-                        <div class="veh-buses-upper-img-wrap">
-                            <img src="{{asset('storage/') . "/" . $busesLgimgPaths[0]}}" alt="Vehicles Bus Image"
-                                class="veh-buses-upper-img">
-                        </div>
-                    </div>
-                    <div class="veh-buses-lower-wrap">
-                        <div class="veh-buses-lower-text-wrap">
-                            <h3 class="veh-buses-lower-title">Vybavení</h3>
-                            <div class="veh-buses-lower-text-inner-wrap">
-                                @foreach (explode("=", $bus->icons) as $icon)
-                                    <div class="veh-buses-lower-icons-wrap">
-                                        <img src="{{explode(",", $icon)[0]}}" alt="Buses Icon Image">
-                                        <p class="veh-buses-lower-icon-text">{{explode(",", $icon)[1]}}</p>
-                                    </div>
-                                @endforeach
+                            <div class="veh-buses-lower-text-wrap">
+                                <h3 class="veh-buses-lower-title">Vybavení</h3>
+                                <div class="veh-buses-lower-text-inner-wrap">
+                                    @if (count(explode("=", $bus->icons)) <= 8)
+                                        @foreach (explode("=", $bus->icons) as $icon)
+                                            <div class="veh-buses-lower-icons-single-row-item">
+                                                <img src="{{explode(",", $icon)[0]}}" alt="Buses Icon Image">
+                                                <p class="veh-buses-lower-icon-text">{{explode(",", $icon)[1]}}</p>
+                                            </div>
+                                        @endforeach
+                                    @else
+                                        @php
+                                            $allIcons = explode("=", $bus->icons);
+                                            $firstEight = array_slice($allIcons, 0, 8);
+                                            $lastEight = array_slice($allIcons, 9, count($allIcons) - 8);
+    
+                                        @endphp
+                                        <div class="veh-buses-lower-text-two-columns-wrap">
+                                            <div class="veh-buses-lower-icons-wrap">
+                                                @foreach ($firstEight as $icon)
+                                                    <div class="veh-buses-lower-icons-item">
+                                                        <img src="{{explode(",", $icon)[0]}}" alt="Buses Icon Image">
+                                                        <p class="veh-buses-lower-icon-text">{{explode(",", $icon)[1]}}</p>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                            <div class="veh-buses-lower-icons-wrap">
+                                                @foreach ($lastEight as $icon)
+                                                <div class="veh-buses-lower-icons-item">
+                                                    <img src="{{explode(",", $icon)[0]}}" alt="Buses Icon Image">
+                                                    <p class="veh-buses-lower-icon-text">{{explode(",", $icon)[1]}}</p>
+                                                </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    @endif
+                                </div>
                             </div>
                         </div>
-                        <div class="veh-buses-lower-imgs-wrap">
-                            <div class="veh-buses-lower-imgs-inner-wrap">
-                                <div>
+                        <div class="veh-buses-upper-img-wrap">
+                            <div class="veh-buses-upper-img-container">
+                                <img src="{{asset('storage/') . "/" . $busesLgimgPaths[0]}}" alt="Vehicles Bus Image"
+                                    class="veh-buses-upper-img">
+                            </div>
+                            <div class="veh-buses-upper-img-container veh-buses-upper-img-sm-imgs-container">
+                                <div class="veh-buses-upper-img-sm-imgs-item">
                                     <img src="{{asset('storage/') . "/" . $busesLgimgPaths[1]}}" alt="Vehicle Bus Small Image"
                                         class="veh-buses-lower-img">
                                 </div>
-                                <div>
+                                <div class="veh-buses-upper-img-sm-imgs-item">
                                     <img src="{{asset('storage/') . "/" . $busesLgimgPaths[2]}}" alt="Vehicle Bus Small Image"
                                         class="veh-buses-lower-img">
                                 </div>

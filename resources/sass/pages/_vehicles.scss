@@ -115,6 +115,7 @@
 
 // ==================== Buses ====================
 .veh-buses-wrap {
+    padding-bottom: 60px;
     background-color: #f2f2f2;
 }
 
@@ -138,9 +139,11 @@
     .veh-buses-upper-text-wrap {
         flex: 1;
     }
-
+    
     .veh-buses-upper-text-inner-wrap {
         width: 600px;
+        margin-bottom: 30px;
+        padding-right: 30px;
     }
 
     .veh-buses-upper-title {
@@ -164,72 +167,93 @@
 
     .veh-buses-upper-img-wrap {
         flex: 1;
+        display: flex;
+        flex-direction: column;
 
-        & > img {
-            height: 100%;
+        .veh-buses-upper-img-container {
+            display: flex;
+
+            &:first-child {
+                margin-bottom: 30px;
+            }
+        }
+
+        .veh-buses-upper-img {
+            object-fit: cover;
+        }
+
+        .veh-buses-upper-img-sm-imgs-item {
+            flex: 1;
+            margin-right: 30px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .veh-buses-lower-img {
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
 }
 
-// Lower
-.veh-buses-lower-wrap {
+.veh-buses-lower-text-wrap {
+    flex: 1;
+}
+
+.veh-buses-lower-text-inner-wrap {
     display: flex;
-    margin-top: 50px;
+    flex-direction: column;
+}
 
-    .veh-buses-lower-text-wrap {
-        flex: 1;
+.veh-buses-lower-text-two-columns-wrap {
+    display: flex;
+}
+
+.veh-buses-lower-icons-single-row-item {
+    display: flex;
+    margin-bottom: 10px;
+
+    & > img {
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
     }
+}
 
-    .veh-buses-lower-text-inner-wrap {
-        display: flex;
-        flex-direction: column;
+.veh-buses-lower-icons-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
     }
+}
 
-    .veh-buses-lower-icons-wrap {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
+.veh-buses-lower-icons-item {
+    display: flex;
+    margin-bottom: 10px;
 
-        & > img {
-            height: 30px;
-            width: 30px;
-            margin-right: 10px;
-        }
+    & > img {
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
     }
+}
 
-    .veh-buses-lower-title {
-        margin-bottom: 30px;
-        font-size: 35px;
-        font-weight: 800;
-        text-transform: uppercase;
-    }
+.veh-buses-lower-title {
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
 
-    .veh-buses-lower-icon-text {
-        font-size: 20px;
-        font-weight: 700;
-    }
-
-    .veh-buses-lower-imgs-wrap {
-        flex: 1;
-    }
-
-    .veh-buses-lower-imgs-inner-wrap {
-        display: flex;
-        margin-bottom: 20px;
-
-        & > div {
-            width: 50%;
-            margin-right: 20px;
-        }
-
-        & > div > img {
-            height: 100%;
-        }
-
-        & > div:last-child {
-            margin-right: 0;
-        }
-    }
+.veh-buses-lower-icon-text {
+    font-size: 20px;
+    font-weight: 700;
 }
 
 @media screen and (max-width: 1400px) {
@@ -260,6 +284,10 @@
     }
 
     // Buses
+    .veh-buses-row {
+        margin-bottom: 80px;
+    }
+
     .veh-buses-bus-item {
         display: flex;
         flex-direction: column;
@@ -273,23 +301,10 @@
 
     .veh-buses-upper-wrap .veh-buses-upper-text-inner-wrap {
         width: 100%;
+        padding-right: 0;
     }
     
-    .veh-buses-upper-wrap .veh-buses-upper-text-wrap {
-        margin-bottom: 30px;
-    }
-
-    .veh-buses-lower-wrap {
-        width: 900px;
-        flex-direction: column;
-    }
-
-    .veh-buses-lower-wrap .veh-buses-lower-text-wrap {
-        margin-bottom: 40px;
-
-    }
-
-    .veh-buses-lower-icons-wrap {
+    .veh-buses-lower-text-wrap {
         margin-bottom: 40px;
     }
 }
@@ -303,10 +318,6 @@
 
     // Buses
     .veh-buses-upper-wrap {
-        width: 600px;
-    }
-
-    .veh-buses-lower-wrap {
         width: 600px;
     }
 }
@@ -360,10 +371,8 @@
         width: 100%;
     }
 
-    .veh-buses-lower-wrap {
-        width: 100%;
-        text-align: center;
-        align-items: center;
+    .veh-buses-lower-text-two-columns-wrap {
+        flex-direction: column;
     }
 }
 
@@ -410,15 +419,11 @@
         font-size: 34px;
     }
 
-    .veh-buses-lower-wrap .veh-buses-lower-text-wrap {
-        order: 2;
-    }
-
-    .veh-buses-lower-wrap .veh-buses-lower-imgs-wrap {
-        margin-bottom: 30px;
-    }
-
-    .veh-buses-lower-wrap .veh-buses-lower-title {
+    .veh-buses-lower-title {
         margin-bottom: 20px;
+    }
+
+    .veh-buses-lower-icon-text {
+        font-size: 18px;
     }
 }
