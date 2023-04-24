@@ -1,6 +1,5 @@
 // ==================== Header ====================
 .veh-header {
-    height: 90vh;
     width: 100vw;
     padding: 40px 80px 0 80px;
     position: relative;
@@ -96,13 +95,24 @@
     .veh-card-btn {
         display: inline-block;
         margin-top: 10px;
-        padding: 10px 10px 15px 10px;
+        padding: 8px 8px 10px 10px;
         font-size: 15px;
         font-weight: 500;
         text-transform: uppercase;
         background-color: $primary-color;
         color: $text-light;
-        border-radius: 5px;
+        border: 2px solid $primary-color;
+        border-radius: 6px;
+        transition: 0.2s all ease-in-out;
+
+        & > i {
+            margin-right: 5px;
+        }
+
+        &:hover {
+            color: $primary-color;
+            background-color: $text-light;
+        }
     }
 
     .veh-card-btn-icon {
@@ -180,6 +190,7 @@
 
         .veh-buses-upper-img {
             object-fit: cover;
+            border-radius: 6px;
         }
 
         .veh-buses-upper-img-sm-imgs-item {
@@ -191,7 +202,7 @@
             }
 
             .veh-buses-lower-img {
-                height: 100%;
+                height: 350px;
                 object-fit: cover;
                 border-radius: 6px;
             }

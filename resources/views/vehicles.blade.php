@@ -33,8 +33,7 @@
                         <h2 class="veh-card-title">{{$bus->name}}</h2>
                         <p class="veh-card-text">({{$bus->seatCount}})</p>
                         <a href="" class="veh-card-btn">
-                            <img src="{{" imgs/vehicles/info-circle-icon.svg"}}" alt="Vehicles Card Btn Icon"
-                                class="veh-card-btn-icon">
+                            <i class="fa-sharp fa-solid fa-circle-info"></i>
                             Chci zjistit více
                         </a>
                     </div>
@@ -76,7 +75,7 @@
                                         $allIcons = explode("=", $bus->icons);
                                         $firstEight = array_slice($allIcons, 0, 8);
                                         $lastEight = array_slice($allIcons, 9, count($allIcons) - 8);
-    
+
                                     @endphp
                                     <div class="veh-buses-lower-text-two-columns-wrap">
                                         <div class="veh-buses-lower-icons-wrap">

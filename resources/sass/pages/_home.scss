@@ -339,7 +339,9 @@
     align-items: center;
 
     & > img {
+        height: 500px;
         object-fit: cover;
+        border-radius: 6px;
     }
 }
 
@@ -414,6 +416,7 @@
         border: 2px solid $primary-color;
         color: $primary-color;
         transition: 0.2s all ease-in-out;
+        border-radius: 6px;
 
         & > i {
             margin-right: 10px;
