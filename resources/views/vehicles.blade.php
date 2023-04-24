@@ -33,8 +33,7 @@
                         <h2 class="veh-card-title">{{$bus->name}}</h2>
                         <p class="veh-card-text">({{$bus->seatCount}})</p>
                         <a href="" class="veh-card-btn">
-                            <img src="{{" imgs/vehicles/info-circle-icon.svg"}}" alt="Vehicles Card Btn Icon"
-                                class="veh-card-btn-icon">
+                            <i class="fa-sharp fa-solid fa-circle-info"></i>
                             Chci zjistit více
                         </a>
                     </div>
@@ -49,7 +48,7 @@
                 @php
                     $busesLgimgPaths = explode(",", $bus->images);
                 @endphp
-                
+
                 <div class="veh-buses-bus-item" id="bus{{$bus->id}}">
                     <div class="veh-buses-row"></div>
                     <div class="veh-buses-upper-wrap">
@@ -58,42 +57,42 @@
                                 <h2 class="veh-buses-upper-title">{{$bus->name}}</h2>
                                 <div class="veh-buses-upper-row"></div>
                                 <p class="veh-buses-upper-text">
-                                    {{$bus->descLong}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sed voluptas fugit est. Officiis corporis quas nam maiores vitae ratione hic voluptates quisquam culpa, facere, exercitationem deleniti dolorum maxime rerum repellendus officia laudantium quasi deserunt expedita beatae aut ullam earum placeat. Corrupti aliquam ullam inventore officiis quasi reprehenderit voluptates blanditiis?
+                                    {{$bus->descLong}}
                                 </p>
                             </div>
-                            <div class="veh-buses-lower-text-wrap">
-                                <h3 class="veh-buses-lower-title">Vybavení</h3>
-                                <div class="veh-buses-lower-text-inner-wrap">
-                                    @if (count(explode("=", $bus->icons)) <= 8)
-                                        @foreach (explode("=", $bus->icons) as $icon)
-                                            <div class="veh-buses-lower-icons-single-row-item">
-                                                <img src="{{explode(",", $icon)[0]}}" alt="Buses Icon Image">
-                                                <p class="veh-buses-lower-icon-text">{{explode(",", $icon)[1]}}</p>
-                                            </div>
-                                        @endforeach
-                                    @else
-                                        @php
-                                            $allIcons = explode("=", $bus->icons);
-                                            $firstEight = array_slice($allIcons, 0, 8);
-                                            $lastEight = array_slice($allIcons, 9, count($allIcons) - 8);
-    
-                                        @endphp
-                                        <div class="veh-buses-lower-text-two-columns-wrap">
-                                            <div class="veh-buses-lower-icons-wrap">
-                                                @foreach ($firstEight as $icon)
-                                                    <div class="veh-buses-lower-icons-item">
-                                                        <img src="{{explode(",", $icon)[0]}}" alt="Buses Icon Image">
-                                                        <p class="veh-buses-lower-icon-text">{{explode(",", $icon)[1]}}</p>
-                                                    </div>
-                                                @endforeach
-                                            </div>
-                                            <div class="veh-buses-lower-icons-wrap">
-                                                @foreach ($lastEight as $icon)
+                        <div class="veh-buses-lower-text-wrap">
+                            <h3 class="veh-buses-lower-title">Vybavení</h3>
+                            <div class="veh-buses-lower-text-inner-wrap">
+                                @if (count(explode("=", $bus->icons)) <= 8)
+                                    @foreach (explode("=", $bus->icons) as $icon)
+                                        <div class="veh-buses-lower-icons-single-row-item">
+                                            <img src="{{explode(",", $icon)[0]}}" alt="Buses Icon Image">
+                                            <p class="veh-buses-lower-icon-text">{{explode(",", $icon)[1]}}</p>
+                                        </div>
+                                    @endforeach
+                                @else
+                                    @php
+                                        $allIcons = explode("=", $bus->icons);
+                                        $firstEight = array_slice($allIcons, 0, 8);
+                                        $lastEight = array_slice($allIcons, 9, count($allIcons) - 8);
+
+                                    @endphp
+                                    <div class="veh-buses-lower-text-two-columns-wrap">
+                                        <div class="veh-buses-lower-icons-wrap">
+                                            @foreach ($firstEight as $icon)
                                                 <div class="veh-buses-lower-icons-item">
                                                     <img src="{{explode(",", $icon)[0]}}" alt="Buses Icon Image">
                                                     <p class="veh-buses-lower-icon-text">{{explode(",", $icon)[1]}}</p>
                                                 </div>
-                                                @endforeach
+                                            @endforeach
+                                        </div>
+                                        <div class="veh-buses-lower-icons-wrap">
+                                            @foreach ($lastEight as $icon)
+                                            <div class="veh-buses-lower-icons-item">
+                                                <img src="{{explode(",", $icon)[0]}}" alt="Buses Icon Image">
+                                                <p class="veh-buses-lower-icon-text">{{explode(",", $icon)[1]}}</p>
+                                            </div>
+                                            @endforeach
                                             </div>
                                         </div>
                                     @endif

@@ -31,6 +31,18 @@ use App\Http\Controllers\MailController;
 
 // ===================== E-mail =====================
 
+// ===================== Reverse Proxy =====================
+$proxy_url    = getenv('PROXY_URL');
+$proxy_scheme = getenv('PROXY_SCHEME');
+
+if (!empty($proxy_url)) {
+   URL::forceRootUrl($proxy_url);
+}
+
+if (!empty($proxy_scheme)) {
+   URL::forceScheme($proxy_scheme);
+}
+
 // ===================== Page Routing =====================
 Route::get('/', function () {
     $trips = Trip::all();

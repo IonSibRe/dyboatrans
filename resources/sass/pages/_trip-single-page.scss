@@ -2,7 +2,7 @@
 .trip-sp-header {
     position: relative;
     height: 70vh;
-    
+
     &::after {
         content: "";
         position: absolute;
@@ -15,6 +15,7 @@
 }
 
 .trip-sp-header-img {
+    object-fit: cover;
     display: inline-block;
     position: relative;
     width: 100%;
@@ -151,6 +152,10 @@
     .trip-sp-info-img {
         width: 100%;
     }
+
+    .trip-sp-header-title, .trip-sp-header-date {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -163,6 +168,7 @@
     }
 
     .trip-sp-header-title, .trip-sp-header-date {
+        text-align: center;
         font-size: 46px;
         font-weight: 700;
         text-transform: uppercase;
@@ -182,11 +188,11 @@
         margin-bottom: 30px;
         font-size: 48px;
     }
-    
+
     .trip-sp-info-date, .trip-sp-info-price {
         font-size: 26px;
     }
-    
+
     .trip-sp-info-text {
         font-size: 22px;
     }

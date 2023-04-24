@@ -3,7 +3,8 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "start": "concurrently \"npm run dev\" \"php artisan serve\""
+        "watch": "vite build --watch",
+        "start": "concurrently \"npm run dev\" \"npm run watch\" \"php artisan serve\""
     },
     "devDependencies": {
         "axios": "^1.1.2",

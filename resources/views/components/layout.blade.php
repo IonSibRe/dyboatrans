@@ -41,7 +41,7 @@
                     </div>
                     <div class="nav-info-phone-num-text-wrap">
                         <p class="nav-info-phone-num-text">objednávky</p>
-                        <a href="tel:+420725675021" class="nav-info-phone-num-text">+420 725 675 021</a>
+                        <a href="tel:+420722644746" class="nav-info-phone-num-text">+420 722 644 746</a>
                     </div>
                 </div>
             </div>
@@ -66,9 +66,9 @@
                 <i class="fa-solid fa-bus"></i>
                 objednávka
             </a>
-            <a href="tel:+420725675021" class="nav-mobile-info-phone-num">
+            <a href="tel:+420722644746" class="nav-mobile-info-phone-num">
                 <i class="fa-solid fa-phone"></i>
-                +420 725 675 021
+                +420 722 644 746
             </a>
         </div>
         <ul class="nav-mobile-item-wrap">
@@ -141,13 +141,13 @@
                             class="footer-opening-times-icon">
                     </div>
                     <div class="footer-opening-times-text-wrap">
-                        <p class="footer-opening-times-text">PO: 17:00 - 22:00</p>
-                        <p class="footer-opening-times-text">ÚT: 17:00 - 22:00</p>
-                        <p class="footer-opening-times-text">ST: 17:00 - 22:00</p>
-                        <p class="footer-opening-times-text">ČT: 17:00 - 22:00</p>
-                        <p class="footer-opening-times-text">PÁ: 17:00 - 22:00</p>
-                        <p class="footer-opening-times-text">SO: 9:00 - 22:00</p>
-                        <p class="footer-opening-times-text">NE: 9:00 - 22:00</p>
+                        <p class="footer-opening-times-text">PO: 00:00 - 24:00</p>
+                        <p class="footer-opening-times-text">ÚT: 00:00 - 24:00</p>
+                        <p class="footer-opening-times-text">ST: 00:00 - 24:00</p>
+                        <p class="footer-opening-times-text">ČT: 00:00 - 24:00</p>
+                        <p class="footer-opening-times-text">PÁ: 00:00 - 24:00</p>
+                        <p class="footer-opening-times-text">SO: 00:00 - 24:00</p>
+                        <p class="footer-opening-times-text">NE: 00:00 - 24:00</p>
                     </div>
                 </div>
             </div>

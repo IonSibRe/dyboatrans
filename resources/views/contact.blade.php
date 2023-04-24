@@ -56,7 +56,7 @@
                 Objednávka
             </h2>
             <p class="con-info-order-text con-info-text-mb">Karel Rizman</p>
-            <p class="con-info-order-text">Mobil: +420 725 675 021</p>
+            <p class="con-info-order-text">Mobil: +420 722 644 746</p>
             <p class="con-info-order-text">E-mail: dyboatrans@email.cz</p>
         </div>
         {{-- Transport --}}

@@ -121,7 +121,7 @@
             &:hover:last-child {
                 color: $secondary-color;
             }
-            
+
             &:last-child {
                 font-weight: 500;
             }
@@ -187,6 +187,10 @@
         &:hover {
             color: $secondary-color;
         }
+    }
+
+    .nav-mobile-info-phone-num-text {
+        color: $text-light;
     }
 }
 

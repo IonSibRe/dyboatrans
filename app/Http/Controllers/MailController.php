@@ -23,8 +23,9 @@ class MailController extends Controller
         ]);
 
         $contact = Contact::create($request->all());;
+        $toAddress = getenv('MAIL_CONTACT_ADDRESS');
 
-        Mail::to("ionsibre@gmail.com")
+        Mail::to($toAddress)
             ->queue(new ContactMail($contact));
 
         return redirect("/contact");
