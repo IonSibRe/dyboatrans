@@ -45,10 +45,10 @@ class BusesController extends Controller
 
             }
         }
-        
+
         Bus::create($formFields);
 
-        return back();
+        return redirect("/admin/buses");
     }
 
     // Update Bus
@@ -70,7 +70,7 @@ class BusesController extends Controller
         }
 
         // Create new dir and store imgs there
-        
+
         if ($request->hasFile("images")) {
             $formFields["images"] = "";
             $folderName = "";
