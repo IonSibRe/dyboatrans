@@ -28,8 +28,11 @@ class ContactMail extends Mailable
      */
     public function envelope(): Envelope
     {
+        $fromAddress = getenv('MAIL_FROM_ADDRESS');
+        $fromName = getenv('MAIL_FROM_NAME');
+
         return new Envelope(
-            from: new Address($this->contact->email, $this->contact->fullname),
+            from: new Address($fromAddress, $fromName),
             subject: "Nová nezávazná poptávka od zákazníka - " . $this->contact->fullname,
         );
     }
