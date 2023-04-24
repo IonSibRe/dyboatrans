@@ -143,7 +143,7 @@
                         $imgPaths = explode(",", $bus->images);
                         $iconsCount = 0;
                     @endphp
-                    
+
                     <div class="home-vehicle-showcase-slide">
                         <div class="home-vehicle-showcase-slide-content">
                             <div class="home-vehicle-showcase-slide-content-img-wrap">

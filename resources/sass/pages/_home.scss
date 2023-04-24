@@ -60,12 +60,12 @@
             border: 2px solid $primary-color;
             border-radius: 5px;
             transition: all 0.2s ease-in-out;
-    
+
             &:hover {
                 background-color: $primary-color;
                 color: $text-light;
             }
-    
+
             & > i {
                 margin-right: 5px;
                 position: relative;
@@ -116,19 +116,19 @@
 
     // Background Images
     .home-header-showcase-slide:first-child {
-        background: url("../../../public/imgs/home/slideshow-img-1.png")
+        background: url("../../public/imgs/home/slideshow-img-1.png")
             no-repeat center center/cover;
     }
     .home-header-showcase-slide:nth-child(2) {
-        background: url("../../../public/imgs/home/slideshow-img-2.png")
+        background: url("../../public/imgs/home/slideshow-img-2.png")
             no-repeat center center/cover;
     }
     .home-header-showcase-slide:nth-child(3) {
-        background: url("../../../public/imgs/home/slideshow-img-3.png")
+        background: url("../../public/imgs/home/slideshow-img-3.png")
             no-repeat center center/cover;
     }
     .home-header-showcase-slide:nth-child(4) {
-        background: url("../../../public/imgs/home/slideshow-img-4.png")
+        background: url("../../public/imgs/home/slideshow-img-4.png")
             no-repeat center center/cover;
     }
 
@@ -220,6 +220,10 @@
 }
 
 // ====================== Vozovy park ======================
+.home-vehicle-showcase {
+    position: relative;
+}
+
 .home-vehicle-showcase-wrap {
     position: relative;
 }
@@ -293,7 +297,6 @@
     color: $secondary-color;
 }
 
-
 .home-vehicle-showcase-title {
     margin: 40px 0;
     display: inline-block;
@@ -344,7 +347,7 @@
     flex: 1;
     display: flex;
     align-items: center;
-    
+
     .home-vehicle-showcase-slide-content-inner-text-wrap {
         width: 100%;
         padding: 0 80px;
@@ -391,7 +394,7 @@
     .home-vehicle-showcase-slide-content-sm-img {
         display: inline-block;
         margin-right: 20px;
-        height: 140px;   
+        height: 140px;
         width: 140px;
         object-fit: cover;
         border-radius: 10px;
@@ -485,7 +488,7 @@
 
     .home-trips-card-img-wrap {
         height: 325px;
-        
+
         & > a > img {
             height: 100%;
             border-top-right-radius: 6px;
@@ -649,22 +652,22 @@
 @media screen and (max-width: 768px) {
     // Header Slideshow
     .home-header .home-header-showcase-slide:first-child {
-        background: url("../../../public/imgs/home/slideshow-mobile-img-1.png")
+        background: url("../../public/imgs/home/slideshow-mobile-img-1.png")
             no-repeat center center/cover;
     }
 
     .home-header .home-header-showcase-slide:nth-child(2) {
-        background: url("../../../public/imgs/home/slideshow-mobile-img-2.png")
+        background: url("../../public/imgs/home/slideshow-mobile-img-2.png")
             no-repeat center center/cover;
     }
 
     .home-header .home-header-showcase-slide:nth-child(3) {
-        background: url("../../../public/imgs/home/slideshow-mobile-img-3.png")
+        background: url("../../public/imgs/home/slideshow-mobile-img-3.png")
             no-repeat center center/cover;
     }
 
     .home-header .home-header-showcase-slide:nth-child(4) {
-        background: url("../../../public/imgs/home/slideshow-mobile-img-4.png")
+        background: url("../../public/imgs/home/slideshow-mobile-img-4.png")
             no-repeat center center/cover;
     }
 

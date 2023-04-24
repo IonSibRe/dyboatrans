@@ -139,7 +139,7 @@
     .veh-buses-upper-text-wrap {
         flex: 1;
     }
-    
+
     .veh-buses-upper-text-inner-wrap {
         width: 600px;
         margin-bottom: 30px;
@@ -193,6 +193,7 @@
             .veh-buses-lower-img {
                 height: 100%;
                 object-fit: cover;
+                border-radius: 6px;
             }
         }
     }
@@ -241,6 +242,7 @@
         height: 30px;
         width: 30px;
         margin-right: 10px;
+        border-radius: 6px;
     }
 }
 
@@ -303,7 +305,7 @@
         width: 100%;
         padding-right: 0;
     }
-    
+
     .veh-buses-lower-text-wrap {
         margin-bottom: 40px;
     }
@@ -351,7 +353,7 @@
     .veh-buses-upper-wrap {
         width: 100%;
     }
-    
+
     .veh-buses-upper-wrap .veh-buses-upper-text-inner-wrap {
         display: flex;
         flex-direction: column;

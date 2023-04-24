@@ -5,7 +5,7 @@
                 Zájezdy
             </h1>
         </a>
-        <a href="/" class="admin-menu-item">
+        <a href="/admin/buses" class="admin-menu-item">
             <h1 class="admin-menu-text">
                 Vozový park
             </h1>
