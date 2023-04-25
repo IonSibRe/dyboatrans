@@ -32,7 +32,7 @@
                     <div class="veh-card-text-wrap">
                         <h2 class="veh-card-title">{{$bus->name}}</h2>
                         <p class="veh-card-text">({{$bus->seatCount}})</p>
-                        <a href="" class="veh-card-btn">
+                        <a href="#bus{{$bus->id}}" class="veh-card-btn">
                             <i class="fa-sharp fa-solid fa-circle-info"></i>
                             Chci zjistit více
                         </a>

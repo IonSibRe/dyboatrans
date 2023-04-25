@@ -17,13 +17,14 @@ navLinks.forEach((link) => {
         link.classList.remove("nav-link-active");
     }
 
-    if (
-        "/" +
-            window.location.href.split("/")[
-                window.location.href.split("/").length - 1
-            ] ===
-        link.getAttribute("href")
-    ) {
+    let hrefSplit = window.location.href.split("/");
+    let last = hrefSplit[hrefSplit.length - 1];
+
+    let idIndex = last.indexOf('#') === -1
+        ? last.length
+        : last.indexOf('#');
+
+    if ("/" + last.substring(0, idIndex) === link.getAttribute("href")) {
         link.classList.add("nav-link-active");
     }
 });
