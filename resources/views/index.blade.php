@@ -174,7 +174,7 @@
                                             alt="Vehicle Slide SM Image"
                                             class="home-vehicle-showcase-slide-content-sm-img">
                                     </div>
-                                    <a href="/vehicles" class="home-vehicle-showcase-slide-content-btn">
+                                    <a href="/vehicles#bus{{$bus->id}}" class="home-vehicle-showcase-slide-content-btn">
                                         <i class="fa-solid fa-circle-info"></i>
                                         více informací
                                     </a>
