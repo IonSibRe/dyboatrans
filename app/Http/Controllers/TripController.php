@@ -42,17 +42,17 @@ class TripController extends Controller
             foreach ($request->file("images") as $key => $image) {
                 if ($key === array_key_first($request->file("images"))) {
                     $folderName = uniqid();
-                    $formFields["images"] .= $image->storeAs("trips/" . $folderName, $image->getClientOriginalName(), "public") . ",";
+                    $formFields["images"] .= $image->store("trips/" . $folderName, "public") . ",";
                 } else {
-                    $formFields["images"] .= $image->storeAs("trips/" . $folderName, $image->getClientOriginalName(), "public") . ",";
+                    $formFields["images"] .= $image->store("trips/" . $folderName, "public") . ",";
                 }
 
             }
         }
-        
+
         Trip::create($formFields);
 
-        return back();
+        return redirect("/admin/trips");
     }
 
     // Update Trip
@@ -68,23 +68,19 @@ class TripController extends Controller
             "priceNotIncludes" => "required",
         ]);
 
-        // Delete dir with imgs
-        if ($request->hasFile("images")) {
-            Storage::deleteDirectory("public/trips/" . explode("/", $trip->images)[1]);
-        }
-
         // Create new dir and store imgs there
-        $formFields["images"] = "";
-
         if ($request->hasFile("images")) {
             $folderName = "";
+            $formFields["images"] = "";
+
+            Storage::deleteDirectory("public/trips/" . explode("/", $trip->images)[1]);
 
             foreach ($request->file("images") as $key => $image) {
                 if ($key === array_key_first($request->file("images"))) {
                     $folderName = uniqid();
-                    $formFields["images"] .= $image->storeAs("trips/" . $folderName, $image->getClientOriginalName(), "public") . ",";
+                    $formFields["images"] .= $image->store("trips/" . $folderName, "public") . ",";
                 } else {
-                    $formFields["images"] .= $image->storeAs("trips/" . $folderName, $image->getClientOriginalName(), "public") . ",";
+                    $formFields["images"] .= $image->store("trips/" . $folderName, "public") . ",";
                 }
             }
         }

@@ -38,9 +38,9 @@ class BusesController extends Controller
             foreach ($request->file("images") as $key => $image) {
                 if ($key === array_key_first($request->file("images"))) {
                     $folderName = uniqid();
-                    $formFields["images"] .= $image->storeAs("buses/" . $folderName, $image->getClientOriginalName(), "public") . ",";
+                    $formFields["images"] .= $image->store("buses/" . $folderName, "public") . ",";
                 } else {
-                    $formFields["images"] .= $image->storeAs("buses/" . $folderName, $image->getClientOriginalName(), "public") . ",";
+                    $formFields["images"] .= $image->store("buses/" . $folderName, "public") . ",";
                 }
 
             }
@@ -64,23 +64,19 @@ class BusesController extends Controller
             $formFields["icons"] = $request["icons"];
         }
 
-        // Delete dir with imgs
-        if ($request->hasFile("images")) {
-            Storage::deleteDirectory("public/buses/" . explode("/", $bus->images)[1]);
-        }
-
         // Create new dir and store imgs there
-
         if ($request->hasFile("images")) {
-            $formFields["images"] = "";
             $folderName = "";
+            $formFields["images"] = "";
+
+            Storage::deleteDirectory("public/buses/" . explode("/", $bus->images)[1]);
 
             foreach ($request->file("images") as $key => $image) {
                 if ($key === array_key_first($request->file("images"))) {
                     $folderName = uniqid();
-                    $formFields["images"] .= $image->storeAs("buses/" . $folderName, $image->getClientOriginalName(), "public") . ",";
+                    $formFields["images"] .= $image->store("buses/" . $folderName, "public") . ",";
                 } else {
-                    $formFields["images"] .= $image->storeAs("buses/" . $folderName, $image->getClientOriginalName(), "public") . ",";
+                    $formFields["images"] .= $image->store("buses/" . $folderName, "public") . ",";
                 }
 
             }
