@@ -61,7 +61,8 @@
         border-bottom: 1px solid #ccc;
 
         & > img {
-            height: 100%;
+            max-height: 300px;
+            object-fit: cover;
             width: 100%;
         }
     }
@@ -75,12 +76,14 @@
         font-size: 20px;
         font-weight: 800;
         text-transform: uppercase;
+        word-break: break-all;
     }
 
     .admin-trips-card-date {
         font-size: 16px;
         font-weight: 600;
         text-transform: uppercase;
+        word-break: break-all;
     }
 
     .admin-trips-card-row {
@@ -93,6 +96,7 @@
     .admin-trips-card-text {
         font-weight: 500;
         font-size: 12px;
+        word-break: break-all;
     }
 
     .admin-trips-card-btn {
