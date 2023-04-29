@@ -16,38 +16,7 @@
     <link rel="icon" type="image/png" href="{{ asset('favicon-32x32.png') }}" sizes="32x32" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}" />
     <title>Dyboatrans - S námi po celé Evropě</title>
-		<meta name="description" content="Dyboatrans to je luxusní, pohodlná a bezpečná doprava osob po celé Evropě našimi autobusy.">
-	<script type="application/ld+json">
-	{
-	  "@context": "https://schema.org",
-	  "@type": "BreadcrumbList",
-	  "itemListElement": [
-      {
-		"@type": "ListItem",
-		"position": 1,
-		"name": "Služby",
-		"item": "https://www.dyboatrans.cz/services"
-	  },
-      {
-		"@type": "ListItem",
-		"position": 2,
-		"name": "Vozový park",
-		"item": "https://www.dyboatrans.cz/vehicles"
-	  },
-	  {
-		"@type": "ListItem",
-		"position": 3,
-		"name": "Zájezdy",
-		"item": "https://www.dyboatrans.cz/trips"
-	  },
-	  {
-		"@type": "ListItem",
-		"position": 4,
-		"name": "Kontakt",
-		"item": "https://www.dyboatrans.cz/contact"
-	  }]
-	}
-    </script>
+	<meta name="description" content="Dyboatrans to je luxusní, pohodlná a bezpečná doprava osob po celé Evropě našimi autobusy. Nabízíme bezpečnou a pohodlnou dopravu s naším moderním vozovým parkem, zkušenými řidiči a informativními průvodci.">
 </head>
 
 <body>
