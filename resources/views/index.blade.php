@@ -164,7 +164,7 @@
                                         </div>
                                     </div>
                                     <p class="home-vehicle-showcase-slide-content-text">
-                                        {{substr($bus->descLong, 0, 220)}}...
+										{{$bus->descShort}}
                                     </p>
                                     <div class="home-vehicle-showcase-slide-content-sm-imgs-wrap">
                                         <img src="{{asset('storage/') . "/" . $imgPaths[1]}}"
