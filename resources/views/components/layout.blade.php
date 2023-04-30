@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" href="{{ asset('favicon-16x16.png') }}" sizes="16x16" />
     <link rel="icon" type="image/png" href="{{ asset('favicon-32x32.png') }}" sizes="32x32" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}" />
-    <title>Dyboatrans - S námi po celé Evropě</title>
+    <title>Dyboatrans - {{$title ?? "S námi po celé Evropě"}}</title>
 	<meta name="description" content="Dyboatrans to je luxusní, pohodlná a bezpečná doprava osob po celé Evropě našimi autobusy. Nabízíme bezpečnou a pohodlnou dopravu s naším moderním vozovým parkem, zkušenými řidiči a informativními průvodci.">
 </head>
 

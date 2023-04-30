@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Vozový park">
     <header class="veh-header">
         <div class="veh-header-inner-wrap">
             <div class="veh-header-content">

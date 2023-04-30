@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Kontakt">
     {{-- Header --}}
     <header class="con-header">
         <div class="con-header-img-wrap">

@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Zájezdy - {{$trip->name}}">
     @php
         $SpImgsPaths = explode(",", $trip->images);
     @endphp

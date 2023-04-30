@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Zájezdy">
     <header class="trips-header">
         <div class="trips-header-inner">
             <div class="trips-header-content-wrap">

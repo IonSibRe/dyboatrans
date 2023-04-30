@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Služby">
     <header class="svc-header">
         <div class="svc-header-content">
             <h1 class="svc-header-title">Služby</h1>
