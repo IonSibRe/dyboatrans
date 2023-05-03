@@ -101,9 +101,9 @@
         <div class="footer-inner">
             <div class="footer-item">
                 <img src="{{ URL::to('/') }}/imgs/footer/footer-logo-bus.png" alt="Footer Logo" class="footer-logo">
-                <a href="tel:420722604746" class="footer-info-text">
+                <a href="tel:420722644746" class="footer-info-text">
                     <img src="{{ URL::to('/') }}/imgs/footer/footer-phone.png" alt="Footer Phone" class="footer-info-icon">
-                    +420 722 604 746
+                    +420 722 644 746
                 </a>
                 <a href="mailto:dyboatrans@email.cz" class="footer-info-text">
                     <img src="{{ URL::to('/') }}/imgs/footer/footer-email.png" alt="Footer Email" class="footer-info-icon">

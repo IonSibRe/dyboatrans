@@ -106,7 +106,7 @@
                     <i class="fa-solid fa-car-side"></i>
                 </h2>
                 <p class="svc-info-text">- Plně vybavené zájezdové autobusy a minibusy s kapacitou 3 - 53 míst</p>
-                <p class="svc-info-text">- Povínná rehistrace plátce obratové daně v SRN, Rakousku, Polsku, Chorvatsku a
+                <p class="svc-info-text">- Povinná registrace plátce obratové daně v SRN, Rakousku, Polsku, Chorvatsku a
                     Slovinsku</p>
                 <p class="svc-info-text">- Zavazadlové boxy, přívěsy na kola, přívěsy na zavazadla</p>
                 <p class="svc-info-text">- Emisní limity EURO 6, možnost vjezdů do měst, která omezují vjezdy starším
