@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="S námi po celé Evropě" description="Dyboatrans to je luxusní, pohodlná a bezpečná doprava osob po celé Evropě našimi autobusy. Nabízíme bezpečnou a pohodlnou dopravu s naším moderním vozovým parkem, zkušenými řidiči a informativními průvodci.">
     @php
     @endphp
     {{-- ================== Header ================== --}}
@@ -152,7 +152,12 @@
                             </div>
                             <div class="home-vehicle-showcase-slide-content-text-wrap">
                                 <div class="home-vehicle-showcase-slide-content-inner-text-wrap">
-                                    <h2 class="home-vehicle-showcase-slide-content-title">{{$bus->name}}</h2>
+                                    <h2 class="home-vehicle-showcase-slide-content-title">
+                                        {{substr($bus->name, 0, 25)}}
+                                        @if (strlen($bus->name) > 25)
+                                            ...
+                                        @endif
+                                    </h2>
                                     <div class="home-vehicle-showcase-slide-icons-wrap">
                                         <div class="home-vehicle-showcase-slide-icons-inner-wrap">
                                             @foreach (explode("=", $bus->icons) as $icon)

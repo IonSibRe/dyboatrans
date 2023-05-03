@@ -1,4 +1,4 @@
-<x-layout title="Služby">
+<x-layout title="Služby" description="Provozujeme tuzemské i zahraniční zájezdy autobusy a minibusy pro 8-58 osob. Za některé z našich vozů je možné připojit i přívěsy.">
     <header class="svc-header">
         <div class="svc-header-content">
             <h1 class="svc-header-title">Služby</h1>

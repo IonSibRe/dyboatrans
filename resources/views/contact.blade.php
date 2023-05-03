@@ -1,4 +1,4 @@
-<x-layout title="Kontakt">
+<x-layout title="Kontakt" description="Pokud máte jakýkoliv dotaz ohledně našich služeb, vozového parku, či zájezdů nebojte se nás kontaktovat.">
     {{-- Header --}}
     <header class="con-header">
         <div class="con-header-img-wrap">

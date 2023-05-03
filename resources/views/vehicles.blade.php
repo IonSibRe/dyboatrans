@@ -1,4 +1,4 @@
-<x-layout title="Vozový park">
+<x-layout title="Vozový park" description="Naše autobusy splňují emisní limity EURO 6, čímž umožňujeme klientům levněji cestovat do zemí, kde jsou tyto normy nutnou podmínkou pro vjezd do některých měst bez dodatkových poplatků jako například Německo nebo Anglie.">
     <header class="veh-header">
         <div class="veh-header-inner-wrap">
             <div class="veh-header-content">
