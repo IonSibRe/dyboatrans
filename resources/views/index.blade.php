@@ -164,7 +164,10 @@
                                         </div>
                                     </div>
                                     <p class="home-vehicle-showcase-slide-content-text">
-										{{$bus->descShort}}
+                                        {{substr($bus->descShort, 0, 150)}}
+                                        @if (strlen($bus->descShort) > 150)
+                                            ...
+                                        @endif
                                     </p>
                                     <div class="home-vehicle-showcase-slide-content-sm-imgs-wrap">
                                         <img src="{{asset('storage/') . "/" . $imgPaths[1]}}"
