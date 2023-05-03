@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="S námi po celé Evropě" description="Dyboatrans to je luxusní, pohodlná a bezpečná doprava osob po celé Evropě našimi autobusy. Nabízíme bezpečnou a pohodlnou dopravu s naším moderním vozovým parkem, zkušenými řidiči a informativními průvodci.">
     @php
     @endphp
     {{-- ================== Header ================== --}}
@@ -73,15 +73,15 @@
             <div class="home-header-info-main-wrap">
                 <div class="home-header-info-title-wrap">
                     <h2 class="home-header-info-title">
-                        <span>DYBOATRANS</span>
-                        TO JE
-                        <span>LUXUSNÍ, POHODLNÁ A BEZPEČNÁ</span>
-                        DOPRAVA OSOB <br> TO PO CELÉ EVROPĚ NAŠIMI AUTOBUSY.
+                        <span>Dyboatrans</span>
+                        to je
+                        <span>luxusní, pohodlná a bezpečná</span><br>
+                        doprava osob po celé Evropě našimi autobusy.
                     </h2>
                 </div>
                 <div class="home-header-info-desc-wrap">
                     <h3 class="home-header-info-desc-title">
-                        VNITROSTÁTNÍ I MEZINÁRODNÍ AUTOBUSOVÁ DOPRAVA
+                        Vnitrostátní i mezinárodní autobusová doprava
                     </h3>
                     <p class="home-header-info-desc-text">
                         Máme mnoholeté zkušenosti s nepravidelnou autobusovou dopravou. Vzhledem k našemu luxusnímu
@@ -101,23 +101,23 @@
             </div>
             <div class="home-header-info-side-wrap">
                 <h2 class="home-header-info-side-wrap-title">
-                    PROČ BYSTE SI MĚLI <span>ZVOLIT ZROVNA NÁS?</span>
+                    Proč byste si měli <span>zvolit zrovna nás?</span>
                 </h2>
                 <div class="home-header-info-side-wrap-item">
                     <i class="fa-solid fa-handshake home-header-info-side-wrap-item-icon"></i>
-                    <p class="home-header-info-side-wrap-item-text">PROFESIONÁLNÍ PŘÍSTUP</p>
+                    <p class="home-header-info-side-wrap-item-text">Profesionální přístup</p>
                 </div>
                 <div class="home-header-info-side-wrap-item">
                     <i class="fa-solid fa-city home-header-info-side-wrap-item-icon"></i>
-                    <p class="home-header-info-side-wrap-item-text">ZNALOST VŠECH EVROPSKÝCH MĚST</p>
+                    <p class="home-header-info-side-wrap-item-text">Znalost všech evropských měst</p>
                 </div>
                 <div class="home-header-info-side-wrap-item">
                     <i class="fa-solid fa-briefcase home-header-info-side-wrap-item-icon"></i>
-                    <p class="home-header-info-side-wrap-item-text">20 LET ZKUŠENOSTÍ V OBORU</p>
+                    <p class="home-header-info-side-wrap-item-text">20 let zkušeností v oboru</p>
                 </div>
                 <div class="home-header-info-side-wrap-item">
                     <i class="fa-solid fa-globe home-header-info-side-wrap-item-icon"></i>
-                    <p class="home-header-info-side-wrap-item-text">ANGLICKY MLUVÍCÍ ŘIDIČI</p>
+                    <p class="home-header-info-side-wrap-item-text">Anglicky mluvící řidiči</p>
                 </div>
             </div>
         </div>
@@ -152,7 +152,12 @@
                             </div>
                             <div class="home-vehicle-showcase-slide-content-text-wrap">
                                 <div class="home-vehicle-showcase-slide-content-inner-text-wrap">
-                                    <h2 class="home-vehicle-showcase-slide-content-title">{{$bus->name}}</h2>
+                                    <h2 class="home-vehicle-showcase-slide-content-title">
+                                        {{substr($bus->name, 0, 25)}}
+                                        @if (strlen($bus->name) > 25)
+                                            ...
+                                        @endif
+                                    </h2>
                                     <div class="home-vehicle-showcase-slide-icons-wrap">
                                         <div class="home-vehicle-showcase-slide-icons-inner-wrap">
                                             @foreach (explode("=", $bus->icons) as $icon)
@@ -164,7 +169,10 @@
                                         </div>
                                     </div>
                                     <p class="home-vehicle-showcase-slide-content-text">
-                                        {{substr($bus->descLong, 0, 220)}}...
+                                        {{substr($bus->descShort, 0, 150)}}
+                                        @if (strlen($bus->descShort) > 150)
+                                            ...
+                                        @endif
                                     </p>
                                     <div class="home-vehicle-showcase-slide-content-sm-imgs-wrap">
                                         <img src="{{asset('storage/') . "/" . $imgPaths[1]}}"

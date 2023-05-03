@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Zájezdy" description="Vydejte se s námí na krátkodobé i dlouhodobé zájezdy za sportem, kulturou a poznáním po ČR nebo Evropě.">
     <header class="trips-header">
         <div class="trips-header-inner">
             <div class="trips-header-content-wrap">

@@ -152,6 +152,7 @@
                 color: $text-light;
                 font-size: 42px;
                 font-weight: 300;
+                text-transform: uppercase;
 
                 & > span {
                     font-weight: 700;
@@ -167,6 +168,7 @@
                 margin-bottom: 15px;
                 font-weight: 800;
                 font-size: 36px;
+                text-transform: uppercase;
             }
 
             .home-header-info-desc-text {
@@ -188,6 +190,7 @@
             margin-bottom: 50px;
             font-size: 40px;
             font-weight: 300;
+            text-transform: uppercase;
 
             & > span {
                 font-weight: 700;
@@ -215,6 +218,7 @@
             flex: 4;
             font-size: 28px;
             font-weight: 600;
+            text-transform: uppercase;
         }
     }
 }
@@ -388,7 +392,7 @@
     .home-vehicle-showcase-slide-content-text {
         margin-bottom: 20px;
         font-size: 25px;
-        font-weight: 700;
+        font-weight: 500;
         text-transform: uppercase;
     }
 
@@ -538,6 +542,15 @@
 
     // ====================== Vehicle Slideshow ======================
 
+    .home-vehicle-showcase-inner {
+        height: 850px;
+        display: flex;
+    }
+
+    .home-vehicle-showcase-slide-content-img {
+        max-height: 400px;
+    }
+
     .home-vehicle-showcase-slide-content {
         flex-direction: column;
     }
@@ -616,6 +629,27 @@
     }
 
     // ====================== Vehicle Slideshow ======================
+
+    .home-vehicle-showcase-inner {
+        height: 750px;
+        display: flex;
+    }
+
+    .home-vehicle-showcase-slide-content-text-wrap .home-vehicle-showcase-slide-content-text {
+        margin-bottom: 0;
+    }
+
+    .home-vehicle-showcase-slide-content-sm-imgs-wrap {
+        display: none;
+    }
+
+    .home-vehicle-showcase-slide-content-text-wrap .home-vehicle-showcase-slide-content-title {
+        font-size: 38px;
+    }
+
+    .home-vehicle-showcase-slide-content-img {
+        max-height: 300px;
+    }
 
     .home-vehicle-showcase-slide-content-img-wrap > img {
         width: 550px;
@@ -699,9 +733,23 @@
     }
 
     // ====================== Vehicle Slideshow ======================
+
     .home-vehicle-showcase-title {
         font-size: 52px;
         margin: 40px 0 0 0;
+    }
+
+    .home-vehicle-showcase-inner {
+        height: 700px;
+        display: flex;
+    }
+
+    .home-vehicle-showcase-slide-content-text-wrap .home-vehicle-showcase-slide-content-title {
+        font-size: 38px;
+    }
+
+    .home-vehicle-showcase-slide-content-img {
+        max-height: 300px;
     }
 
     .home-vehicle-showcase-btns {
@@ -808,6 +856,15 @@
     }
 
     // ====================== Vehicle Slideshow ======================
+
+    .home-vehicle-showcase-inner {
+        height: 550px;
+        display: flex;
+    }
+
+    .home-vehicle-showcase-slide-content-img {
+        max-height: 200px;
+    }
 
     .home-vehicle-showcase-title {
         margin: 40px 0 0 0;

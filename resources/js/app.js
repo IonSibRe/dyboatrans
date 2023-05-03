@@ -158,10 +158,10 @@ const vehicleMobilePrev = document.querySelector(
 const vehicleMobileNext = document.querySelector(
     "#home-vehicle-showcase-mobile-btns-next"
 );
-
-const currentMainImg = document.querySelector(".vehicle-current").children[0].children[0].children[0];
 const vehiclesSmImgs = document.querySelectorAll(".home-vehicle-showcase-slide-content-sm-img");
-const currentMainImgSrc = currentMainImg.src;
+
+let currentMainImg = document.querySelector(".vehicle-current").children[0].children[0].children[0];
+let currentMainImgSrc = currentMainImg.src;
 
 [...vehiclesSmImgs].forEach((img) => {
     img.addEventListener("mouseenter", () => {
@@ -175,38 +175,31 @@ const currentMainImgSrc = currentMainImg.src;
 
 const vehicleNextSlide = () => {
     const vehicleCurrent = document.querySelector(".vehicle-current");
-    vehicleCurrent.classList.remove("vehicle-current");
+    const vehicleNext = vehicleCurrent.nextElementSibling
+        ?? vehicleSlides[0]; // Defaults to first slide
 
-    const vehiclesSmImgs = vehicleCurrent.children[0].children[0].children;
-    console.log(vehiclesSmImgs);
-
-    if (vehicleCurrent.nextElementSibling) {
-        vehicleCurrent.nextElementSibling.classList.add("vehicle-current");
-    } else {
-        vehicleSlides[0].classList.add("vehicle-current");
-    }
-
-    setTimeout(() => {
-        vehicleCurrent.classList.remove("vehicle-current");
-    });
+    switchToSlide(vehicleCurrent, vehicleNext);
 };
 
 const vehiclePrevSlide = () => {
     const vehicleCurrent = document.querySelector(".vehicle-current");
+    const vehicleNext = vehicleCurrent.previousElementSibling
+        ?? vehicleSlides[vehicleSlides.length - 1]; // Defaults to last slide
+
+    switchToSlide(vehicleCurrent, vehicleNext);
+};
+
+const switchToSlide = (vehicleCurrent, vehicleNext) => {
     vehicleCurrent.classList.remove("vehicle-current");
 
-    if (vehicleCurrent.previousElementSibling) {
-        vehicleCurrent.previousElementSibling.classList.add("vehicle-current");
-    } else {
-        vehicleSlides[vehicleSlides.length - 1].classList.add(
-            "vehicle-current"
-        );
-    }
+    vehicleNext.classList.add("vehicle-current");
+    currentMainImg = vehicleNext.children[0].children[0].children[0];
+    currentMainImgSrc = currentMainImg.src;
 
     setTimeout(() => {
         vehicleCurrent.classList.remove("vehicle-current");
     });
-};
+}
 
 if (window.location.pathname === "/") {
     vehiclePrev.addEventListener("click", vehiclePrevSlide);
